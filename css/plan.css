@@ -1,0 +1,233 @@
+body {
+    /* height: 10000px; */
+}
+
+.banner_bg.breadcrumb_title {
+    border: 1px solid red;
+
+
+}
+
+ul.breadcrumb_title_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    min-width: 1000px;
+}
+
+.breadcrumb_title_list li.hover_not {
+
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li a {
+    text-decoration: none;
+    color: #8ECFD2;
+    /* border: 1px solid red; */
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+
+
+}
+
+.breadcrumb_title_list>li a:hover {
+    color: #7C7C7C;
+}
+
+/* <!-- ================================================各自分頁的開始======================================== --> */
+.to-do_rule_step {
+    color: #8ECFD2;
+    text-align: center;
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+.to-do_rule_step p {
+    /* border: 1px solid red; */
+
+}
+
+.to-do_rule_step a {
+    text-decoration: none;
+    color: #3F6395
+}
+
+.to-do_rule_step a:hover {
+    color: #7C7C7C;
+}
+
+/* <!-- ============================================表單============================================ --> */
+
+#day_selector {
+    appearance: none;
+    outline: none;
+    background-color: none;
+    border: 1px solid#919191;
+    border-radius: 8px;
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    color: #919191;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+
+    background-image: url(../images/triangle.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 8px center;
+    /* 水平方向距離右側 8px；垂直方向 center */
+
+}
+
+.day_seletor {
+    min-width: 1000px;
+}
+
+/* 
+無法成功插入三角形
+#day_selector::after {
+    content: "t";
+    display: inline-block;
+    border: 5px solid red;
+} */
+
+/* <!-- ================================================表單======================================== --> */
+.outside_box {
+    /* border: 1px solid red; */
+
+}
+
+.myForm_create_day1 h3,
+.myForm_create_day2 h3 {
+    color: #8ECFD2;
+}
+
+legend {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 40px;
+    /* font-family:  */
+}
+
+#myForm_create {
+    margin: 0 auto;
+    width: 900px;
+    border: 5px double #8ECFD2;
+    padding: 20px;
+    margin-top: 20px;
+    min-width: 1000px;
+}
+
+.trip_news,
+.day1_create_breakfast,
+.day1_create_lunch,
+.day1_create_dinner,
+.day1_create_living,
+.day1_create_list,
+.day2_create_breakfast,
+.day2_create_lunch,
+.day2_create_dinner,
+.day2_create_living,
+.day2_create_list {
+    margin: 20px 50px;
+
+}
+
+#trip_news_title {
+    width: 400px;
+}
+
+.button_create1,
+.button_create2 {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    margin: 0 auto;
+
+
+}
+
+/* .myForm_create_day1 input {
+    margin: 0 8px;
+    padding: 4px 8px;
+
+} */
+.trip_news input,
+.day1_create_breakfast input,
+.day1_create_lunch input,
+.day1_create_dinner input,
+.day1_create_living input,
+.day1_create_list input,
+.myForm_create_day2 input,
+.day2_create_breakfast input,
+.day2_create_lunch input,
+.day2_create_dinner input,
+.day2_create_list input,
+.day1_create_list textarea,
+.day2_create_list textarea {
+    margin: 0 8px;
+    padding: 8px 8px;
+}
+
+.day1_create_list textarea,
+.day2_create_list textarea {
+    width: 700px;
+    height: 170px;
+}
+
+button#button_create1_submit {
+    width: 100%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid #8ECFD2;
+    background-color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #8ECFD2;
+}
+
+button#button_create1_submit:hover {
+    width: 100%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid;
+    background-color: #8ECFD2;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+button#button_create2_download {
+    width: 100%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid #FFDB9D;
+    background-color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #FFDB9D;
+}
+
+button#button_create2_download:hover {
+    width: 100%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid;
+    background-color: #FFDB9D;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+}

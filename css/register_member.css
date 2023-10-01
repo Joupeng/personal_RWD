@@ -1,0 +1,431 @@
+.banner_bg.breadcrumb_title {
+    border: 1px solid red;
+}
+
+ul.breadcrumb_title_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    min-width: 1000px;
+}
+
+
+.breadcrumb_title_list>li.hover_not {
+
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li a {
+    text-decoration: none;
+    color: #8ECFD2;
+    /* border: 1px solid red; */
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+
+
+}
+
+.breadcrumb_title_list>li a:hover {
+    color: #7C7C7C;
+}
+
+/* ======================================================下方個人首頁開始=============================================== */
+.main_container {
+    /* border: 1px solid red; */
+    /* 會露出的縫隙，配合下方寬度 */
+    /* 防止footer衝上來 */
+    min-width: 1200px;
+    /* 減去上方下方 */
+    min-height: calc(100vh - 84.5px - 524px - 23px - 500px);
+}
+
+.inside_container {
+    /* border: 1px solid blue; */
+    width: 1200px;
+    margin: 0 auto;
+    /* 抽掉兩個框的小縫隙 */
+    font-size: 0;
+    padding: 40px 0;
+}
+
+.inside_container aside.aside,
+.inside_container main.main {
+    /* 水平方向 */
+    display: inline-block;
+    vertical-align: top;
+    /* 補回字體大小 */
+    font-size: 16px;
+    background-color: #EAEAEA;
+    /* background-color: hsla(0, 0, 91, .5); */
+    border-radius: 8px;
+}
+
+
+
+.inside_container aside.aside {
+    /* border: 1px solid black; */
+    width: 250px;
+    margin-right: 40px;
+    padding: 20px;
+
+}
+
+
+
+/* ==============================================================側邊攔========================================= */
+.inside_container aside.aside p.main_title_1 {
+    font-size: 36px;
+    color: #8ECFD2;
+    margin: 0;
+    font-weight: bold;
+}
+
+ul.index_type {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+ul.index_type>li {
+    margin-bottom: 10px;
+}
+
+ul.index_type li.photo_box {
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+ul.index_type li.photo_box::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("/images/register_member/photo.png");
+    background-size: cover;
+    /* border: 1px solid red; */
+    vertical-align: bottom;
+}
+
+ul.index_type li.trip_love_box {
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+ul.index_type li.trip_love_box::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("/images/register_member/lock.png");
+    background-size: cover;
+    /* border: 1px solid red; */
+    vertical-align: bottom;
+}
+
+
+/* =================================================================主內容 ======================================================================*/
+
+.inside_container main.main {
+    /* border: 1px solid blue; */
+    width: calc(100% - 300px - 40px);
+    padding: 50px;
+    margin-top: 50px
+}
+
+/* ==================================================連結修改內容============================================ */
+#tabs-1 {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.ui-tabs-anchor {
+    text-decoration: none;
+    /* border: 2px solid green; */
+    color: #8ECFD2;
+    font-size: 24px;
+}
+
+
+#tabs-2 {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#tabs-3 {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+a#ui-id-3.ui-tabs-anchor::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/register_member/write_document.svg");
+    background-size: cover;
+    /* border: 1px solid red; */
+    vertical-align: bottom;
+    color: #8ECFD2;
+}
+
+.other_box {
+    display: flex;
+    gap: 20px;
+}
+
+
+.other_box_text img {
+    width: 100%;
+}
+
+a#ui-id-3.main_container {
+    width: 1000px;
+}
+
+/* #tab-3.other_box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+} */
+
+/* =================================================下方是之前內容======================================================= */
+main.main ul.content_box {
+    /* border: 1px solid red; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+
+}
+
+main.main ul.content_box>li {
+    /* border: 1px solid blue; */
+    /* 計算每一個li還有他的距離 */
+    width: calc((100% - 40px)/2);
+    margin-right: 40px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 317px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+}
+
+/* 2的倍數不加margin-right !不然會掉下去*/
+main.main ul.content_box>li:nth-child(2n) {
+    margin-right: 0;
+}
+
+ul.content_box h3 {
+    font-size: 32px;
+    color: #8ECFD2;
+    margin-top: 80px;
+    /* 需使用其他定位方式 */
+}
+
+ul.content_box p {
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+ul.content_box .center_position {
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: auto;
+    height: 100%;
+
+
+}
+
+/* 旅人收藏 */
+
+.diary_box {
+    display: grid;
+    /* grid-template-rows: auto; */
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    height: 300px;
+
+}
+
+.diary_box_text {
+    background-color: #8ECFD2;
+    color: #fff;
+    text-align: center;
+
+
+
+}
+
+
+
+
+/* 原本的 */
+.main_container {
+    /* border: 1px solid red; */
+    /* 會露出的縫隙，配合下方寬度 */
+    /* 防止footer衝上來 */
+    min-width: 1200px;
+    /* 減去上方下方 */
+    min-height: calc(100vh - 84.5px - 524px - 23px - 500px);
+}
+
+.inside_container {
+    /* border: 1px solid blue; */
+    width: 1200px;
+    margin: 0 auto;
+    /* 抽掉兩個框的小縫隙 */
+    font-size: 0;
+    padding: 40px 0;
+}
+
+.inside_container aside.aside,
+.inside_container main.main {
+    /* 水平方向 */
+    display: inline-block;
+    vertical-align: top;
+    /* 補回字體大小 */
+    font-size: 16px;
+    background-color: #EAEAEA;
+    /* background-color: hsla(0, 0, 91, .5); */
+    border-radius: 8px;
+}
+
+
+
+.inside_container aside.aside {
+    /* border: 1px solid black; */
+    width: 300px;
+    margin-right: 40px;
+    padding: 20px;
+
+}
+
+
+
+/* ==============================================================側邊攔========================================= */
+.inside_container aside.aside p.main_title_1 {
+    font-size: 36px;
+    color: #8ECFD2;
+    margin: 0;
+    font-weight: bold;
+}
+
+ul.index_type {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+ul.index_type>li {
+    margin-bottom: 10px;
+}
+
+ul.index_type li.photo_box {
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+ul.index_type li.photo_box::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("/images/register_member/photo.png");
+    background-size: cover;
+}
+
+ul.index_type li.trip_love_box {
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+ul.index_type li.trip_love_box::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("/images/register_member/lock.png");
+    background-size: cover;
+}
+
+/* =================================================================主內容 ======================================================================*/
+
+/* .inside_container main.main {
+    border: 1px solid blue;
+    width: calc(100% - 300px - 40px);
+    padding: 50px;
+}
+
+
+
+
+
+main.main ul.content_box {
+    border: 1px solid red;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+
+}
+
+main.main ul.content_box>li {
+    /* border: 1px solid blue; */
+/* 計算每一個li還有他的距離 */
+/* width: calc((100% - 40px)/2);
+    margin-right: 40px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 317px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+} */
+
+/* 2的倍數不加margin-right !不然會掉下去*/
+/* main.main ul.content_box>li:nth-child(2n) {
+    margin-right: 0;
+} */
+
+/* ul.content_box h3 {
+    font-size: 32px;
+    color: #8ECFD2;
+    margin-top: 80px;
+    /* 需使用其他定位方式 */
+/* } */
+
+/* ul.content_box p {
+    font-size: 24px;
+    color: #8ECFD2;
+} */
+
+/* ul.content_box .center_position {
+    /* border: 1px solid red; */
+/* width: 100%;
+    margin: auto;
+    height: 100%;
+
+
+}  */

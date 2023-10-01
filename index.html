@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="./css/common/all.css">
+    <link rel="stylesheet" href="./css/common/header.css">
+    <link rel="stylesheet" href="./css/common/footer.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- ================================================================漢堡按鈕============================================================================== -->
+
+
+
+
+    <div class="about-us"></div>
+    <header class="header">
+        <div class="header__block">
+            <nav class="header__nav">
+                <button type="button" id="btn_hamburger"></button>
+                <a href="./index.html" class="header__logo">
+                    <img src="./images/logo/logo_green_small.png" class="header__logo-img">
+                </a>
+                <ul class="header__nav-list">
+                    <li class="header__nav_li">
+                        <a class="header__nav_li-link" href="./about_us.html">關於獨旅</a>
+                    </li>
+                    <li class="header__nav_li">
+                        <span class="header__nav_li-link  -special_function">旅行視角</span>
+                        <ul class="header__sub-ul">
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./plan.html">自助規劃</a></li>
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./form.html">旅行投稿</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav_li ">
+                        <a class="header__nav_li-link -hover_function" href="./safe.html">安全資料</a>
+                    </li>
+                    <li class="header__nav_li ">
+                        <span class="header__nav_li-link">推薦景點</span>
+                        <ul class="header__sub-ul">
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./spot.html">心境選點</a></li>
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./point.html">在地店家</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="header__nav_li -register_function"><a href="./register.html"
+                            class="header__nav_li-link -register">註冊/登入</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    <!-- ============================================banner位置跟其他分頁不同============================================ -->
+    <section class="banner_bg">
+        <!-- <img src="./images/index/banner.jpg"> -->
+        <div class="font_box">
+            <!-- 要包在div裡面 -->
+            <div>
+                <h1>你想去哪呢?</h1>
+                <p>多久沒有自己決定該前往何處?<br>也許該為自己認真一次<br>
+                    不再依靠任何人</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =======================================================影片內容1 ======================================================================> -->
+    <div class="video_mountain">
+
+        <div class="video-block__text">
+            <div>
+                <p class="mountain_text_left">也許找一座山</p>
+            </div>
+            <div>
+                <p class="mountain_text_right">去跟自己對話吧 </p>
+            </div>
+        </div>
+        <div class="video-block__video">
+            <video src="./video/Mountain.mp4" autoplay muted playsinline loop></video>
+        </div>
+
+
+    </div>
+    <!-- =======================================================影片內容2 ======================================================================> -->
+    <div class="column_block_video_sea">
+        <div>
+            <video src="./video/sea.mp4" autoplay muted playsinline loop></video>
+        </div>
+        <div class="second_video_text">
+            <div class="column_item_right_sea">
+                <p>告別過去吧 </p>
+            </div>
+            <div class="column_item_left_sea">
+                <p>也許找一片海 </p>
+            </div>
+        </div>
+    </div>
+    <!-- ===========================================================如何使用網站===================================================================== -->
+    <div class="how_to_use_container">
+        <h1>你可以怎麼使用網站?</h1>
+        <ul>
+            <li>
+                <img src="./images/index/card-custom.png" alt="無法顯示">
+                <h3>景點入手</h3>
+                <p>從選單中推薦景點，可以根據抽牌或是店家，進行景點推薦</p>
+            </li>
+            <li>
+                <img src="./images/index/write_document.png" alt="無法顯示">
+                <h3>獨創旅程</h3>
+                <p class="how_to_use_container_trip">跟著網站所提供的表單，規劃自己的行程</p>
+                <p class="how_to_use_container_register">*需要加入會員並且登入</p>
+            </li>
+            <li>
+                <img src="./images/index/share_document.png" alt="無法顯示">
+                <h3>精彩分享</h3>
+                <p class="how_to_use_container_trip">也可以透過網站獲得其他人的旅遊經驗</p>
+                <p class="how_to_use_container_register">*需要加入會員並且登入</p>
+            </li>
+            <li>
+                <img src="./images/index/document.png" alt="無法顯示">
+                <h3>安全資訊</h3>
+                <p>可以透過安全資料頁面存取需要前往國家的資訊於手機中</p>
+            </li>
+        </ul>
+    </div>
+    <!--  --------------------------------------------------------------會有什麼樣精采內容?------------------------------------------------------------------- -->
+    <div class="how_can_get">
+        <h1>會有什麼樣精采內容?</h1>
+        <p>心境選點，讓您可以透過選取喜歡的卡片來得到推薦景點，也可以透過店家直接選擇地點</p>
+        <div class="card_introduce">
+            <ul>
+                <li>
+                    <div id="card">
+                        <div class="front">
+                            <img src="./images/index/card_big.png" alt="無法顯示" class="card_big">
+                        </div>
+                        <div class="back">
+                            <img src="./images/spot/spot_1_back.svg" alt="無法顯示" class="card_big">
+                        </div>
+                    </div>
+                    <p>點選後會翻轉到另一面</p>
+                </li>
+                <li><img src="./images/index/card_normal.png" alt="無法顯示" class=card_normal></li>
+                <li><img src="./images/index/card_turn.png" alt="無法顯示" class="card_turn"></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /*================================================================= 留言板================================================================================ */ -->
+    <div class="note_left">
+        <h1>留言板</h1>
+        <div class="note_picture_container">
+            <div class="note_picture_container__outside">
+                <div class="note_picture__photo"><img src="./images/index/one_one.png" alt="無法顯示"></div>
+                <div class="note_picture__text">
+                    <p>2023/10/12</p>
+                    <p>阿爾卑斯山(冬)</p>
+                </div>
+                <div class="note_picture__think">
+                    <span>剛好來的時候是冬季，山頭上有些雪，真的很美讓人癡迷，歡迎大家前往</span>
+                    <p>Jenny</p>
+                </div>
+            </div>
+            <div class="note_picture_container__outside">
+                <div class="note_picture__photo"><img src="./images/index/one_two.png" alt="無法顯示"></div>
+                <div class="note_picture__text">
+                    <p>2023/10/12</p>
+                    <p>阿爾卑斯山(冬)</p>
+                </div>
+                <div class="note_picture__think">
+                    <span>剛好來的時候是冬季，山頭上有些雪，真的很美讓人癡迷，歡迎大家前往</span>
+                    <p>Jenny</p>
+                </div>
+            </div>
+            <div class="note_picture_container__outside">
+                <div class="note_picture__photo"><img src="./images/index/one_three.png" alt="無法顯示"></div>
+                <div class="note_picture__text">
+                    <p>2023/10/12</p>
+                    <p>阿爾卑斯山</p>
+                </div>
+                <div class="note_picture__think">
+                    <span>剛好來的時候是冬季，山頭上有些雪，真的很美讓人癡迷，歡迎大家前往</span>
+                    <p>Jenny</p>
+                </div>
+            </div>
+            <div class="note_picture_container__outside">
+                <div class="note_picture__photo"> <img src="./images/index/two_one.png" alt="無法顯示"></div>
+                <div class="note_picture__text">
+                    <p>2023/10/12</p>
+                    <p>阿爾卑斯山(冬)</p>
+                </div>
+                <div class="note_picture__think">
+                    <span>剛好來的時候是冬季，山頭上有些雪，真的很美讓人癡迷，歡迎大家前往</span>
+                    <p>Jenny</p>
+                </div>
+            </div>
+            <div class="note_picture_container__outside">
+                <div class="note_picture__photo"><img src="./images/index/two_two.png" alt="無法顯示"></div>
+                <div class="note_picture__text">
+                    <p>2023/10/12</p>
+                    <p>阿爾卑斯山(冬)</p>
+                </div>
+                <div class="note_picture__think">
+                    <span>剛好來的時候是冬季，山頭上有些雪，真的很美讓人癡迷，歡迎大家前往</span>
+                    <p>Jenny</p>
+                </div>
+            </div>
+            <div class="note_picture_container__outside">
+                <div class="note_picture__photo"> <img src="./images/index/two_three.png" alt="無法顯示"></div>
+                <div class="note_picture__text">
+                    <p>2023/10/12</p>
+                    <p>阿爾卑斯山(冬)</p>
+                </div>
+                <div class="note_picture__think">
+                    <span>剛好來的時候是冬季，山頭上有些雪，真的很美讓人癡迷，歡迎大家前往</span>
+                    <p>Jenny</p>
+                </div>
+            </div>
+
+            <!-- /*=================================================================留下訊息 ================================================================================ */ -->
+        </div>
+        <div class="note_your_message">
+            <h1>留下你的旅遊趣事</h1>
+            <div class="note_list">
+                <div class="message_container form-group">
+                    <input type="text" placeholder="請輸入姓名">
+                </div>
+                <div class=" form-group">
+                    <input type="text" placeholder="請輸入前往國家">
+                </div>
+                <div class=" form-group">
+                    <input type="text" placeholder="請輸入前往景點名">
+                </div>
+                <div class=" form-group">
+                    <input type="text" placeholder="請輸入內容">
+                </div>
+                <div class="form-group">
+                    <form action="#" method="post" enctype="multipart/form-data"></form>
+                    <input type="file" name="the_file1">
+                </div>
+            </div>
+            <div class="note_sumbit_button">
+                <button type="sumit">送出</button>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------footer---------------------------------------------------- -->
+    <footer class="box_footer_main">
+        <ul class="main_list">
+            <li>
+                <div class="box_footer_list">
+                    <img src="./images/logo/logo_white_150.png">
+                    <p>想要最新消息?</p>
+                    <p>想要加入我們?</p>
+                    <p>想要了解更多?</p>
+                    <div class="list_media">
+                        <img src="./images/footer/youtube.svg" alt="">
+                        <img src="./images/footer/IG.svg" alt="">
+                        <img src="./images/footer/fb.svg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="box_footer_contact">
+                    <h3>Contact us</h3>
+                    <p>email:yrjfkflfd@gmail.com</p>
+                    <p>新竹縣新豐鄉山崎村</p>
+                </div>
+            </li>
+            <li>
+                <div class="box_footer_content">
+                    <ul class="=content_link">
+                        <li><a href="./about_us.html">
+                                <p>關於獨旅</p>
+                            </a></li>
+                        <li><a href="./plan.html">
+                                <p>旅行視角</p>
+                            </a></li>
+                        <li><a href="./spot.html">
+                                <p>推薦景點</p>
+                            </a></li>
+                        <li><a href="./safe.html">
+                                <p>安全資料</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+
+        <div class="class_for">
+            <p>本網站為緯育TibaMe前端工程師班第80期學員專題作品，本平台僅供學習、展示之用。參考資源:KKDAY</p>
+        </div>
+
+    </footer>
+    <script>
+        // 漢堡功能
+        let btn_hamburger_el = document.getElementById("btn_hamburger");
+        btn_hamburger_el.addEventListener("click", function () {
+            this.classList.toggle("-on")
+        });
+
+
+        // 翻牌功能
+        $("#card").flip();
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+/* ====================================================================麵包屑============================================================== */
+
+
+.banner_bg.breadcrumb_title {
+    /* border: 1px solid red; */
+}
+
+ul.breadcrumb_title_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    min-width: 1000px;
+}
+
+
+
+.breadcrumb_title_list>li.hover_not {
+
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li a {
+    text-decoration: none;
+    color: #8ECFD2;
+    font-size: 24px;
+    /* border: 1px solid red; */
+    padding: 0 8px;
+}
+
+.breadcrumb_title_list>li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+
+
+}
+
+.breadcrumb_title_list>li a:hover {
+    color: #7C7C7C;
+}
+
+/* =================================================================關於獨旅======================================================================= */
+.about_us_box {
+    min-width: 1000px;
+}
+
+.about_us_box h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 45px;
+    font-weight: bold;
+    font-size: 50px;
+
+}
+
+.about_text {
+
+    /* border: 1px solid blue; */
+    /* width: 100%; */
+    width: 900px;
+    margin: auto;
+
+}
+
+.about_us_box h3 {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 36px;
+
+}
+
+.about_us_box p {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 24px;
+    /* border: 1px solid red; */
+
+
+}
+
+.team_list_box {
+    margin-top: 100px;
+}
+
+.team_outside_box {
+    /* border: 1px solid red; */
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    gap: 30px;
+
+}
+
+
+.team_outside_box img {
+    width: 100%;
+    height: auto;
+}

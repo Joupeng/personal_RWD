@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推薦景點</title>
+    <link rel="stylesheet" href="./css/common/all.css">
+    <link rel="stylesheet" href="./css/common/header.css">
+    <link rel="stylesheet" href="./css/common/footer.css">
+    <link rel="stylesheet" href="./css/common/banner2.css">
+    <link rel="stylesheet" href="./css/spot.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__block">
+            <nav class="header__nav">
+                <a href="./index.html" class="header__logo">
+                    <img src="./images/logo/logo_green_small.png" class="header__logo-img">
+                </a>
+                <ul class="header__nav-list">
+                    <li class="header__nav_li">
+                        <a class="header__nav_li-link" href="./about_us.html">關於獨旅</a>
+                    </li>
+                    <li class="header__nav_li">
+                        <span class="header__nav_li-link  -special_function">旅行視角</span>
+                        <ul class="header__sub-ul">
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./plan.html">自助規劃</a></li>
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./form.html">旅行投稿</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav_li ">
+                        <a class="header__nav_li-link -hover_function" href="./safe.html">安全資料</a>
+                    </li>
+                    <li class="header__nav_li ">
+                        <span class="header__nav_li-link -active">推薦景點</span>
+                        <ul class="header__sub-ul -active">
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./spot.html">心境選點</a></li>
+                            <li class="header__sub-li"><a class="header__sub-li-link" href="./point.html">在地店家</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="header__nav_li -register_function"><a href="./register.html"
+                            class="header__nav_li-link -register">註冊/登入</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner_bg">
+        <div class="search_bar">
+            <p class="search_text">推薦景點</p>
+            <div class="search_text_list">
+                <input type="text" id="inputbox" placeholder="請輸入國家">
+                <ul class="search_text_list_country">
+                    <li><button type="button">#日本</button></li>
+                    <li><button type="button">#法國</button></li>
+                    <li><button type="button">#韓國</button></li>
+                    <li><button type="button">#美國</button></li>
+                    <li><button type="button">#義大利</button></li>
+                    <li><button type="button">#新加坡</button></li>
+                </ul>
+            </div>
+            <!-- <img src="./images/banner 1.png"> -->
+        </div>
+    </section>
+    <!-- ===============================================麵包屑==================================================== -->
+    <div class="breadcrumb_title">
+        <ul class="breadcrumb_title_list">
+            <li><a href="./index.html">首頁</a></li>
+            <li><a href="./spot.html">推薦景點 </a></li>
+            <li class="hover_not">心境選點</li>
+        </ul>
+    </div>
+    <!-- ===============================================抽牌開始==================================================== -->
+    <div class="introduce_text">
+        <h1>心境選點</h1>
+        <p>如果不知道該去哪裡走走，那就用抽抽看吧，底下有兩種心境，來推薦您景點，請您點選下方選定一張牌，翻過來就是您可以參考的地方。</p>
+    </div>
+    <!-- 補動畫
+    <img src="/images/animation.png" alt="無法顯示"> -->
+
+    <div class="mind_spot_title">
+        <h3>職場失意 </h3>
+        <p>也許上司看不到你的閃光點、同事與你有太多不同，疲憊的工作環境，讓你越來越不認識自己，可是你的生活不是只有工作，也許可以去別的地方看一看，才會發現世界很大，有很多可能性。</p>
+    </div>
+    <div class="spot_card_choose">
+        <ul>
+            <li>
+                <!-- ===============================================第一張牌 ===============================================================================-->
+                <div id="card">
+                    <div class="front">
+                        <img src="./images/spot/spot_1.png" alt="無法顯示">
+                    </div>
+                    <div class="back">
+                        <img src="./images/spot/spot_1_back.svg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- ===============================================第二張牌 ===============================================================================-->
+                <div id="card1">
+                    <div class="front">
+                        <img src="./images/spot/spot_2.png" alt="無法顯示">
+                    </div>
+                    <div class="back">
+                        <img src="./images/spot/spot_1_back.svg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- ===============================================第三張牌 ===============================================================================-->
+                <div id="card2">
+                    <div class="front">
+                        <img src="./images/spot/spot_3.png" alt="無法顯示">
+                    </div>
+                    <div class="back">
+                        <img src="./images/spot/spot_1_back.svg" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="mind_spot_title">
+        <h3>失去一段關係 </h3>
+        <p>可能熟悉的事不再是日常，而是回憶，在人生中不可避免地會跟任何關係的人，終究走向兩個方向，可是時間終究會往前走，你可以休息但不能因此而失去未來</p>
+    </div>
+    <div class="spot_card_choose">
+        <ul>
+            <li>
+                <!-- ===============================================第一張牌 ===============================================================================-->
+                <div id="card3">
+                    <div class="front">
+                        <img src="./images/spot/spot_4.svg" alt="無法顯示">
+                    </div>
+                    <div class="back">
+                        <img src="./images/spot/spot_1_back.svg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- ===============================================第二張牌 ===============================================================================-->
+                <div id="card4">
+                    <div class="front">
+                        <img src="./images/spot/spot_5.png" alt="無法顯示">
+                    </div>
+                    <div class="back">
+                        <img src="./images/spot/spot_1_back.svg" alt="無法顯示">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- ===============================================第三張牌 ===============================================================================-->
+                <div id="card5">
+                    <div class="front">
+                        <img src="./images/spot/spot_6.png" alt="無法顯示">
+                    </div>
+                    <div class="back">
+                        <img src="./images/spot/spot_1_back.svg" alt="無法顯示">
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <p>即使遍體麟傷，也跟為自己做一次決定</p>
+    </div>
+    <!-- ------------------------------------------------footer---------------------------------------------------- -->
+
+    <footer class="box_footer_main">
+        <ul class="main_list">
+            <li>
+                <div class="box_footer_list">
+                    <img src="./images/logo/logo_white_150.png">
+                    <p>想要最新消息?</p>
+                    <p>想要加入我們?</p>
+                    <p>想要了解更多?</p>
+                    <div class="list_media">
+                        <img src="./images/footer/youtube.svg" alt="">
+                        <img src="./images/footer/IG.svg" alt="">
+                        <img src="./images/footer/fb.svg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="box_footer_contact">
+                    <h3>Contact us</h3>
+                    <p>email:yrjfkflfd@gmail.com</p>
+                    <p>新竹縣新豐鄉山崎村</p>
+                </div>
+            </li>
+            <li>
+                <div class="box_footer_content">
+                    <ul class="=content_link">
+                        <li><a href="./about_us.html">
+                                <p>關於獨旅</p>
+                            </a></li>
+                        <li><a href="./plan.html">
+                                <p>旅行視角</p>
+                            </a></li>
+                        <li><a href="./spot.html">
+                                <p>推薦景點</p>
+                            </a></li>
+                        <li><a href="./safe.html">
+                                <p>安全資料</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+
+        <div class="class_for">
+            <p>本網站為緯育TibaMe前端工程師班第80期學員專題作品，本平台僅供學習、展示之用。參考資源:KKDAY</p>
+        </div>
+
+    </footer>
+
+    <script>
+        $("#card").flip();
+        $("#card1").flip();
+        $("#card2").flip();
+        $("#card3").flip();
+        $("#card4").flip();
+        $("#card5").flip();
+
+    </script>
+</body>
+
+
+</html>

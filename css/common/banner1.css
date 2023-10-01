@@ -1,0 +1,46 @@
+section.banner_bg {
+    /* border: 1px solid red; */
+    height: 524px;
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    margin-top: 20px;
+    /* 確保圖片不會拉過去的時候留有白空隙 */
+    min-width: 1200px;
+}
+
+section.banner_bg img {
+    /* 先定位在框的50%位置 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 再去扣掉自己的長或是寬得到真正的中間 */
+    transform: translate(-50%, -50%);
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    font-size: 16px;
+    /* display: none; */
+    max-width: 1200px;
+
+
+}
+
+section.banner_bg p {
+
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+    font-size: 64px;
+    font-weight: 500;
+    color: #fff;
+    width: 500px;
+    height: 106px;
+    text-align: center;
+    z-index: 1;
+    letter-spacing: 42px;
+
+
+}

@@ -1,0 +1,130 @@
+body {
+    /* height: 10000px;  */
+}
+
+/* ===========================================================================麵包屑================================================================================= */
+.banner_bg.breadcrumb_title {
+    border: 1px solid red;
+}
+
+ul.breadcrumb_title_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    min-width: 1000px;
+}
+
+
+.breadcrumb_title_list>li.hover_not {
+
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li a {
+    text-decoration: none;
+    color: #8ECFD2;
+    /* border: 1px solid red; */
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+
+
+}
+
+.breadcrumb_title_list>li a:hover {
+    color: #7C7C7C;
+}
+
+/* ======================================================下方標題開始=============================================== */
+.introduce_text {
+    min-width: 1000px;
+}
+
+.introduce_text h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 45px;
+    font-weight: bold;
+    font-size: 50px;
+
+}
+
+.introduce_text p {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 24px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.mind_spot_title {
+    margin-bottom: 30px;
+    min-width: 1000px;
+}
+
+
+
+.mind_spot_title h3 {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+}
+
+.mind_spot_title p {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 24px;
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+/* 補動畫 */
+/* .point_vendor_title img {
+    width: 100px;
+    height: 100px;
+
+} */
+
+
+/* ==============================================================抽牌================================================================== */
+
+
+.spot_card_choose ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    list-style: none;
+    /* justify-content: space-evenly; */
+    /* max-width: 800px; */
+    padding: 0;
+    margin: auto;
+    gap: 30px;
+    width: 800px;
+    margin: 0 auto;
+    min-width: 1000px;
+}
+
+
+
+.spot_card_choose p {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 36px;
+}
+
+.spot_card_choose img {
+    width: 100%;
+    height: auto;
+}

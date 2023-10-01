@@ -1,0 +1,344 @@
+section.banner_bg {
+    margin-top: 20px;
+    height: 524px;
+    /* border: 1px solid red; */
+    background-image: url("../images/index/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 521px;
+    /* min-height: 100%;
+    min-width: 100%; */
+    min-width: 1200px;
+}
+
+div.font_box {
+    /* border: 1px solid red; */
+    background-color: #8ECFD2;
+    color: #FFF;
+    height: 100%;
+    /* 在他的父元素進行撐開 ，不用設定高*/
+    width: 426px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner_bg div.font_box h1 {
+    font: "Noto Sans SC";
+    /* border: 1px solid green; */
+    font-size: 32px;
+    width: 261px;
+    /* height: 82px; */
+    letter-spacing: 12.8px;
+    /* 32*40%=12.8 */
+
+}
+
+.banner_bg div.font_box p {
+    text-align: center;
+    /* border: 1px solid black; */
+    font-family: "Noto Sans SC";
+    font-size: 16px;
+    letter-spacing: 3px;
+    /*16*20%=3.2*/
+    width: 261px;
+    margin: 0 auto;
+}
+
+.banner_bg img,
+div.font_box {
+    font-size: 16px;
+}
+
+
+
+/* =============================================================影片內容1================================================================== */
+.video_mountain {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: auto;
+    /* border: 1px solid red; */
+    margin-top: 100px;
+    min-width: 1000px;
+
+}
+
+.video-block__video video {
+    width: 100%;
+}
+
+.video-block__text {
+    font-size: 36px;
+    color: #8ECFD2;
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.video-block__text p {
+    width: 60px;
+}
+
+.mountain_text_left {
+    margin-top: -50px;
+
+}
+
+
+/* =============================================================影片內容2================================================================== */
+.column_block_video_sea {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: auto;
+
+    margin-top: 100px;
+    min-width: 1000px;
+
+}
+
+.column_block_video_sea video {
+    width: 100%;
+}
+
+.second_video_text {
+    font-size: 36px;
+    color: #8ECFD2;
+
+    display: flex;
+    justify-content: center;
+}
+
+.second_video_text p {
+    width: 60px;
+    /* border: 1px solid red; */
+
+}
+
+.column_item_left_sea {
+    margin-top: -50px;
+}
+
+/* ==============================================================如何使用=================================================================== */
+.how_to_use_container ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 50px;
+    padding: 0;
+    min-width: 1000px;
+
+}
+
+.how_to_use_container ul>li {
+    width: 255px;
+    text-align: center;
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+.how_to_use_container h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 15px;
+
+}
+
+.how_to_use_container_register {
+    font-size: 18px;
+}
+
+/* --------------------------------------------------------------會有什麼樣精采內容?-------------------------------------------------------------------*/
+.how_can_get h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 15px;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.how_can_get p {
+    color: #8ECFD2;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+.how_can_get {
+    /* border: 1px solid red; */
+    min-width: 1000px;
+
+}
+
+.card_introduce ul {
+    /* border: 1px solid blue; */
+    display: flex;
+
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.card_introduce ul img {
+    width: 100%;
+}
+
+.card_introduce ul>li {
+    width: 300px;
+}
+
+.card_introduce ul .card_big {
+    /* border: 1px solid red; */
+}
+
+.card_introduce ul .card_normal {
+    /* border: 1px solid blue; */
+    margin-left: 100px;
+}
+
+.card_introduce ul .card_turn {
+    /* border: 1px solid green; */
+}
+
+/*================================================================= 留言板================================================================================ */
+.note_left {
+    min-width: 1000px;
+}
+
+.note_picture_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: auto;
+    padding: 0;
+    gap: 30px;
+    /* border: 1px solid red; */
+
+}
+
+.note_left h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+.note_left h1::before {
+    content: ' ';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    background-image: url("/images/index/pen.png");
+    background-size: 30px;
+    margin-right: 10px;
+}
+
+/* =================================================================留言框組的效果=================================================================== */
+
+.note_picture_container__outside {
+    /* border: 1px solid red; */
+    position: relative;
+    border: 1px solid #919191;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.note_picture__photo img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.note_picture__text {
+    width: 70%;
+    height: 100%;
+    /* background-color: #919191; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsla(183, 43%, 69%, 1);
+
+    /* 讓字置中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.note_picture__text:hover {
+    /* background-color: hsla(183, 43%, 69%, 0); */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.note_picture__text p {
+    /* border: 1px solid blue; */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.note_picture__think {
+    color: #8ECFD2;
+    padding: 10px;
+}
+
+.note_picture__think p {
+    text-align: right;
+}
+
+/*=================================================================留下訊息 ================================================================================ */
+.note_your_message h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 15px;
+    margin-top: 80px;
+}
+
+.note_list {
+    /* border: 1px solid red; */
+    width: 350px;
+    margin: 0 auto;
+
+}
+
+.note_list input {
+    /* justify-content: center; */
+    color: #8ECFD2;
+}
+
+input[type="text"] {
+    background-color: #FFDB9D;
+    border: 0;
+    border-radius: 8px;
+    padding: 8px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="text"]::placeholder {
+    color: #919191;
+}
+
+.note_sumbit_button {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form-group {
+    padding: 8px 0;
+
+}

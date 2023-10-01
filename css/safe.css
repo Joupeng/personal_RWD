@@ -1,0 +1,286 @@
+.banner_bg.breadcrumb_title {
+    /* border: 1px solid red; */
+}
+
+ul.breadcrumb_title_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    min-width: 1000px;
+}
+
+
+.breadcrumb_title_list>li.hover_not {
+
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li a {
+    text-decoration: none;
+    color: #8ECFD2;
+    /* border: 1px solid red; */
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+
+
+}
+
+.breadcrumb_title_list>li a:hover {
+    color: #7C7C7C;
+}
+
+
+
+/*  =======================================================================主題開始 ==================================================================================================-*/
+.safe_title h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 45px;
+    font-weight: bold;
+}
+
+/* ==============================================================tab開始================================================================ */
+
+
+.all_information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 30px;
+}
+
+.safe_main_box {
+    /* border: 1px solid red; */
+
+}
+
+
+.safe_main_box .inner_box {
+    /* border: 1px solid blue; */
+    background-color: #EAEAEA;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+/* ============================================================最小寬設定 =======================================================*/
+
+.all_tabs_box {
+    min-width: 1000px;
+}
+
+#tabs ul.tabs_set {
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+
+#tabs ul.tabs_set>li {
+    padding: 8px 25px;
+    font-size: 18px;
+
+}
+
+.ui-widget-content {
+    border: 1px solid #fff !important;
+    background: #ffffff;
+    color: #333333;
+}
+
+/* ui套件修改 */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    border: 1px solid#8ECFD2 !important;
+    background: #8ECFD2 !important;
+    font-weight: normal;
+    color: #ffffff !important;
+}
+
+.ui-widget-header {
+    border: none !important;
+    background: none !important;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+
+/* ============================================================================圖片=============================================================== */
+.inner_box .image_outside {
+    /* border: 1px solid red; */
+
+}
+
+.inner_box .image_box {
+    width: 175px;
+    /* border: 1px solid pink; */
+    margin: auto;
+}
+
+.safe_main_box .inner_box img {
+    /* border: 1px solid yellow; */
+    width: 100%;
+
+
+}
+
+.all_information {
+    /* border: 1px solid orange; */
+}
+
+/* =================================================================================標題文字 ================================================================================*/
+.inner_box h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #8ECFD2;
+
+}
+
+.all_information .hospitial_box h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+.all_information .departmant_box h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #8ECFD2;
+}
+
+/* =================================================================================聯絡文字 ================================================================================*/
+.hospitial_box ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.hospitial_box ul>li {
+    list-style: none;
+
+}
+
+.hospitial_box ul>li.address_icon::before {
+    content: " ";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../images/safe/address.png");
+    background-size: 40px;
+    background-size: cover;
+
+}
+
+.hospitial_box ul>li.phone_icon::before {
+    content: " ";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../images/safe/phone.png");
+    background-size: 40px;
+    background-size: cover;
+
+}
+
+.departmant_box ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.departmant_box ul>li {
+    list-style: none;
+    /* vertical-align: baseline; */
+
+}
+
+/*================================================================ 機構icon對齊============================================================ */
+
+li.address_icon p {
+    /* border: 1px solid green; */
+    /* margin: 0; */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+li.phone_icon p {
+    /* border: 1px solid blue; */
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+li.address_icon::before {
+    content: " ";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+    vertical-align: middle;
+
+    background-image: url("../images/safe/address.png");
+    background-size: 40px;
+    background-size: cover;
+
+}
+
+li.phone_icon::before {
+    content: " ";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../images/safe/phone.png");
+    background-size: 40px;
+    background-size: cover;
+    vertical-align: middle;
+    /* border: 1px solid purple; */
+}
+
+/* ================================================================放入icon=============================================================== */
+.all_information p {
+    font-size: 20px;
+    color: #8ECFD2;
+    /* 讓icon進去 */
+    display: inline;
+}
+
+/* =========================================================================按鈕================================================================= */
+.download_safe {
+    /* border: 1px solid red; */
+    width: 216px;
+    margin: auto;
+}
+
+.download_safe button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+
+    border: 3px solid #8ECFD2;
+    background-color: #fff;
+    margin-top: 40px;
+    font-size: 24px;
+    color: #8ECFD2;
+
+
+}

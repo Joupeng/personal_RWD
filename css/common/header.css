@@ -1,0 +1,263 @@
+/* ================================================漢堡按鈕============================================== */
+
+/* 怕會有浮動問題 */
+.header__nav {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#btn_hamburger {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #919191;
+
+    position: relative;
+    float: right;
+    cursor: pointer;
+    display: none;
+
+}
+
+@media (max-width: 767.98px) {
+    #btn_hamburger {
+        display: inline-block;
+    }
+}
+
+#btn_hamburger::before {
+    content: "";
+    /* border: 1px solid red; */
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    display: inline-block;
+    /* 定位在框裡 */
+    left: 50%;
+    top: 33%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    /* 先旋轉再移動 ，ease一樣預設就不寫*/
+    transition: transform .2s, top .2s ease .2s width .2s;
+}
+
+/* 出現-on 斜的*/
+#btn_hamburger.-on::before {
+    /* 上面的線往下 */
+    top: 50%;
+    /* 要translate也要rotate */
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 90%;
+    /* 轉場漸進下來(垂直概念33%到50%)花1秒，ease是delay1秒才旋轉，一秒鐘後寬度改變 */
+    transition: top .2s, transform .2s ease .2s, width .2s ease .2s;
+}
+
+#btn_hamburger::after {
+    content: "";
+    /* border: 1px solid red; */
+    height: 1px;
+    background-color: blue;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    bottom: 33%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    /* 先旋轉再移動位置 */
+    transition: transform .2s, bottom .2s ease .2s width .2s;
+}
+
+#btn_hamburger.-on::after {
+    bottom: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: bottom .2s, transform .2s ease .2s, width .2s ease .2s;
+}
+
+
+
+
+.header {
+    /* border: 1px solid red; */
+
+}
+
+.header__block {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 1000px;
+    border: 1000px;
+}
+
+.header__nav {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+/*====================   logo 區域  ====================*/
+
+.header-logo img {
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.header__nav-list {
+    display: flex;
+}
+
+@media (max-width:767.98px) {
+    .header__nav-list {
+        display: none;
+    }
+}
+
+.header__nav_li {
+    /* border: 1px solid orange; */
+    display: block;
+    font-size: 20px;
+
+    /* background-color: #fff; */
+    /* border: 1px solid #8ECFD2; */
+    margin: 0 10px;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    /* padding: 0 10px; */
+}
+
+/* a連結 */
+
+
+.header__nav_li-link {
+    display: inline-block;
+    /* height: 40px;
+    line-height: 40px; */
+    text-decoration: none;
+    color: #8ECFD2;
+    padding: 0 10px;
+    border: 1px solid #8ECFD2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 註冊鍵設定 */
+.header__nav_li-link.-register {
+    color: #FFDB9D;
+    border: 1px solid #FFDB9D;
+}
+
+.header__nav_li-link.-register:hover {
+    border-radius: 8px;
+    background: var(--neutral-colors-white, #FFF);
+    box-shadow: 0px 4px 4px 0px #FFDB9D;
+}
+
+.header__nav_li-link.-register::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../../images/house.svg");
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+
+}
+
+.header__nav_li-link.-active {
+    background-color: #8ECFD2;
+    color: #fff;
+    pointer-events: none;
+    opacity: 1;
+
+}
+
+.header__nav_li-link.-register.-active {
+    background-color: #FFDB9D;
+    color: #fff;
+    pointer-events: none;
+    opacity: 1;
+}
+
+/* 是否能成功 */
+.header__nav_li-link.-register.-active::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../../images/house_white.svg");
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+
+.header__nav_li.-special_function {
+    color: #8ECFD2;
+}
+
+.header__nav_li-link:hover {
+    border-radius: 8px;
+    background: var(--neutral-colors-white, #FFF);
+    box-shadow: 0px 4px 4px 0px #8ECFD2;
+}
+
+.header__sub-ul {
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.header__nav_li:hover .header__sub-ul {
+    opacity: 1;
+}
+
+
+/* -------------------------------------------------小文字排-------------------------------------- */
+
+.header__sub-ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    /* z-index: 1; */
+    white-space: nowrap;
+    transform: translateX(-50%);
+    margin-top: 2px;
+    /* display: none; */
+}
+
+
+.header__sub-ul.-active {
+    opacity: 1;
+}
+
+.header__sub-li-link {
+    color: #8ECFD2;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.header__sub-li {
+    color: #919191;
+    font-size: 20px;
+}
+
+.header__sub-li:not(:last-child)::after {
+    content: "|";
+    font-size: 16px;
+
+}

@@ -1,0 +1,214 @@
+/* body {
+    height: 10000px;
+} */
+
+/* ========================================================麵包屑================================================ */
+.banner_bg.breadcrumb_title {
+    border: 1px solid red;
+}
+
+ul.breadcrumb_title_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    min-width: 1000px;
+}
+
+
+
+.breadcrumb_title_list>li.hover_not {
+
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li a {
+    text-decoration: none;
+    color: #8ECFD2;
+    /* border: 1px solid red; */
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.breadcrumb_title_list>li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+
+
+}
+
+.breadcrumb_title_list>li a:hover {
+    color: #7C7C7C;
+}
+
+.point_vendor_title h1 {
+    color: #8ECFD2;
+    text-align: center;
+    letter-spacing: 45px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* ====================================================標題開始======================================================= */
+.point_vendor_title {
+    min-width: 1000px;
+}
+
+.point_vendor_title img {
+    width: 100px;
+    height: 100px;
+
+}
+
+/* ====================================================究極宮格開始======================================================= */
+
+.linear_box {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.linear_text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #8ECFD2;
+    width: 40px;
+    text-align: center;
+    /* border: 1px solid red; */
+    padding: 5px;
+    background-color: #FFFFFF;
+
+}
+
+.contaniner_photo {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    height: 1400px;
+    padding: 20px;
+    /* min-width: 1400px; */
+    width: 100%;
+}
+
+
+.grid-container {
+    display: grid;
+    /* border: 1px solid black; */
+    row-gap: 30px;
+    column-gap: 30px;
+    grid-template-rows: 200px 200px 200px 150px 150px 300px;
+    /* grid-template-rows: auto; */
+    width: 1400px;
+    /* 六行 */
+    /* grid-template-columns: 15% 15% 40%; */
+
+    grid-template-areas:
+        "first first second third"
+        "first first fourth fourth"
+        "fifth sixth fourth fourth"
+        "fifth sixth senventh senventh"
+        "tenth tenth senventh senventh"
+        "tenth tenth ninth eighth";
+
+
+}
+
+
+
+
+
+.grid-item {
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-item:nth-child(1) {
+    /* 這個 item 命名為 first  */
+    grid-area: first;
+    background-image: url("../images/point/first.png");
+}
+
+.grid-item:nth-child(2) {
+
+    grid-area: second;
+    background-image: url("../images/point/second.png");
+}
+
+.grid-item:nth-child(3) {
+
+    grid-area: third;
+    background-image: url("../images/point/third.png");
+}
+
+.grid-item:nth-child(4) {
+
+    grid-area: fourth;
+    background-image: url("../images/point/fourth.png");
+}
+
+.grid-item:nth-child(5) {
+
+    grid-area: fifth;
+    background-image: url("../images/point/fifth.png");
+}
+
+.grid-item:nth-child(6) {
+
+    grid-area: sixth;
+    background-image: url("../images/point/sixth.png");
+}
+
+.grid-item:nth-child(7) {
+    grid-area: senventh;
+    background-image: url("../images/point/seventh.png");
+
+}
+
+#seventh_item {
+    position: relative;
+}
+
+.word_text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    text-align: center;
+    padding: 5px;
+    background-color: #FFFFFF;
+
+    font-size: 24px;
+    color: #8ECFD2;
+
+
+}
+
+
+.grid-item:nth-child(8) {
+    grid-area: eighth;
+    background-image: url("../images/point/eighth.png");
+}
+
+.grid-item:nth-child(9) {
+
+    grid-area: ninth;
+    background-image: url("../images/point/nineth.png");
+}
+
+.grid-item:nth-child(10) {
+
+    grid-area: tenth;
+    background-image: url("../images/point/tenth.png");
+}
