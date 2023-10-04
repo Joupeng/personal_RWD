@@ -2,16 +2,27 @@ section.banner_bg {
     margin-top: 20px;
     height: 524px;
     /* border: 1px solid red; */
-    background-image: url("../images/index/banner1.jpg");
+    background-image: url("../images/index/banner2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
     height: 521px;
-    /* min-height: 100%;
-    min-width: 100%; */
-    min-width: 1200px;
+    /* min-width: 1200px; */
+    /* max-width: 1200px; */
 }
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    section.banner_bg {
+        width: 1440px;
+    }
+}
+
+
+
+
+
+
 
 div.font_box {
     /* border: 1px solid red; */

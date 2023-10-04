@@ -60,6 +60,7 @@ ul.breadcrumb_title_list {
     width: 100px;
     height: 100px;
 
+
 }
 
 /* ====================================================究極宮格開始======================================================= */
@@ -121,6 +122,11 @@ ul.breadcrumb_title_list {
 
 }
 
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
@@ -136,13 +142,13 @@ ul.breadcrumb_title_list {
 .grid-item:nth-child(1) {
     /* 這個 item 命名為 first  */
     grid-area: first;
-    background-image: url("../images/point/first.png");
+    /* background-image: url("../images/point/first.png"); */
 }
 
 .grid-item:nth-child(2) {
 
     grid-area: second;
-    background-image: url("../images/point/second.png");
+    /* background-image: url("../images/point/second.png"); */
 }
 
 .grid-item:nth-child(3) {

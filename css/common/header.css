@@ -1,29 +1,26 @@
 /* ================================================漢堡按鈕============================================== */
 
-/* 怕會有浮動問題 */
-.header__nav {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 
 #btn_hamburger {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 100px;
+    height: 80px;
     background-color: transparent;
-    border: 1px solid #919191;
-
+    /* background-color: #8ECFD2; */
+    /* border: 1px solid #919191; */
+    border: none;
+    border-radius: 8px;
     position: relative;
-    float: right;
+
     cursor: pointer;
     display: none;
 
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 992px) {
     #btn_hamburger {
-        display: inline-block;
+        display: block;
     }
 }
 
@@ -31,7 +28,7 @@
     content: "";
     /* border: 1px solid red; */
     height: 1px;
-    background-color: red;
+    background-color: #919191;
     position: absolute;
     display: inline-block;
     /* 定位在框裡 */
@@ -58,7 +55,7 @@
     content: "";
     /* border: 1px solid red; */
     height: 1px;
-    background-color: blue;
+    background-color: #919191;
     position: absolute;
     display: inline-block;
     left: 50%;
@@ -81,14 +78,14 @@
 
 .header {
     /* border: 1px solid red; */
-
+    margin-left: 20px;
 }
 
 .header__block {
-    max-width: 1200px;
+
     margin: 0 auto;
-    min-width: 1000px;
-    border: 1000px;
+    max-width: 1200px;
+    width: 100%
 }
 
 .header__nav {
@@ -97,6 +94,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    position: relative;
 }
 
 
@@ -109,37 +107,67 @@
 
 }
 
-.header__nav-list {
+.header__nav {
     display: flex;
 }
 
-@media (max-width:767.98px) {
+.header__nav-list {
+    display: flex;
+    /* border: 1px solid green; */
+}
+
+@media(max-width:992px) {
     .header__nav-list {
-        display: none;
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        transform: translate(0, 0%);
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+        width: 300px;
+
     }
 }
+
+
+
+
+
 
 .header__nav_li {
     /* border: 1px solid orange; */
     display: block;
     font-size: 20px;
-
-    /* background-color: #fff; */
-    /* border: 1px solid #8ECFD2; */
     margin: 0 10px;
     position: relative;
-    height: 40px;
+    /* height: 40px; */
     line-height: 40px;
     /* padding: 0 10px; */
 }
+
+@media(max-width:992px) {
+    #block_first {
+        border: 1px solid #8ECFD2;
+        border-radius: 8px;
+    }
+
+    #block_second {
+        border: 1px solid #8ECFD2;
+        border-radius: 8px;
+    }
+}
+
+
 
 /* a連結 */
 
 
 .header__nav_li-link {
     display: inline-block;
-    /* height: 40px;
-    line-height: 40px; */
+    /* height: 40px; */
+    line-height: 40px;
     text-decoration: none;
     color: #8ECFD2;
     padding: 0 10px;
@@ -147,6 +175,27 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+
+
+@media(max-width:992px) {
+
+
+    .header__nav_li-link {
+        display: block;
+    }
+}
+
+@media(max-width:992px) {
+
+
+    .-special_function {
+        border: none;
+    }
+}
+
+
+
 
 /* 註冊鍵設定 */
 .header__nav_li-link.-register {
@@ -189,7 +238,7 @@
     opacity: 1;
 }
 
-/* 是否能成功 */
+
 .header__nav_li-link.-register.-active::before {
     content: "";
     display: inline-block;
@@ -208,20 +257,30 @@
     color: #8ECFD2;
 }
 
+/* ===============================================hover功能================================================================ */
+
+
+
 .header__nav_li-link:hover {
     border-radius: 8px;
     background: var(--neutral-colors-white, #FFF);
     box-shadow: 0px 4px 4px 0px #8ECFD2;
 }
 
-.header__sub-ul {
-    opacity: 0;
-    transition: opacity .4s;
+@media (min-width:992px) {
+    .header__nav_li:hover .header__sub-ul {
+        opacity: 1;
+    }
+
+    .header__sub-ul {
+        opacity: 0;
+        transition: opacity .4s;
+    }
 }
 
-.header__nav_li:hover .header__sub-ul {
-    opacity: 1;
-}
+
+
+
 
 
 /* -------------------------------------------------小文字排-------------------------------------- */
@@ -229,15 +288,32 @@
 .header__sub-ul {
     padding: 0;
     list-style: none;
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    /* z-index: 1; */
-    white-space: nowrap;
-    transform: translateX(-50%);
-    margin-top: 2px;
-    /* display: none; */
+    position: relative;
+
+}
+
+/* display:block無效 */
+@media (min-width:993px) {
+    .header__sub-ul {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        /* z-index: 1; */
+        white-space: nowrap;
+        transform: translateX(-50%);
+        margin-top: 2px;
+        /* display: none; */
+    }
+}
+
+@media (max-width:992px) {
+    .header__sub-ul {
+        /* list-style: circle; */
+        /* border: 1px solid #8ECFD2; */
+        /* border-radius: 8px; */
+    }
+
 }
 
 
@@ -245,19 +321,44 @@
     opacity: 1;
 }
 
+/* 小文字在992會變不一樣 */
 .header__sub-li-link {
     color: #8ECFD2;
     font-size: 16px;
     text-decoration: none;
 }
 
+@media (max-width:992px) {
+    .header__sub-li-link {
+        color: red;
+        /* border: 1px solid red; */
+        display: block;
+        padding-left: 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        line-height: 25px;
+
+    }
+}
+
+
 .header__sub-li {
     color: #919191;
     font-size: 20px;
 }
 
+
+
 .header__sub-li:not(:last-child)::after {
     content: "|";
     font-size: 16px;
 
+}
+
+@media(max-width:992px) {
+
+    .header__sub-li:not(:last-child)::after {
+        display: none;
+
+    }
 }

@@ -27,16 +27,17 @@
     <div class="about-us"></div>
     <header class="header">
         <div class="header__block">
+
+            <a href="./index.html" class="header__logo"> </a>
+
             <nav class="header__nav">
-                <button type="button" id="btn_hamburger"></button>
-                <a href="./index.html" class="header__logo">
-                    <img src="./images/logo/logo_green_small.png" class="header__logo-img">
-                </a>
-                <ul class="header__nav-list">
+                <img src="./images/logo/logo_green_small.png" class="header__logo-img">
+
+                <ul class="header__nav-list" id="nav_block">
                     <li class="header__nav_li">
                         <a class="header__nav_li-link" href="./about_us.html">關於獨旅</a>
                     </li>
-                    <li class="header__nav_li">
+                    <li class="header__nav_li" id="block_first">
                         <span class="header__nav_li-link  -special_function">旅行視角</span>
                         <ul class="header__sub-ul">
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./plan.html">自助規劃</a></li>
@@ -46,8 +47,8 @@
                     <li class="header__nav_li ">
                         <a class="header__nav_li-link -hover_function" href="./safe.html">安全資料</a>
                     </li>
-                    <li class="header__nav_li ">
-                        <span class="header__nav_li-link">推薦景點</span>
+                    <li class="header__nav_li " id="block_second">
+                        <span class="header__nav_li-link -special_function">推薦景點</span>
                         <ul class="header__sub-ul">
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./spot.html">心境選點</a></li>
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./point.html">在地店家</a></li>
@@ -57,6 +58,8 @@
                     <li class="header__nav_li -register_function"><a href="./register.html"
                             class="header__nav_li-link -register">註冊/登入</a></li>
                 </ul>
+                <button type="button" id="btn_hamburger"></button>
+
             </nav>
         </div>
     </header>
@@ -316,6 +319,8 @@
         btn_hamburger_el.addEventListener("click", function () {
             this.classList.toggle("-on")
         });
+
+
 
 
         // 翻牌功能
