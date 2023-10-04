@@ -19,12 +19,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
         rel="stylesheet">
-    <script>
-        $(function () {
-            $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
-            $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
-        });
-    </script>
+
 </head>
 
 <body>
@@ -60,6 +55,7 @@
                     <li class="header__nav_li -register_function"><a href="./register.html"
                             class="header__nav_li-link -register">註冊/登入</a></li>
                 </ul>
+                <button type="button" id="btn_hamburger"></button>
             </nav>
         </div>
     </header>
@@ -262,6 +258,26 @@
         </div>
 
     </footer>
+    <script>
+        // 漢堡功能
+        let btnHamburger = document.getElementById("btn_hamburger");
+        let navList = document.querySelector('.header__nav-list');
+
+        btnHamburger.addEventListener("click", function () {
+            this.classList.toggle("-on");
+            navList.classList.toggle("-open");
+        });
+
+
+        // tab功能
+        $(function () {
+            $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+            $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+        });
+
+
+
+    </script>
 </body>
 
 </html>

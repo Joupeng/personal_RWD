@@ -166,18 +166,18 @@ ul.breadcrumb_title_list {
 .grid-item:nth-child(5) {
 
     grid-area: fifth;
-    background-image: url("../images/point/fifth.png");
+    /* background-image: url("../images/point/fifth.png"); */
 }
 
 .grid-item:nth-child(6) {
 
     grid-area: sixth;
-    background-image: url("../images/point/sixth.png");
+    /* background-image: url("../images/point/sixth.png"); */
 }
 
 .grid-item:nth-child(7) {
     grid-area: senventh;
-    background-image: url("../images/point/seventh.png");
+    /* background-image: url("../images/point/seventh.png"); */
 
 }
 
@@ -204,17 +204,17 @@ ul.breadcrumb_title_list {
 
 .grid-item:nth-child(8) {
     grid-area: eighth;
-    background-image: url("../images/point/eighth.png");
+    /* background-image: url("../images/point/eighth.png"); */
 }
 
 .grid-item:nth-child(9) {
 
     grid-area: ninth;
-    background-image: url("../images/point/nineth.png");
+    /* background-image: url("../images/point/nineth.png"); */
 }
 
 .grid-item:nth-child(10) {
 
     grid-area: tenth;
-    background-image: url("../images/point/tenth.png");
+    /* background-image: url("../images/point/tenth.png"); */
 }

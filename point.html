@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>推薦景點</title>
-    <style>
-        /* 沒有控制到 */
-        /* img {
-            width: 200px;
-        } */
-    </style>
     <link rel="stylesheet" href="./css/common/all.css">
     <link rel="stylesheet" href="./css/common/header.css">
     <link rel="stylesheet" href="./css/common/footer.css">
@@ -66,6 +60,7 @@
                     <li class="header__nav_li -register_function"><a href="./register.html"
                             class="header__nav_li-link -register">註冊/登入</a></li>
                 </ul>
+                <button type="button" id="btn_hamburger"></button>
             </nav>
         </div>
     </header>
@@ -190,6 +185,15 @@
 
     </footer>
     <script>
+        // 漢堡功能
+        let btnHamburger = document.getElementById("btn_hamburger");
+        let navList = document.querySelector('.header__nav-list');
+
+        btnHamburger.addEventListener("click", function () {
+            this.classList.toggle("-on");
+            navList.classList.toggle("-open");
+        });
+
         // fadeTo功能=====================================
         $(function () {
             $('.grid-item').css('opacity', 0.5).mouseover(function () {

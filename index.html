@@ -315,10 +315,15 @@
     </footer>
     <script>
         // 漢堡功能
-        let btn_hamburger_el = document.getElementById("btn_hamburger");
-        btn_hamburger_el.addEventListener("click", function () {
-            this.classList.toggle("-on")
+        let btnHamburger = document.getElementById("btn_hamburger");
+        let navList = document.querySelector('.header__nav-list');
+
+        btnHamburger.addEventListener("click", function () {
+            this.classList.toggle("-on");
+            navList.classList.toggle("-open");
         });
+
+
 
 
 

@@ -104,12 +104,12 @@ ul.index_type li.photo_box {
     color: #8ECFD2;
 }
 
-ul.index_type li.photo_box::before {
+a#ui-id-1.ui-tabs-anchor::before {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url("/images/register_member/photo.png");
+    background-image: url("../images/register_member/photo.png");
     background-size: cover;
     /* border: 1px solid red; */
     vertical-align: bottom;
@@ -120,12 +120,12 @@ ul.index_type li.trip_love_box {
     color: #8ECFD2;
 }
 
-ul.index_type li.trip_love_box::before {
+a#ui-id-2.ui-tabs-anchor::before {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url("/images/register_member/lock.png");
+    background-image: url("../images/register_member/lock.png");
     background-size: cover;
     /* border: 1px solid red; */
     vertical-align: bottom;
@@ -178,6 +178,7 @@ a#ui-id-3.ui-tabs-anchor::before {
     /* border: 1px solid red; */
     vertical-align: bottom;
     color: #8ECFD2;
+    margin-left: 35px;
 }
 
 .other_box {

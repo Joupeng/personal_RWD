@@ -7,14 +7,24 @@ section.banner_bg {
     background-size: cover;
     background-position: center center;
     position: relative;
-    height: 521px;
+
     /* min-width: 1200px; */
     /* max-width: 1200px; */
+    width: 100%;
 }
 
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media (max-width: 992px) {
     section.banner_bg {
-        width: 1440px;
+        margin-top: 20px;
+        height: 524px;
+        /* border: 1px solid red; */
+        background-image: url("../images/index/banner_t.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        height: 521px;
+        /* width: 100%; */
     }
 }
 
@@ -34,8 +44,24 @@ div.font_box {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+
+@media (max-width: 992px) {
+    div.font_box {
+        /* border: 1px solid red; */
+        background-color: #8ECFD2;
+        color: #FFF;
+        height: 100%;
+        /* 在他的父元素進行撐開 ，不用設定高*/
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 
 .banner_bg div.font_box h1 {
     font: "Noto Sans SC";
@@ -45,6 +71,19 @@ div.font_box {
     /* height: 82px; */
     letter-spacing: 12.8px;
     /* 32*40%=12.8 */
+
+}
+
+@media (max-width: 992px) {
+    .banner_bg div.font_box h1 {
+        font: "Noto Sans SC";
+        /* border: 1px solid green; */
+        font-size: 32px;
+        width: 261px;
+        /* height: 82px; */
+        letter-spacing: 12.8px;
+        /* 32*40%=12.8 */
+    }
 
 }
 
@@ -73,7 +112,7 @@ div.font_box {
     grid-template-rows: auto;
     /* border: 1px solid red; */
     margin-top: 100px;
-    min-width: 1000px;
+    /* min-width: 1000px; */
 
 }
 
@@ -109,7 +148,7 @@ div.font_box {
     grid-template-rows: auto;
 
     margin-top: 100px;
-    min-width: 1000px;
+    /* min-width: 1000px; */
 
 }
 
@@ -142,7 +181,7 @@ div.font_box {
     list-style: none;
     margin-top: 50px;
     padding: 0;
-    min-width: 1000px;
+    /* min-width: 1000px; */
 
 }
 
@@ -182,7 +221,7 @@ div.font_box {
 
 .how_can_get {
     /* border: 1px solid red; */
-    min-width: 1000px;
+    /* min-width: 1000px;s */
 
 }
 
@@ -220,7 +259,7 @@ div.font_box {
 
 /*================================================================= 留言板================================================================================ */
 .note_left {
-    min-width: 1000px;
+    /* min-width: 1000px; */
 }
 
 .note_picture_container {
@@ -248,7 +287,7 @@ div.font_box {
     width: 30px;
     height: 30px;
 
-    background-image: url("/images/index/pen.png");
+    background-image: url("../images/index/pen.png");
     background-size: 30px;
     margin-right: 10px;
 }

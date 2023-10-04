@@ -58,6 +58,7 @@
                     <li class="header__nav_li -register_function"><a href="./register.html"
                             class="header__nav_li-link -register">註冊/登入</a></li>
                 </ul>
+                <button type="button" id="btn_hamburger"></button>
             </nav>
         </div>
     </header>
@@ -229,6 +230,15 @@
     </footer>
 
     <script>
+        // 漢堡功能
+        let btnHamburger = document.getElementById("btn_hamburger");
+        let navList = document.querySelector('.header__nav-list');
+
+        btnHamburger.addEventListener("click", function () {
+            this.classList.toggle("-on");
+            navList.classList.toggle("-open");
+        });
+        // 翻牌功能
         $("#card").flip();
         $("#card1").flip();
         $("#card2").flip();

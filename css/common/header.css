@@ -1,6 +1,16 @@
 /* ================================================漢堡按鈕============================================== */
 
+.header {
+    /* border: 1px solid red; */
+    margin-left: 20px;
+}
 
+.header__block {
+
+    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* width: 100% */
+}
 
 #btn_hamburger {
     display: inline-block;
@@ -76,17 +86,7 @@
 
 
 
-.header {
-    /* border: 1px solid red; */
-    margin-left: 20px;
-}
 
-.header__block {
-
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%
-}
 
 .header__nav {
     /* border: 1px solid red; */
@@ -113,11 +113,17 @@
 
 .header__nav-list {
     display: flex;
-    /* border: 1px solid green; */
+
 }
 
-@media(max-width:992px) {
+
+/* 在992px及以下屏幕宽度时，顯示菜单 */
+@media (max-width: 992px) {
     .header__nav-list {
+        display: none;
+    }
+
+    .header__nav-list.-open {
         display: block;
         position: absolute;
         top: 100%;
@@ -127,12 +133,12 @@
         padding: 0;
         margin: 0;
         width: 300px;
+        border-radius: 8px;
+
+        background-color: hsla(43, 97%, 75%, 0.8);
 
     }
 }
-
-
-
 
 
 
@@ -183,6 +189,10 @@
 
     .header__nav_li-link {
         display: block;
+        color: #8ECFD2;
+        /* background-color: hsla(43, 83%, 84%, 0.7); */
+
+        border: 0;
     }
 }
 
@@ -203,6 +213,15 @@
     border: 1px solid #FFDB9D;
 }
 
+@media(max-width:992px) {
+    .header__nav_li-link.-register {
+        color: #8ECFD2;
+    }
+}
+
+
+
+
 .header__nav_li-link.-register:hover {
     border-radius: 8px;
     background: var(--neutral-colors-white, #FFF);
@@ -221,6 +240,13 @@
     background-repeat: no-repeat;
     margin-right: 5px;
 
+}
+
+@media(max-width:992px) {
+    .header__nav_li-link.-register::before {
+        background-image: url("../../images/house_green.png");
+        /* border: none; */
+    }
 }
 
 .header__nav_li-link.-active {
@@ -330,7 +356,7 @@
 
 @media (max-width:992px) {
     .header__sub-li-link {
-        color: red;
+        color: #919191;
         /* border: 1px solid red; */
         display: block;
         padding-left: 20px;

@@ -53,6 +53,7 @@
                         <li class="header__nav_li -register_function -active"><a href="./register.html"
                                 class="header__nav_li-link -register -active">註冊/登入</a></li>
                     </ul>
+                    <button type="button" id="btn_hamburger"></button>
                 </nav>
             </div>
         </header>
@@ -152,6 +153,17 @@
             </div>
 
         </footer>
+        <script>
+            // 漢堡功能
+            let btnHamburger = document.getElementById("btn_hamburger");
+            let navList = document.querySelector('.header__nav-list');
+
+            btnHamburger.addEventListener("click", function () {
+                this.classList.toggle("-on");
+                navList.classList.toggle("-open");
+            });
+
+        </script>
 </body>
 
 
