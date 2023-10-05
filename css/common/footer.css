@@ -1,111 +1,147 @@
 footer {
     clear: both;
+
+}
+
+.box_footer_list .logo_img {
+    display: block;
+    margin: 0 auto;
+
 }
 
 .box_footer_main {
+    width: 100%;
+    max-width: 1400px;
     background-color: #8ECFD2;
-    height: 500px;
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-top: 80px;
+    padding: 20px;
+
+    /* border: 1px solid black; */
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center; */
+
 
 }
+
+
 
 .box_footer_main ul.main_list {
     list-style: none;
-    display: flex;
-    /* border: 3px solid yellow; */
+    /* background-color: #8ECFD2; */
+    margin: 0 auto;
+    padding: 0;
+
+    /* display: flex;
+    border: 3px solid yellow;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 0;
-    min-width: 1000px;
+   */
+
 }
 
 .box_footer_main ul>li {
-    width: 300px;
+    /* width: 300px; */
 }
 
-
-
+/* 包含Logo到社群位置一整個 */
 .box_footer_list {
     /* border: 1px solid green; */
+    margin: 0 auto;
 }
 
+/* 最新消息等文字 */
 .box_footer_list p {
+    text-align: center;
     font-size: 24px;
     margin: 0;
-    margin-top: 5px;
-    padding: 0;
-    /* font-weight: bolder; */
     letter-spacing: 3.5px;
     color: #fff;
 
 
+
+    /*margin-top: 5px;
+    padding: 0;
+    font-weight: bolder;
+    
+  */
+
+
 }
 
 
-
+/* 社群的icon ===========================================================================================================*/
 .list_media {
-    /* border: 1px solid red; */
+    text-align: center;
+    margin-top: 10px;
+
+
+    /* border: 1px solid red;
     height: 60px;
     width: 200px;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 0 auto;*/
+
 }
 
 .list_media img {
-    height: 100%;
+    display: inline-block;
+    width: 55px;
+    padding: 6px;
 }
 
-.class_for {
-    font-size: 16px;
-}
 
-.box_footer_main ul>li:nth-child(3) {
-    flex-grow: 1;
-}
 
-.footer_list {
-    /* border: 1px solid red; */
-    /* height: 250px; */
-}
+
 
 .box_footer_contact {
+    margin: 10px auto;
     /* border: 1px solid blue; */
-    color: #fff;
+    /* color: #fff; */
 }
 
 .box_footer_contact h3 {
-    font-size: 24px;
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
+    color: #fff;
 }
 
-/* =======================================================================右側bar連到各頁 =====================================================================*/
+.box_footer_contact p {
+    text-align: center;
+    color: #fff;
+}
+
+
+/* 分成三欄右側分剩下========================================================================================================= */
+
+/* .box_footer_main ul>li:nth-child(3) {
+    flex-grow: 1;
+} */
 .box_footer_content {
     /* border: 4px solid purple; */
 
 }
 
 .box_footer_content ul {
-    display: flex;
     list-style: none;
+    /* display: flex; */
+
 
 }
 
-.box_footer_content ul>li {
+/* .box_footer_content ul>li {
     font-size: 20px;
     font-weight: 600;
 
-}
+} */
 
 .box_footer_content ul>li a {
     text-decoration: none;
-    display: block;
+    /* display: block; */
     color: #fff;
-    font-size: 24px;
+    font-size: 30px;
+
 
 }
 
@@ -113,20 +149,31 @@ footer {
     color: #7C7C7C;
 }
 
+ul.content_link {
+    padding: 0;
+    margin-top: 20px;
+}
 
-
+/* 選單的文字 */
 .box_footer_content ul>li p {
+    text-align: center;
+    margin: 10px auto;
+
+
+
+
     /* border: 1px solid red; */
-    padding: 8px;
-    margin: 0;
-    width: 150px;
+    /* padding: 8px; */
+    /* margin: 0; */
+    /* width: 150px; */
+
 
 }
 
 
+/* 聲明文字 */
 .class_for {
     text-align: center;
-    min-width: 1000px;
-    font-size: 18px;
-
+    font-size: 16px;
+    color: #fff;
 }

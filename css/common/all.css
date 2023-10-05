@@ -7,5 +7,12 @@
 
 body {
     margin: 0;
+    padding: 0;
+
 
 }
+
+/* RWD的所有圖片都不超出父元素 */
+/* img {
+    max-width: 100%;
+} */
