@@ -11,8 +11,7 @@ ul.breadcrumb_title_list {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
-    min-width: 1000px;
+    /* margin-right: 40px; */
 }
 
 
@@ -53,27 +52,57 @@ ul.breadcrumb_title_list {
 
 .left_register {
     /* border: 4px black; */
-    width: 400px;
+    /* width: 400px; */
+    width: 100%;
     border-radius: 8px;
+    background-color: #EAEAEA;
+}
+
+@media (min-width:576px) {
+    .left_register {
+        /* border: 4px black; */
+        width: 400px;
+        border-radius: 8px;
+    }
 }
 
 .register_big_box {
     margin-top: 80px;
     /* border: 1px solid orange; */
-    display: flex;
-    justify-content: center;
-    min-width: 1000px
+    padding: 0 20px;
+}
+
+@media (min-width:576px) {
+    .register_big_box {
+        /* margin-top: 80px; */
+        /* border: 1px solid orange; */
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+    }
 }
 
 .register_form {
-
+    width: 100%;
     /* border: 1px solid red; */
-
-    /* width: 700px; */
-    background-color: #EAEAEA;
-    display: flex;
-    column-gap: 20px;
+    /* background-color: #EAEAEA; */
+    /* display: flex;
+    column-gap: 20px;*/
     border-radius: 8px;
+    /* margin: 0 20px; */
+    padding: 0 20px;
+
+}
+
+@media (min-width:576px) {
+    .register_form {
+        /* border: 1px solid red; */
+        background-color: #EAEAEA;
+        display: flex;
+        column-gap: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+    }
 }
 
 .register_function {
@@ -154,14 +183,37 @@ hr {
     color: #8ECFD2;
     font-size: 36px;
     font-weight: bold;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
+}
+
+@media (min-width:576px) {
+    .text_still_member {
+        text-align: center;
+        color: #8ECFD2;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 10px;
+    }
 }
 
 .right_big_box {
     /* border: 1px solid blue; */
-    width: 370px;
-    margin: auto;
+    /* width: 370px; */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 30px;
+}
 
+@media (min-width:576px) {
+    .right_big_box {
+        /* border: 1px solid blue; */
+        width: 370px;
+        background-color: #EAEAEA;
+    }
 }
 
 
@@ -169,6 +221,8 @@ hr {
     width: 100%;
     margin: auto;
     /* border: 1px solid yellow; */
+    margin-top: 30px;
+
 
 }
 

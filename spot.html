@@ -66,15 +66,18 @@
         <div class="search_bar">
             <p class="search_text">推薦景點</p>
             <div class="search_text_list">
-                <input type="text" id="inputbox" placeholder="請輸入國家">
-                <ul class="search_text_list_country">
-                    <li><button type="button">#日本</button></li>
-                    <li><button type="button">#法國</button></li>
-                    <li><button type="button">#韓國</button></li>
-                    <li><button type="button">#美國</button></li>
-                    <li><button type="button">#義大利</button></li>
-                    <li><button type="button">#新加坡</button></li>
-                </ul>
+                <div class="search_function">
+                    <input type="text" id="inputbox" placeholder="請輸入國家">
+                    <button type="button" id="button_search"></button>
+                </div>
+                <div class="search_text_list_country">
+                    <span class="suggestion" onclick="addSuggestion('日本')">#日本</span>
+                    <span class="suggestion" onclick="addSuggestion('法國')">#法國</span>
+                    <span class="suggestion" onclick="addSuggestion('韓國')">#韓國</span>
+                    <span class="suggestion" onclick="addSuggestion('美國')">#美國</span>
+                    <span class="suggestion" onclick="addSuggestion('義大利')">#義大利</span>
+                    <span class="suggestion" onclick="addSuggestion('新加坡')">#新加坡</span>
+                </div>
             </div>
             <!-- <img src="./images/banner 1.png"> -->
         </div>
@@ -238,6 +241,13 @@
             this.classList.toggle("-on");
             navList.classList.toggle("-open");
         });
+
+        //search bar功能
+        function addSuggestion(suggestion) {
+            let inputbox = document.getElementById('inputbox').value = suggestion;
+        }
+
+
         // 翻牌功能
         $("#card").flip();
         $("#card1").flip();

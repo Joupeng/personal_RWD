@@ -11,7 +11,7 @@ ul.breadcrumb_title_list {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
+    /* margin-right: 40px; */
     min-width: 1000px;
 }
 
