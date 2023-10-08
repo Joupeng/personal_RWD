@@ -10,7 +10,7 @@ ul.breadcrumb_title_list {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
-    min-width: 1000px;
+    /* min-width: 1000px; */
 }
 
 
@@ -64,7 +64,7 @@ ul.breadcrumb_title_list {
 
 }
 
-.about_us_box h3 {
+.team_list_box h3 {
     color: #8ECFD2;
     text-align: center;
     font-size: 36px;
