@@ -32,6 +32,7 @@ footer {
     margin: 0 auto;
     padding: 0;
 
+    /* 是否用在992 */
     /* display: flex;
     border: 3px solid yellow;
     align-items: center;
@@ -39,6 +40,23 @@ footer {
     justify-content: center;
    */
 
+}
+
+@media (min-width:768px) {
+    .box_footer_main ul.main_list {
+        list-style: none;
+        /* background-color: #8ECFD2; */
+        margin: 0 auto;
+        padding: 0;
+
+        display: flex;
+        border: 3px solid yellow;
+        align-items: center;
+        /* text-align: center; */
+        justify-content: space-around;
+
+
+    }
 }
 
 .box_footer_main ul>li {

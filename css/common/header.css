@@ -1,17 +1,18 @@
-/* ================================================漢堡按鈕============================================== */
-
 .header {
     /* border: 1px solid red; */
     margin-left: 20px;
+    /* width: 100%; */
 }
 
 .header__block {
 
     margin: 0 auto;
     /* max-width: 1200px; */
-    /* width: 100% */
+    width: 100%;
+
 }
 
+/* ================================================漢堡按鈕============================================== */
 #btn_hamburger {
     display: inline-block;
     width: 100px;
@@ -88,14 +89,7 @@
 
 
 
-.header__nav {
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    position: relative;
-}
+
 
 
 /*====================   logo 區域  ====================*/
@@ -107,8 +101,15 @@
 
 }
 
+/* ==========================================================nav區域============================================================== */
 .header__nav {
+    /* border: 1px solid red; */
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    /* width: 100%; */
 }
 
 .header__nav-list {
