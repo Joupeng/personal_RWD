@@ -7,7 +7,6 @@ ul.breadcrumb_title_list {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
-    min-width: 1000px;
 }
 
 
@@ -51,10 +50,20 @@ ul.breadcrumb_title_list {
 
 
 .all_information {
-    display: grid;
+    text-align: center;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
-    gap: 30px;
+    gap: 30px; */
+}
+
+@media(min-width:768px) {
+    .all_information {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
 }
 
 .safe_main_box {
@@ -66,7 +75,8 @@ ul.breadcrumb_title_list {
 .safe_main_box .inner_box {
     /* border: 1px solid blue; */
     background-color: #EAEAEA;
-    width: 700px;
+    width: 100%;
+    /* width: 700px; */
     margin: auto;
     padding: 20px;
 
@@ -75,12 +85,17 @@ ul.breadcrumb_title_list {
 /* ============================================================最小寬設定 =======================================================*/
 
 .all_tabs_box {
-    min-width: 1000px;
+    width: 100%;
+    border: 1px solid red;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 #tabs ul.tabs_set {
     display: flex;
-    width: 700px;
+    /* width: 700px; */
+    width: 100%;
     margin: 0 auto;
     list-style: none;
     justify-content: flex-start;
@@ -132,6 +147,22 @@ a.ui-button:active,
     margin: auto;
 }
 
+@media(min-width:576px) {
+    .inner_box .image_box {
+        width: 250px;
+        /* border: 1px solid pink; */
+        margin: auto;
+    }
+}
+
+@media(min-width:768px) {
+    .inner_box .image_box {
+        width: 325px;
+        /* border: 1px solid pink; */
+        margin: auto;
+    }
+}
+
 .safe_main_box .inner_box img {
     /* border: 1px solid yellow; */
     width: 100%;
@@ -166,10 +197,14 @@ a.ui-button:active,
 }
 
 /* =================================================================================聯絡文字 ================================================================================*/
+.hospitial_box {
+    margin-bottom: 30px;
+}
+
 .hospitial_box ul {
     padding: 0;
     margin: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .hospitial_box ul>li {
@@ -204,7 +239,7 @@ a.ui-button:active,
 .departmant_box ul {
     padding: 0;
     margin: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .departmant_box ul>li {
