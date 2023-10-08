@@ -43,25 +43,55 @@ ul.breadcrumb_title_list {
 
 /* =================================================================關於獨旅======================================================================= */
 .about_us_box {
-    min-width: 1000px;
+    width: 100%;
 }
 
+
 .about_us_box h1 {
+    text-align: center;
     color: #8ECFD2;
     text-align: center;
-    letter-spacing: 45px;
+    letter-spacing: 20px;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 45px;
 
+}
+
+@media(min-width:576px) {
+    .about_us_box h1 {
+        color: #8ECFD2;
+        text-align: center;
+        letter-spacing: 45px;
+        font-weight: bold;
+        font-size: 50px;
+    }
 }
 
 .about_text {
-
     /* border: 1px solid blue; */
-    /* width: 100%; */
-    width: 900px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    color: #8ECFD2;
+    padding: 0 20px;
 
+}
+
+@media(min-width:576px) {
+
+    .about_text {
+        /* border: 1px solid blue; */
+        max-width: 800px;
+
+    }
+}
+
+@media(min-width:768px) {
+
+    .about_text {
+        /* border: 1px solid blue; */
+        max-width: 1000px;
+
+    }
 }
 
 .team_list_box h3 {
@@ -81,21 +111,61 @@ ul.breadcrumb_title_list {
 }
 
 .team_list_box {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-.team_outside_box {
-    /* border: 1px solid red; */
-    display: grid;
-    max-width: 800px;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: auto;
-    gap: 30px;
+@media(min-width:576px) {
+    .team_list_box {
+        margin-top: 100px;
+    }
+}
 
+
+
+/* 我的團隊 */
+.team_outside_box {
+    width: 100%;
+}
+
+@media(min-width:576px) {
+    .team_outside_box {
+        border: 1px solid red;
+        display: grid;
+        max-width: 800px;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        gap: 30px;
+    }
+}
+
+@media(min-width:768px) {
+    .team_outside_box {
+        border: 1px solid red;
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        gap: 30px;
+    }
 }
 
 
 .team_outside_box img {
     width: 100%;
     height: auto;
+
+}
+
+.team_person {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team_person h3 {
+    margin: 18px auto;
+}
+
+.team_person p {
+    color: #8ECFD2;
+    font-size: 20px;
 }
