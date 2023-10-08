@@ -13,9 +13,6 @@ section.banner_bg {
     background-size: cover;
     background-position: center center;
     position: relative;
-
-    /* min-width: 1200px; */
-    max-width: 1400px;
     width: 100%;
 }
 
@@ -23,7 +20,7 @@ section.banner_bg {
     section.banner_bg {
         margin-top: 20px;
         height: 524px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         background-image: url("../images/index/banner_t.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -40,19 +37,14 @@ div.font_box {
     /* display: none; */
     /* border: 1px solid red; */
     background-color: transparent;
-    /* color: #FFF; */
-
-    /* width: 100px; */
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    padding-top: 10px;
 }
 
 
 @media (min-width: 768px) {
 
     div.font_box {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         background-color: #8ECFD2;
         color: #FFF;
         height: 100%;
@@ -289,25 +281,41 @@ div.font_box {
 
 /* ==============================================================如何使用=================================================================== */
 .how_to_use_container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 0 20px;
 }
 
 .how_to_use_container ul {
-    width: 100%;
-    /* display: flex; */
-    /* justify-content: space-evenly; */
+    /* width: 100%; */
     list-style: none;
     margin: 0 auto;
     /* margin-top: 50px;*/
-    padding: 0;
+    padding: 0 20px;
 
 }
 
 @media(min-width:576px) {
     .how_to_use_container ul {
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-top: 50px;
+        padding: 0;
+
+    }
+}
+
+@media(min-width:768px) {
+    .how_to_use_container ul {
+        /* width: 100%; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        flex-wrap: wrap;
         list-style: none;
         margin-top: 50px;
         padding: 0;
@@ -316,21 +324,21 @@ div.font_box {
 }
 
 .how_to_use_container ul>li {
-    width: 100%;
     text-align: center;
     font-size: 16px;
     color: #8ECFD2;
     margin: 0 auto;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+
 
 }
 
 @media(min-width:576px) {
     .how_to_use_container ul>li {
-        width: 255px;
         text-align: center;
         font-size: 24px;
         color: #8ECFD2;
+        padding: 0 10px;
     }
 }
 
@@ -362,13 +370,13 @@ div.font_box {
 }
 
 .how_to_use_container li p {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     font-size: 18px;
 }
 
 /* --------------------------------------------------------------會有什麼樣精采內容?-------------------------------------------------------------------*/
 .how_can_get {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
 
 }
@@ -411,14 +419,14 @@ div.font_box {
 }
 
 .card_introduce {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     padding: 0 20px
 }
 
 
 .card_introduce ul {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     /* border: 1px solid blue; */
     list-style: none;
     width: 100%;
@@ -428,7 +436,7 @@ div.font_box {
 
 @media(min-width:576px) {
     .card_introduce ul {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: flex;
         justify-content: space-evenly;
         list-style: none;
@@ -452,7 +460,7 @@ div.font_box {
 }
 
 .card_introduce ul .card_big {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .card_introduce ul .card_normal {
@@ -461,7 +469,7 @@ div.font_box {
 
 @media(min-width:576px) {
     .card_introduce ul .card_normal {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: block;
         margin-left: 100px;
     }
@@ -469,7 +477,7 @@ div.font_box {
 
 
 .card_introduce ul .card_turn {
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 /*================================================================= 留言板================================================================================ */
@@ -486,7 +494,7 @@ div.font_box {
     margin: 0 auto;
     /* padding-top: 20px; */
     /* gap: 30px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
