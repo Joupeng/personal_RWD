@@ -61,6 +61,14 @@ ul.breadcrumb_title_list {
 @media (min-width:576px) {
     .left_register {
         /* border: 4px black; */
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width:768px) {
+    .left_register {
+        /* border: 4px black; */
         width: 400px;
         border-radius: 8px;
     }
@@ -85,7 +93,6 @@ ul.breadcrumb_title_list {
 .register_form {
     width: 100%;
     /* border: 1px solid red; */
-    /* background-color: #EAEAEA; */
     /* display: flex;
     column-gap: 20px;*/
     border-radius: 8px;
@@ -94,7 +101,7 @@ ul.breadcrumb_title_list {
 
 }
 
-@media (min-width:576px) {
+@media (min-width:768px) {
     .register_form {
         /* border: 1px solid red; */
         background-color: #EAEAEA;
@@ -107,7 +114,15 @@ ul.breadcrumb_title_list {
 
 .register_function {
     /* border: 1px solid blue; */
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+    padding-bottom: 10px;
+}
+
+@media (min-width:576px) {
+    .register_function {
+        margin-bottom: 42px;
+        padding-bottom: 20px;
+    }
 }
 
 .logo_inside_box {
@@ -119,15 +134,28 @@ ul.breadcrumb_title_list {
     margin: 0 auto;
     /* border: 3px solid purple; */
     padding: 20px;
+    /* width: 50%; */
 }
 
-
+@media (min-width:576px) {
+    #title_logo {
+        margin: 0 auto;
+        padding: 30px;
+    }
+}
 
 .register_text {
     text-align: center;
     color: #8ECFD2;
     font-size: 36px;
     font-weight: bold;
+}
+
+@media (min-width:576px) {
+    .register_text {
+        font-size: 40px;
+        font-weight: bold;
+    }
 }
 
 /* 使用不同方式登入 */
@@ -138,16 +166,37 @@ ul.breadcrumb_title_list {
     margin-top: 20px;
 }
 
+@media (min-width:576px) {
+    .other_function_text {
+        font-size: 36px;
+        margin-top: 30px;
+    }
+}
+
 hr {
     width: 250px;
     color: #8ECFD2;
     height: 3px;
 }
 
+@media (min-width:576px) {
+    hr {
+        width: 320px;
+        height: 5px;
+    }
+}
+
 .input_list_button {
     width: 200px;
     margin: auto;
     margin-top: 10px
+}
+
+@media (min-width:576px) {
+    .input_list_button {
+        width: 320px;
+        margin-top: 20px
+    }
 }
 
 .input_list_button input {
@@ -158,12 +207,18 @@ hr {
     border: 1px solid #CDCDCD;
 }
 
+@media (min-width:576px) {
+    .input_list_button input {
+        width: 320px;
+        /* padding: 6px; */
+        /* margin: 10px 0; */
+        border: 1px solid #CDCDCD;
+    }
+}
 
 .input_list_button button {
     width: 200px;
     padding: 2px;
-
-
     border: 3px solid #8ECFD2;
     background-color: #fff;
     margin-top: 10px;
@@ -172,26 +227,51 @@ hr {
 
 }
 
+@media (min-width:576px) {
+    .input_list_button button {
+        width: 320px;
+        /* padding: 2px; */
+        border: 3px solid #8ECFD2;
+        background-color: #fff;
+        /* margin-top: 10px; */
+        font-size: 24px;
+    }
+}
 
 .function_icon {
     display: flex;
     justify-content: center;
+    height: 80px;
 }
+
+@media (min-width:576px) {
+    .function_icon {
+        height: 120px;
+        margin-top: 15px;
+    }
+}
+
+/* ==============================================================================註冊會員================================================================================ */
 
 .text_still_member {
     text-align: center;
     color: #8ECFD2;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 8px;
 }
 
 @media (min-width:576px) {
     .text_still_member {
-        text-align: center;
-        color: #8ECFD2;
         font-size: 36px;
-        font-weight: bold;
+        letter-spacing: 12px;
+    }
+
+}
+
+@media (min-width:768px) {
+    .text_still_member {
+        font-size: 36px;
         letter-spacing: 10px;
     }
 }
@@ -201,9 +281,6 @@ hr {
     /* width: 370px; */
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #fff;
     margin-top: 30px;
 }
@@ -211,8 +288,16 @@ hr {
 @media (min-width:576px) {
     .right_big_box {
         /* border: 1px solid blue; */
+        background-color: #fff;
+    }
+}
+
+@media (min-width:768px) {
+    .right_big_box {
+        /* border: 1px solid blue; */
         width: 370px;
         background-color: #EAEAEA;
+        margin: auto;
     }
 }
 
@@ -229,4 +314,25 @@ hr {
 .immediately_register {
     text-align: center;
     margin-top: 20px;
+}
+
+.immediately_register button {
+    width: 100px;
+    padding: 2px;
+    border: 3px solid #8ECFD2;
+    background-color: #fff;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #8ECFD2;
+    border-radius: 8px;
+}
+
+@media (min-width:576px) {
+    .immediately_register button {
+        width: 180px;
+        /* padding: 2px; */
+        margin-top: 20px;
+        font-size: 24px;
+        border-radius: 8px;
+    }
 }
