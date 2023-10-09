@@ -5,8 +5,18 @@
 ul.breadcrumb_title_list {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    /* margin-right: 40px; */
+    justify-content: center;
+    padding: 0;
+}
+
+@media (min-width:768px) {
+    ul.breadcrumb_title_list {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+
 }
 
 
@@ -90,7 +100,7 @@ ul.breadcrumb_title_list {
 
 .all_tabs_box {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0 20px;
     margin: 0 auto;
     max-width: 800px;

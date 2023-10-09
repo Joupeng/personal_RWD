@@ -11,8 +11,18 @@ body {
 ul.breadcrumb_title_list {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    /* margin-right: 40px; */
+    justify-content: center;
+    padding: 0;
+}
+
+@media (min-width:768px) {
+    ul.breadcrumb_title_list {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+
 }
 
 .breadcrumb_title_list li.hover_not {
@@ -141,7 +151,6 @@ legend {
     color: #8ECFD2;
     text-align: center;
     font-size: 36px;
-    /* font-family:  */
 }
 
 @media (min-width:576px) {
@@ -159,19 +168,19 @@ legend {
     width: 100%;
 }
 
-@media (min-width:1200px) {
-    #myForm_create {
-        max-width: 1400px;
-    }
-
-}
-
 @media (min-width:576px) {
     #myForm_create {
         border: 5px double #8ECFD2;
         padding: 20px;
         margin-top: 40px;
     }
+}
+
+@media (min-width:1200px) {
+    #myForm_create {
+        max-width: 1400px;
+    }
+
 }
 
 .trip_news,

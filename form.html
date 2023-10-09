@@ -71,10 +71,11 @@
         <div class="step_text">
             <p>此功能希望有實地走訪的旅人，可以提供當地旅行的資訊，可以讓有計畫前往的旅人，也可以更了解當地，再決定是否前往。</p>
             <p>需要先</strong><a href="./register.html">登入</a>，才能使用。</p>
+
+            <h3>步驟說明</h3>
+            <p>需先選擇天數，然後就會根據天數產生表單，供您填寫行程
+                感謝您的提供</p>
         </div>
-        <h3>步驟說明</h3>
-        <p>需先選擇天數，然後就會根據天數產生表單，供您填寫行程
-            感謝您的提供</p>
     </div>
     <!-- ============================================表單天數============================================ -->
     <div class="day_seletor">
@@ -88,7 +89,7 @@
 
     </div>
     <!-- ============================================表單============================================ -->
-    <div>
+    <div class="outside_box">
         <form id="myForm_create">
             <!-- <fieldset> -->
             <legend>行程表</legend>
@@ -97,21 +98,17 @@
                 <input type="text" placeholder="請輸入行程名稱">
                 <input type=" text" placeholder="請輸入前往國家">
                 <input type="date" placeholder="請選擇起始日期">
-                <input type="date" placeholder="請選擇返程日期">
             </div>
             <div class="day1_create_breakfast">
-                <input type="text" placeholder="請輸入早餐品項">
                 <input type="text" placeholder="請輸入早餐地點">
                 <input type="text" placeholder="請輸入交通工具">
                 <input type="time" placeholder="請選擇抵達時間">
             </div>
             <div class="day1_create_lunch">
-                <input type=" text" placeholder="請輸入午餐品項">
                 <input type="text" placeholder="請輸入午餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
             <div class="day1_create_dinner">
-                <input type="text" placeholder="請輸入晚餐品項">
                 <input type="text" placeholder="請輸入晚餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
@@ -123,30 +120,27 @@
             </div>
             <h3 class="myForm_create_day2">第二天</h3>
             <div class="day2_create_breakfast">
-                <input type="text" placeholder="請輸入早餐品項">
                 <input type="text" placeholder="請輸入早餐地點">
                 <input type="text" placeholder="請輸入交通工具">
                 <input type="time" placeholder="請選擇抵達時間">
             </div>
             <div class="day2_create_lunch">
-                <input type="text" placeholder="請輸入午餐品項">
                 <input type="text" placeholder="請輸入午餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
             <div class="day2_create_dinner">
-                <input type="text" placeholder="請輸入晚餐品項">
                 <input type="text" placeholder="請輸入晚餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
             <div class="day2_create_list">
                 <textarea placeholder="請輸入行程清單"></textarea>
             </div>
-            <div>
+            <div class="share_photo">
                 <p>上傳照片景點(最多可以上傳10張)</p>
             </div>
             <div class="document_onload">
                 <form action="#" method="post" enctype="multipart/form-data"></form>
-                <input type="file" name="the_file1">
+                <input type="file" name="the_file1" id="file_onload">
             </div>
             <div class="button_create1">
                 <button type="submit" id="button_create1_submit">確認</button>
@@ -160,7 +154,7 @@
         <ul class="main_list">
             <li>
                 <div class="box_footer_list">
-                    <img src="./images/logo/logo_white_150.png">
+                    <img src="./images/logo/logo_white_150.png" class="logo_img">
                     <p>想要最新消息?</p>
                     <p>想要加入我們?</p>
                     <p>想要了解更多?</p>
