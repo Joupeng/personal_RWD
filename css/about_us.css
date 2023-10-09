@@ -119,6 +119,7 @@ ul.breadcrumb_title_list {
 
 .team_list_box {
     margin-top: 50px;
+    padding: 0 20px
 }
 
 @media(min-width:576px) {
@@ -136,7 +137,7 @@ ul.breadcrumb_title_list {
 
 @media(min-width:576px) {
     .team_outside_box {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: grid;
         max-width: 800px;
         grid-template-columns: 1fr 1fr;
@@ -147,7 +148,7 @@ ul.breadcrumb_title_list {
 
 @media(min-width:768px) {
     .team_outside_box {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: grid;
         max-width: 1000px;
         grid-template-columns: 1fr 1fr 1fr;
