@@ -578,10 +578,8 @@ div.font_box {
     justify-content: center;
 }
 
-@media (min-width:992px) {
-    .note_picture__text {
-        background-color: hsla(183, 43%, 69%, 0);
-    }
+.note_picture__text {
+    background-color: transparent
 }
 
 .note_picture__text:hover {
@@ -589,6 +587,20 @@ div.font_box {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+
+@media (min-width:992px) {
+    .note_picture__text {
+        background-color: hsla(183, 43%, 69%, 1);
+    }
+
+    .note_picture__text:hover {
+        /* background-color: hsla(183, 43%, 69%, 0); */
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+}
+
+
 
 .note_picture__text p {
     /* border: 1px solid blue; */
