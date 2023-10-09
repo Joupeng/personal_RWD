@@ -578,6 +578,12 @@ div.font_box {
     justify-content: center;
 }
 
+@media (min-width:992px) {
+    .note_picture__text {
+        background-color: hsla(183, 43%, 69%, 0);
+    }
+}
+
 .note_picture__text:hover {
     /* background-color: hsla(183, 43%, 69%, 0); */
     opacity: 0;
