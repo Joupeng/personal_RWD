@@ -130,14 +130,14 @@
         top: 100%;
         right: 0%;
         transform: translate(0, 0%);
-        z-index: 1;
+        z-index: 2;
         padding: 0;
         margin: 0;
-        width: 300px;
+        width: 60%;
         border-radius: 8px;
 
-        background-color: hsla(43, 97%, 75%, 0.8);
-
+        /* background-color: hsla(43, 97%, 75%, 0.8); */
+        background-color: hsla(43, 97%, 75%, 1);
     }
 }
 
@@ -221,13 +221,14 @@
 }
 
 
-
+/* 註冊登入效果 */
 
 .header__nav_li-link.-register:hover {
     border-radius: 8px;
     background: var(--neutral-colors-white, #FFF);
     box-shadow: 0px 4px 4px 0px #FFDB9D;
 }
+
 
 .header__nav_li-link.-register::before {
     content: "";
@@ -265,6 +266,14 @@
     opacity: 1;
 }
 
+@media(max-width:992px) {
+    .header__nav_li-link.-register.-active {
+        background-color: #8ecfd2;
+        color: #fff;
+        pointer-events: none;
+        opacity: 1;
+    }
+}
 
 .header__nav_li-link.-register.-active::before {
     content: "";
