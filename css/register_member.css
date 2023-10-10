@@ -475,7 +475,6 @@ main.main ul.content_box>li {
     margin-bottom: 30px;
     background-color: #fff;
     border-radius: 8px;
-    /* height: 317px;  */
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -488,7 +487,6 @@ main.main ul.content_box>li {
         margin-bottom: 30px;
         background-color: #fff;
         border-radius: 8px;
-        height: 317px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 }
@@ -516,7 +514,7 @@ ul.content_box .center_position {
     /* border: 1px solid red; */
     width: 100%;
     margin: auto;
-    height: 100%;
+    /* height: 100%; */
 
 
 }
@@ -572,7 +570,7 @@ ul.content_box .center_position {
         /* 防止footer衝上來 */
         /* min-width: 1200px; */
         /* 減去上方下方 */
-        min-height: calc(100vh - 84.5px - 524px - 23px - 500px);
+        /* min-height: calc(100vh - 84.5px - 524px - 23px - 500px); */
     }
 }
 
@@ -631,17 +629,18 @@ ul.index_type li.trip_love_box::before {
 }
 
 /* =================================================================主內容 ======================================================================*/
-/* 收藏照片功能 */
+/* 收藏照片功能第一個餐廳 */
 #photo_box {
-    border: 5px dashed #ccc;
-    width: 400px;
-    height: 400px;
+    border: 5px dashed #8ECFD2;
+    width: 300px;
+    height: 300px;
     text-align: center;
     position: relative;
+    letter-spacing: 10px;
 }
 
 #add {
-    font-size: 100px;
+    font-size: 80px;
     font-weight: bold;
     color: #ccc;
     position: absolute;
@@ -653,13 +652,169 @@ ul.index_type li.trip_love_box::before {
 }
 
 #theFile {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.file_unload {
-    width: 400px;
+/* 第一組upload按鈕的設定 */
+.file_upload {
+    /* width: 300px; */
     text-align: center;
     margin: 10px;
+}
+
+#upload_button {
+    font-size: large;
+    border: 2px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+/* 第二組住宿 */
+
+#photoLiving {
+    border: 5px dashed #8ECFD2;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 10px;
+}
+
+#add_1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#theFile_1 {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.file_upload_1 {
+    text-align: center;
+    margin: 10px;
+}
+
+
+#upload_button_1 {
+    font-size: large;
+    border: 2px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+/* 收藏照片功能第三個景點 */
+#spotPhoto {
+    border: 5px dashed #8ECFD2;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 10px;
+}
+
+#add_2 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#theFile_2 {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 第三組upload按鈕的設定 */
+.file_upload_2 {
+    text-align: center;
+    margin: 10px;
+}
+
+
+#upload_button_2 {
+    font-size: large;
+    border: 2px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+/* 收藏照片功能第四個交通 */
+#trafficPhoto {
+    border: 5px dashed #8ECFD2;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 10px;
+}
+
+#add_3 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #ccc;
+    /* 為了垂直置中定位 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#theFile_3 {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 第三組upload按鈕的設定 */
+.file_upload_3 {
+    text-align: center;
+    margin: 10px;
+}
+
+
+#upload_button_3 {
+    font-size: large;
+    border: 2px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    border-radius: 8px;
+    padding: 5px 10px;
 }
