@@ -82,7 +82,7 @@
                     <ul class="index_type">
                         <li class="photo_box"><a href="#tabs-1">收藏照片</a></li>
                         <li class="trip_love_box"><a href="#tabs-2">旅人收藏</a></li>
-                        <li class="other_box"><a href="#tabs-3">他人推薦</a></li>
+                        <li class="other_box_contanier"><a href="#tabs-3">他人推薦</a></li>
                 </aside>
                 </ul>
                 <div id="tabs-1">
@@ -136,23 +136,36 @@
                     </main>
                 </div>
                 <div id="tabs-3">
-                    <main class=" main">
-                        <!-- 先用照片代替 -->
+                    <main class="main">
+                        <!-- 先用照片代替，資料到時會從旅行推薦的資料進行填入 -->
                         <div class="other_box">
-                            <div class="other_box_text">
+                            <div class="other_box_text" id="other_box_text_1">
                                 <!-- <h4>2023/09/12</h4>
                                 <p>阿爾卑斯山(冬)</p> -->
                                 <img src=".//images/register_member/other1.svg" alt="">
+                                <div class="save_love_button"><button type="button" id="save_for_1">存入個人收藏</button>
+                                </div>
                             </div>
-                            <div class="other_box_text">
+                            <div class="other_box_text" id="other_box_text_2">
                                 <!-- <h4>2023/09/12</h4>
                                 <p>阿爾卑斯山(冬)</p> -->
                                 <img src=".//images/register_member/other1.svg" alt="">
+                                <div class="save_love_button"><button type="button" id="save_for_2">存入個人收藏</button>
+                                </div>
                             </div>
-                            <div class="other_box_text">
+                            <div class="other_box_text" id="other_box_text_3">
                                 <!-- <h4>2023/09/12</h4>
                                 <p>阿爾卑斯山(冬)</p> -->
                                 <img src=".//images/register_member/other1.svg" alt="">
+                                <div class="save_love_button"><button type="button" id="save_for_3">存入個人收藏</button>
+                                </div>
+                            </div>
+                            <div class="other_box_text" id="other_box_text_4">
+                                <!-- <h4>2023/09/12</h4>
+                                <p>阿爾卑斯山(冬)</p> -->
+                                <img src=".//images/register_member/other1.svg" alt="">
+                                <div class="save_love_button"><button type="button" id="save_for_4">存入個人收藏</button>
+                                </div>
                             </div>
                         </div>
                     </main>
@@ -160,51 +173,6 @@
             </div>
         </div>
     </div>
-    <!-- ===============================================================原本的======================================================================================= -->
-    <!-- <div class="main_container">
-        <div class="inside_container">
-            <aside class="aside">
-                <p class="main_title_1">個人首頁</p>
-                <div class="personl_index_list">
-                    <ul class="index_type">
-                        <li class="photo_box">收藏照片</li>
-                        <li class="trip_love_box">旅人收藏</li>
-                    </ul>
-                </div>
-            </aside>
-            <main class="main">
-                <ul class="content_box">
-                    <li>
-                        <div class="center_position">
-                            <h3>餐廳</h3>
-                            <p>Total:15張</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="center_position">
-                            <h3>住宿</h3>
-                            <p>Total:15張</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="center_position">
-                            <h3>景點</h3>
-                            <p>Total:15張</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="center_position">
-                            <h3>交通</h3>
-                            <p>Total:15張</p>
-                        </div>
-                    </li>
-
-                </ul>
-            </main>
-        </div>
-
-    </div> -->
-
     <!-- ------------------------------------------------footer---------------------------------------------------- -->
     <footer class="box_footer_main">
         <ul class="main_list">
@@ -270,8 +238,19 @@
             $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
             $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
         });
-
-
+        //跳出已存取成功訊息，他人推薦加入個人收藏
+        let saveOk1 = document.getElementById('save_for_1');
+        saveOk1.addEventListener('click', function () {
+            alert('成功存入個人收藏');
+        });
+        let saveOk2 = document.getElementById('save_for_2');
+        saveOk2.addEventListener('click', function () {
+            alert('成功存入個人收藏');
+        });
+        let saveOk3 = document.getElementById('save_for_3');
+        saveOk3.addEventListener('click', function () {
+            alert('成功存入個人收藏');
+        });
 
     </script>
 </body>

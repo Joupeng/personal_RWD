@@ -62,9 +62,9 @@ ul.breadcrumb_title_list {
         /* border: 1px solid red; */
         /* 會露出的縫隙，配合下方寬度 */
         /* 防止footer衝上來 */
-        min-width: 1200px;
+        /* min-width: 1200px; */
         /* 減去上方下方 */
-        min-height: calc(100vh - 84.5px - 524px - 23px - 500px);
+        /* min-height: calc(100vh - 84.5px - 524px - 23px - 500px); */
     }
 }
 
@@ -74,6 +74,18 @@ ul.breadcrumb_title_list {
     width: 100%;
     /* 抽掉兩個框的小縫隙 */
     padding: 0 20px;
+}
+
+@media (min-width:768px) {
+    .inside_container {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width:768px) {
+    .inside_container {
+        padding: 0 40px;
+    }
 }
 
 .inside_container main.main {
@@ -198,20 +210,229 @@ a#ui-id-3.ui-tabs-anchor::before {
 }
 
 .other_box {
-    display: flex;
-    gap: 20px;
+    display: block;
+    /* 移除多的白縫隙 */
+    font-size: 0;
+
+}
+
+@media (min-width:768px) {
+    .other_box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
 }
 
 @media (min-width:992px) {
     .other_box {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         gap: 20px;
     }
 }
 
 .other_box_text img {
     width: 100%;
+    margin-bottom: 20px;
+
 }
+
+/* ============================================================他人推薦排組按鈕控制======================================================================= */
+#other_box_text_1 {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+button#save_for_1 {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width:576px) {
+    button#save_for_1 {
+        width: 360px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width:768px) {
+    button#save_for_1 {
+        width: 300px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width:992px) {
+    button#save_for_1 {
+        width: 180px;
+        font-size: 18px;
+    }
+}
+
+button#save_for_1:hover {
+    background-color: #8ECFD2;
+    color: #fff;
+}
+
+#other_box_text_2 {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+button#save_for_2 {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (min-width:576px) {
+    button#save_for_2 {
+        width: 360px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width:768px) {
+    button#save_for_2 {
+        width: 300px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width:992px) {
+    button#save_for_2 {
+        width: 180px;
+        font-size: 18px;
+    }
+}
+
+
+button#save_for_2:hover {
+    background-color: #8ECFD2;
+    color: #fff;
+}
+
+#other_box_text_3 {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+
+button#save_for_3 {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (min-width:576px) {
+    button#save_for_3 {
+        width: 360px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width:768px) {
+    button#save_for_3 {
+        width: 300px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width:992px) {
+    button#save_for_3 {
+        width: 180px;
+        font-size: 18px;
+    }
+}
+
+
+button#save_for_3:hover {
+    background-color: #8ECFD2;
+    color: #fff;
+}
+
+#other_box_text_4 {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+
+button#save_for_4 {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #8ECFD2;
+    background-color: #fff;
+    color: #8ECFD2;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (min-width:576px) {
+    button#save_for_4 {
+        width: 360px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width:768px) {
+    button#save_for_4 {
+        width: 300px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width:992px) {
+    button#save_for_4 {
+        width: 180px;
+        font-size: 18px;
+    }
+}
+
+
+button#save_for_4:hover {
+    background-color: #8ECFD2;
+    color: #fff;
+}
+
+/* #box_for_position_1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+} */
 
 /* 等會再確認 */
 /* a#ui-id-3.main_container {
