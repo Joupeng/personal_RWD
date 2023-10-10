@@ -14,8 +14,8 @@
     <script src="./css/jquery-ui.theme.css"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-    <!-- GOOGLE FONT -->
+    <script src="./js/register_member.js"></script>
+    <!--  GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
         rel="stylesheet">
@@ -89,9 +89,14 @@
                     <main class="main">
                         <ul class="content_box">
                             <li>
-                                <div class="center_position">
+                                <div class="center_position" id="photo_box">
                                     <h3>餐廳</h3>
                                     <p>Total:15張</p>
+                                    <div id="add">+</div>
+                                    <input type="file" id="theFile">
+                                </div>
+                                <div class="file_unload">
+                                    <button style="font-size: large;">Upload</button>
                                 </div>
                             </li>
                             <li>

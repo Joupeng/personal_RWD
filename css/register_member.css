@@ -631,3 +631,35 @@ ul.index_type li.trip_love_box::before {
 }
 
 /* =================================================================主內容 ======================================================================*/
+/* 收藏照片功能 */
+#photo_box {
+    border: 5px dashed #ccc;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+#add {
+    font-size: 100px;
+    font-weight: bold;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#theFile {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+}
+
+.file_unload {
+    width: 400px;
+    text-align: center;
+    margin: 10px;
+}
