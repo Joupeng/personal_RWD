@@ -145,6 +145,23 @@ ul.breadcrumb_title_list {
 .myForm_create_day1 h3,
 .myForm_create_day2 h3 {
     color: #8ECFD2;
+    font-size: 24px;
+}
+
+@media (min-width:768px) {
+
+    .myForm_create_day1 h3,
+    .myForm_create_day2 h3 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width:992px) {
+
+    .myForm_create_day1 h3,
+    .myForm_create_day2 h3 {
+        font-size: 40px;
+    }
 }
 
 legend {
