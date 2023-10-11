@@ -53,7 +53,32 @@ ul.breadcrumb_title_list {
 
 /* ======================================================下方標題開始=============================================== */
 .introduce_text {
-    /* min-width: 1000px; */
+    width: 100%;
+    padding: 0 20px;
+}
+
+@media (min-width:576px) {
+    .introduce_text {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width:768px) {
+    .introduce_text {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width:992px) {
+    .introduce_text {
+        padding: 0 60px;
+    }
+}
+
+@media (min-width:1200px) {
+    .introduce_text {
+        padding: 0 80px;
+    }
 }
 
 .introduce_text h1 {
@@ -73,6 +98,7 @@ ul.breadcrumb_title_list {
 }
 
 .introduce_text p {
+    width: 100%;
     color: #8ECFD2;
     text-align: center;
     font-size: 24px;
@@ -82,15 +108,47 @@ ul.breadcrumb_title_list {
 @media(min-width:576px) {
     .introduce_text p {
         font-size: 36px;
+    }
+}
+
+@media(min-width:576px) {
+    .introduce_text p {
+        font-size: 30px;
         max-width: 1200px;
     }
 }
 
+/* ------------------------------------------------------------------------職場排組------------------------------------------------------------------------------------------------ */
+
 .mind_spot_title {
+    width: 100%;
+    padding: 0 20px;
     margin-bottom: 30px;
 }
 
+@media(min-width:576px) {
+    .mind_spot_title {
+        padding: 0 30px;
+    }
+}
 
+@media(min-width:768px) {
+    .mind_spot_title {
+        padding: 0 40px;
+    }
+}
+
+@media(min-width:992px) {
+    .mind_spot_title {
+        padding: 0 60px;
+    }
+}
+
+@media(min-width:1200px) {
+    .mind_spot_title {
+        padding: 0 80px;
+    }
+}
 
 .mind_spot_title h3 {
     color: #8ECFD2;
@@ -105,17 +163,17 @@ ul.breadcrumb_title_list {
 .mind_spot_title p {
     color: #8ECFD2;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     margin: 0 auto;
 
 }
 
 @media(min-width:576px) {
     .mind_spot_title p {
-        font-size: 36px;
-        max-width: 1200px;
+        font-size: 28x;
     }
 }
+
 
 /* 補動畫 */
 /* .point_vendor_title img {
@@ -129,10 +187,8 @@ ul.breadcrumb_title_list {
 
 
 .spot_card_choose ul {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    list-style: none; */
+    width: 100%;
+    list-style: none;
     /* justify-content: space-evenly; */
     /* max-width: 800px; */
     padding: 0;
@@ -146,22 +202,62 @@ ul.breadcrumb_title_list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-        list-style: none;
         /* justify-content: space-evenly; */
         /* max-width: 800px; */
-        gap: 30px;
+        gap: 10px;
         /* width: 800px; */
     }
 }
+
+@media(min-width:768px) {
+    .spot_card_choose ul {
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media(min-width:992px) {
+    .spot_card_choose ul {
+        gap: 30px;
+        padding: 0 30px;
+    }
+}
+
+@media(min-width:1200px) {
+    .spot_card_choose ul {
+        gap: 30px;
+        padding: 0 40px;
+    }
+}
+
 
 
 .spot_card_choose p {
     color: #8ECFD2;
     text-align: center;
-    font-size: 36px;
+    font-size: 24px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+@media(min-width:576px) {
+    .spot_card_choose p {
+        font-size: 36px;
+    }
 }
 
 .spot_card_choose img {
     width: 100%;
     height: auto;
+}
+
+#card,
+#card1,
+#card2,
+#card3,
+#card4,
+#card5 {
+    /* margin: 0 auto; */
+    /* border: 1px solid red; */
+    margin: 24px 20px;
 }
