@@ -147,21 +147,47 @@
     /* border: 1px solid orange; */
     display: block;
     font-size: 20px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     position: relative;
     /* height: 40px; */
     line-height: 40px;
     /* padding: 0 10px; */
+
+    /* 子層效果設定 */
+
+
+
+
+
+
 }
+
+@media (min-width:992px) {
+    .header__nav_li {
+        /* border: 1px solid orange; */
+        display: block;
+        font-size: 20px;
+        /* margin: 0 10px; */
+        position: relative;
+        /* height: 40px; */
+        line-height: 40px;
+        padding: 0 10px;
+    }
+}
+
+
+
+
 
 @media(max-width:992px) {
     #block_first {
-        border: 1px solid #8ECFD2;
+        /* border: 1px solid #8ECFD2; */
         border-radius: 8px;
+        /* padding: 0 10px; */
     }
 
     #block_second {
-        border: 1px solid #8ECFD2;
+        /* border: 1px solid #8ECFD2; */
         border-radius: 8px;
     }
 }
@@ -183,17 +209,15 @@
     cursor: pointer;
 }
 
-
-
 @media(max-width:992px) {
-
-
     .header__nav_li-link {
         display: block;
         color: #8ECFD2;
         /* background-color: hsla(43, 83%, 84%, 0.7); */
-
+        /* padding: 0; */
         border: 0;
+        border-radius: 0px;
+        /* padding: 0; */
     }
 }
 
@@ -221,13 +245,183 @@
 }
 
 
-/* 註冊登入效果 */
+
+
+/* ===============================================hover功能================================================================ */
+
+
+/* 這是a標籤 */
+.header__nav_li-link:hover {
+    /* border-radius: 8px; */
+    background-color: #8ECFD2;
+    color: #fff;
+    /* background: var(--neutral-colors-white, #FFF);
+    box-shadow: 0px 4px 4px 0px #8ECFD2; */
+}
+
+@media(min-width:992px) {
+    .header__nav_li-link:hover {
+        background: var(--neutral-colors-white, #FFF);
+        box-shadow: 0px 4px 4px 0px #8ECFD2;
+        border-radius: 8px;
+        color: #8ECFD2;
+    }
+}
+
+/* 設定在li沒關係是因為其他沒有下層即使呈現也沒有差 */
+@media (min-width:992px) {
+    .header__nav_li:hover .header__sub-ul {
+        opacity: 1;
+
+    }
+
+    .header__sub-ul {
+        opacity: 0;
+        transition: opacity .4s;
+    }
+}
+
+
+
+
+
+
+/* -------------------------------------------------小文字排-------------------------------------- */
+
+.header__sub-ul {
+    padding: 0;
+    list-style: none;
+    position: relative;
+
+}
+
+/* display:block無效 */
+@media (min-width:993px) {
+    .header__sub-ul {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        /* z-index: 1; */
+        white-space: nowrap;
+        transform: translateX(-50%);
+        margin-top: 2px;
+    }
+}
+
+@media (max-width:992px) {
+    .header__sub-ul {
+        /* list-style: circle; */
+        /* border: 1px solid #8ECFD2; */
+        /* border-radius: 8px; */
+        /* 先把子層隱藏 */
+        display: none;
+
+
+    }
+
+}
+
+@media (max-width:992px) {
+    .header__nav-list .header__sub-ul {
+        position: absolute;
+        z-index: 99;
+        background-color: pink;
+
+    }
+}
+
+
+
+
+
+
+.header__sub-ul:hover a {
+    display: block;
+}
+
+.header__sub-ul:hover {
+    color: blue;
+
+}
+
+
+/* 給子層的定位，推薦景點跟旅行視角這兩個父層 */
+.dropdown {
+    position: relative;
+    text-decoration: none;
+
+    /* 給a標籤設定 */
+    display: block;
+}
+
+
+.header__sub-ul.-active {
+    opacity: 1;
+}
+
+/* 小文字在992會變不一樣 */
+.header__sub-li-link {
+    color: #8ECFD2;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+@media (max-width:992px) {
+    .header__sub-li-link {
+        color: #919191;
+        /* border: 1px solid red; */
+        display: block;
+        padding-left: 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        line-height: 25px;
+
+    }
+}
+
+
+.header__sub-li {
+    color: #919191;
+    font-size: 20px;
+}
+
+
+
+.header__sub-li:not(:last-child)::after {
+    content: "|";
+    font-size: 16px;
+
+}
+
+@media(max-width:992px) {
+
+    .header__sub-li:not(:last-child)::after {
+        display: none;
+
+    }
+}
+
+/* ===========================================================註冊登入效果 ===============================================================================================*/
 
 .header__nav_li-link.-register:hover {
-    border-radius: 8px;
-    background: var(--neutral-colors-white, #FFF);
-    box-shadow: 0px 4px 4px 0px #FFDB9D;
+    /* border-radius: 8px; */
+    /* background: var(--neutral-colors-white, #FFF);
+    box-shadow: 0px 4px 4px 0px #FFDB9D; */
+    color: #fff;
+    background-color: #8ECFD2;
+
 }
+
+@media (min-width:992px) {
+    .header__nav_li-link.-register:hover {
+        border-radius: 8px;
+        background: var(--neutral-colors-white, #FFF);
+        box-shadow: 0px 4px 4px 0px #FFDB9D;
+        color: #FFDB9D;
+    }
+}
+
 
 
 .header__nav_li-link.-register::before {
@@ -291,110 +485,4 @@
 
 .header__nav_li.-special_function {
     color: #8ECFD2;
-}
-
-/* ===============================================hover功能================================================================ */
-
-
-
-.header__nav_li-link:hover {
-    border-radius: 8px;
-    background: var(--neutral-colors-white, #FFF);
-    box-shadow: 0px 4px 4px 0px #8ECFD2;
-}
-
-@media (min-width:992px) {
-    .header__nav_li:hover .header__sub-ul {
-        opacity: 1;
-    }
-
-    .header__sub-ul {
-        opacity: 0;
-        transition: opacity .4s;
-    }
-}
-
-
-
-
-
-
-/* -------------------------------------------------小文字排-------------------------------------- */
-
-.header__sub-ul {
-    padding: 0;
-    list-style: none;
-    position: relative;
-
-}
-
-/* display:block無效 */
-@media (min-width:993px) {
-    .header__sub-ul {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        /* z-index: 1; */
-        white-space: nowrap;
-        transform: translateX(-50%);
-        margin-top: 2px;
-        /* display: none; */
-    }
-}
-
-@media (max-width:992px) {
-    .header__sub-ul {
-        /* list-style: circle; */
-        /* border: 1px solid #8ECFD2; */
-        /* border-radius: 8px; */
-    }
-
-}
-
-
-.header__sub-ul.-active {
-    opacity: 1;
-}
-
-/* 小文字在992會變不一樣 */
-.header__sub-li-link {
-    color: #8ECFD2;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-@media (max-width:992px) {
-    .header__sub-li-link {
-        color: #919191;
-        /* border: 1px solid red; */
-        display: block;
-        padding-left: 20px;
-        font-size: 16px;
-        border-radius: 8px;
-        line-height: 25px;
-
-    }
-}
-
-
-.header__sub-li {
-    color: #919191;
-    font-size: 20px;
-}
-
-
-
-.header__sub-li:not(:last-child)::after {
-    content: "|";
-    font-size: 16px;
-
-}
-
-@media(max-width:992px) {
-
-    .header__sub-li:not(:last-child)::after {
-        display: none;
-
-    }
 }
