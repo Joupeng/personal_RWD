@@ -323,11 +323,42 @@
 }
 
 @media (max-width:992px) {
-    .header__nav-list .header__sub-ul {
-        position: absolute;
-        z-index: 99;
-        background-color: pink;
+    .header__sub-ul.a {
+        /* list-style: circle; */
+        /* border: 1px solid #8ECFD2; */
+        /* border-radius: 8px; */
+        /* 先把子層隱藏 */
+        display: none;
 
+
+    }
+
+}
+
+
+
+
+@media (max-width:992px) {
+    .header__sub-ul.b {
+        /* list-style: circle; */
+        /* border: 1px solid #8ECFD2; */
+        /* border-radius: 8px; */
+        /* 先把子層隱藏 */
+        display: none;
+
+
+    }
+
+}
+
+
+@media (max-width:992px) {
+    .header__nav-list .header__sub-ul {
+        /* position: absolute; */
+        z-index: 99;
+        /* background-color: #FFDB9D; */
+        height: 50px;
+        margin: 5px 5px;
     }
 }
 
@@ -372,7 +403,7 @@
         color: #919191;
         /* border: 1px solid red; */
         display: block;
-        padding-left: 20px;
+        padding-left: 10px;
         font-size: 16px;
         border-radius: 8px;
         line-height: 25px;

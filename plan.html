@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/common/footer.css">
     <link rel="stylesheet" href="./css/common/banner1.css">
     <link rel="stylesheet" href="./css/plan.css">
+    <!-- 子階層的 -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
@@ -27,9 +29,11 @@
                     <li class="header__nav_li">
                         <a class="header__nav_li-link" href="./about_us.html">關於獨旅</a>
                     </li>
-                    <li class="header__nav_li">
-                        <span class="header__nav_li-link  -special_function -active">旅行視角</span>
-                        <ul class="header__sub-ul -active">
+                    <li class="header__nav_li" id="block_first">
+                        <a href="#" class="dropdown">
+                            <span class="header__nav_li-link  -special_function">旅行視角</span>
+                        </a>
+                        <ul class="header__sub-ul a">
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./plan.html">自助規劃</a></li>
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./form.html">旅行投稿</a></li>
                         </ul>
@@ -37,9 +41,11 @@
                     <li class="header__nav_li ">
                         <a class="header__nav_li-link -hover_function" href="./safe.html">安全資料</a>
                     </li>
-                    <li class="header__nav_li ">
-                        <span class="header__nav_li-link ">推薦景點</span>
-                        <ul class="header__sub-ul ">
+                    <li class="header__nav_li " id="block_second">
+                        <a href="#" class="dropdown">
+                            <span class="header__nav_li-link -special_function">推薦景點</span>
+                        </a>
+                        <ul class="header__sub-ul b">
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./spot.html">心境選點</a></li>
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./point.html">在地店家</a></li>
                         </ul>
@@ -210,6 +216,19 @@
         btnHamburger.addEventListener("click", function () {
             this.classList.toggle("-on");
             navList.classList.toggle("-open");
+        });
+
+        //子選單的功能
+        $(document).ready(function () {
+            // 收合選單
+            $('.dropdown').click(function (e) {
+                e.preventDefault();
+                // e.preventDefault();/阻止事件的預設行為，這裡防止點擊連結時跳轉到其他頁面。因為它是用a標籤做的，照理說要有頁面跳轉功能/
+                $(this).parent().find('.header__sub-ul').slideToggle();
+                // 找到被點擊元素（.dropdown）的父層，然後在父層內找到類別為 dropdown-open 的子元素，並使用 slideToggle 效果來切換它的顯示/隱藏狀態。
+                $(this).parent().siblings().find('.header__sub-ul').slideUp();
+                // 將其他打開的選單收起來
+            })
         });
 
     </script>
