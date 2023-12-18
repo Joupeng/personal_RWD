@@ -358,14 +358,14 @@ button#button_create1_submit {
 }
 
 button#button_create1_submit:hover {
-    width: 100%;
+    width: 280px;
     margin: 10px;
-    padding: 8px;
+    padding: 12px;
     border-radius: 8px;
-    border: 3px solid;
+    /* border: 3px solid; */
     background-color: #8ECFD2;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
 }
 
@@ -383,22 +383,22 @@ button#button_create2_download {
 
 @media (min-width:576px) {
     button#button_create2_download {
-        width: 400px;
-        margin: 12px;
-        padding: 12px 16px;
+        width: 300px;
+        margin: 10px;
+        padding: 12px;
         border-radius: 8px;
         border: 3px solid #FFDB9D;
         background-color: #fff;
-        margin-top: 24px;
-        font-size: 24px;
+        margin-top: 20px;
+        font-size: 20px;
     }
 
 }
 
 button#button_create2_download:hover {
-    width: 100%;
+    width: 300px;
     margin: 10px;
-    padding: 8px;
+    padding: 12px;
     border-radius: 8px;
     border: 3px solid;
     background-color: #FFDB9D;
