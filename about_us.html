@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/about_us.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- 子階層的 -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
     <!-- GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
@@ -87,34 +87,33 @@
         <div class="team_outside_box">
             <div class="team_person">
                 <img src="./images/about_us/1.jpeg" alt="無法顯示">
-                <h3>職稱</h3>
-                <p>法規經過限制男女旅遊商城也可他就決定看來出售她說面積，調整程度。
-                </p>
+                <h3>網站前端維護</h3>
+                <p>網站架構維護及設計，後續功能開發，目前持續研究對於獨旅的功能研發內容，歡迎加入團隊。</p>
             </div>
             <div class="team_person">
                 <img src="./images/about_us/2.jpeg" alt="無法顯示">
-                <h3>職稱</h3>
-                <p>法規經過限制男女旅遊商城也可他就決定看來出售她說面積，調整程度。
+                <h3>網站前端維護</h3>
+                <p>網站架構維護及設計，後續功能開發，目前持續研究對於獨旅的功能研發內容，歡迎加入團隊</p>
             </div>
             <div class="team_person">
                 <img src="./images/about_us/3.jpeg" alt="無法顯示">
-                <h3>職稱</h3>
-                <p>法規經過限制男女旅遊商城也可他就決定看來出售她說面積，調整程度。
+                <h3>網站後台維護</h3>
+                <p>資料庫建置及串接功能研發及維護，目前後台功能建置設計中，歡迎加入團隊。</p>
             </div>
             <div class="team_person">
                 <img src="./images/about_us/4.jpeg" alt="無法顯示">
-                <h3>職稱</h3>
-                <p>法規經過限制男女旅遊商城也可他就決定看來出售她說面積，調整程度。
+                <h3>網站後台維護</h3>
+                <p>資料庫建置及串接功能研發及維護，目前後台功能建置設計中，歡迎加入團隊。</p>
             </div>
             <div class="team_person">
                 <img src="./images/about_us/5.jpeg" alt="無法顯示">
-                <h3>職稱</h3>
-                <p>法規經過限制男女旅遊商城也可他就決定看來出售她說面積，調整程度。
+                <h3>客服人員</h3>
+                <p>協助客戶網站任何疑難雜症，例如填寫資料異常或是網站內容錯誤，歡迎洽詢客服。</p>
             </div>
             <div class="team_person">
                 <img src="./images/about_us/6.jpeg" alt="無法顯示">
-                <h3>職稱</h3>
-                <p>法規經過限制男女旅遊商城也可他就決定看來出售她說面積，調整程度。
+                <h3>客服人員</h3>
+                <p>協助客戶網站任何疑難雜症，例如填寫資料異常或是網站內容錯誤，歡迎洽詢客服</p>
             </div>
         </div>
     </div>
@@ -186,8 +185,11 @@
                 // e.preventDefault();/阻止事件的預設行為，這裡防止點擊連結時跳轉到其他頁面。因為它是用a標籤做的，照理說要有頁面跳轉功能/
                 $(this).parent().find('.header__sub-ul').slideToggle();
                 // 找到被點擊元素（.dropdown）的父層，然後在父層內找到類別為 dropdown-open 的子元素，並使用 slideToggle 效果來切換它的顯示/隱藏狀態。
-                $(this).parent().siblings().find('.header__sub-ul').slideUp();
+                // siblings()找同一個層級，找到共通父元素，找.header__sub-ul同一級的，也就是都是li的，向前向後都找
+                //所以當開合他們會一起動
+                //$(this).parent().siblings().find('.header__sub-ul').slideUp();
                 // 將其他打開的選單收起來
+                //驗證console.log("ok")
             })
         })
     </script>
