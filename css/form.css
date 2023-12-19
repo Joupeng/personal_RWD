@@ -71,20 +71,24 @@ ul.breadcrumb_title_list {
     margin: 0 auto;
 }
 
+.to-do_rule_step h1 {
+    font-size: 20px;
+}
+
 /* h1就是2em */
 @media (min-width:576px) {
     .to-do_rule_step h1 {
-        font-size: 3em;
+        font-size: 32px;
     }
 }
 
 .to-do_rule_step h3 {
-    font-size: 24px;
+    font-size: 14px;
 }
 
 @media (min-width:576px) {
     .to-do_rule_step h3 {
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 
@@ -156,14 +160,21 @@ ul.breadcrumb_title_list {
 legend {
     color: #8ECFD2;
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     /* font-family:  */
+}
+
+@media (min-width:576px) {
+    legend {
+        font-size: 24px;
+        letter-spacing: 10px;
+    }
 }
 
 .myForm_create_day1,
 .myForm_create_day2 {
     color: #8ECFD2;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 @media (min-width:768px) {
@@ -171,7 +182,7 @@ legend {
     .myForm_create_day1,
     .myForm_create_day2 {
         color: #8ECFD2;
-        font-size: 32px;
+        font-size: 20px;
     }
 }
 
@@ -180,7 +191,7 @@ legend {
     .myForm_create_day1,
     .myForm_create_day2 {
         color: #8ECFD2;
-        font-size: 40px;
+        font-size: 28px;
     }
 }
 
@@ -224,7 +235,7 @@ legend {
     margin: 20px auto;
     padding: 18px;
     width: 100%;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 @media (min-width:576px) {
@@ -242,7 +253,7 @@ legend {
     .day2_create_list input,
     .day1_create_list textarea,
     .day2_create_list textarea {
-        font-size: 24px;
+        font-size: 16px;
     }
 }
 
@@ -265,7 +276,7 @@ legend {
         margin: 15px auto;
         padding: 18px;
         width: 100%;
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 
@@ -285,7 +296,7 @@ legend {
     .day1_create_list textarea,
     .day2_create_list textarea {
         padding: 10px;
-        font-size: 30px;
+        font-size: 28px;
         width: 300px;
         margin: 10px 10px;
 
