@@ -92,6 +92,7 @@ ul.breadcrumb_title_list {
     width: 100%;
     /* width: 700px; */
     margin: auto;
+    margin-top: -1px;
     padding: 20px;
 
 }

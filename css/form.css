@@ -96,14 +96,46 @@ ul.breadcrumb_title_list {
     font-size: 20px;
     padding: 0 20px;
     text-align: center;
+    width: 280px;
+    margin: 0 auto;
 }
 
-@media (min-width:576px) {
+@media (min-width:576px) and (max-width:768px) {
     .step_text p {
         font-size: 24px;
         padding: 0 20px;
+        width: 480px;
+        margin: 0 auto;
     }
 }
+
+@media (min-width:768px) and (max-width:992px) {
+    .step_text p {
+        font-size: 24px;
+        padding: 0 20px;
+        width: 680px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .step_text p {
+        font-size: 24px;
+        padding: 0 20px;
+        width: 880px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:1200px) {
+    .step_text p {
+        font-size: 24px;
+        padding: 0 20px;
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+
 
 .to-do_rule_step p {
     /* border: 1px solid red; */

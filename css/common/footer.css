@@ -130,6 +130,7 @@ footer {
 } */
 .box_footer_content ul {
     list-style: none;
+    padding: 0;
     /* display: flex; */
 }
 
