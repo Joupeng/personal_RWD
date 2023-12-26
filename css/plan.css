@@ -81,16 +81,47 @@ ul.breadcrumb_title_list {
 
 .to-do_rule_step p {
     /* border: 1px solid red; */
-    width: 100%;
+    /* width: 100%; */
+    width: 280px;
     padding: 0 20px;
     font-size: 20px;
+    text-align: left;
+    margin: 0 auto;
 }
 
-@media (min-width:576px) {
+@media (min-width:576px) and (max-width:768px) {
     .to-do_rule_step p {
-        /* border: 1px solid red; */
+        font-size: 16px;
         padding: 0 20px;
+        width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .to-do_rule_step p {
+        font-size: 20px;
+        padding: 0 20px;
+        width: 680px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .to-do_rule_step p {
+        font-size: 20px;
+        padding: 0 20px;
+        width: 880px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:1200px) {
+    .to-do_rule_step p {
         font-size: 24px;
+        padding: 0 20px;
+        width: 900px;
+        margin: 0 auto;
     }
 }
 
