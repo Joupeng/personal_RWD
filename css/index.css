@@ -712,24 +712,52 @@ div.font_box {
     text-align: center;
     letter-spacing: 8px;
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
-@media(min-width:576px) {
+@media(min-width:576px) and (max-width:768px) {
     .note_your_message h1 {
         color: #8ECFD2;
         text-align: center;
         letter-spacing: 15px;
-        font-size: 36px;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+
+@media(min-width:768px) {
+    .note_your_message h1 {
+        color: #8ECFD2;
+        text-align: center;
+        letter-spacing: 15px;
+        font-size: 24px;
         margin-top: 50px;
     }
 }
 
 .note_list {
     /* border: 1px solid red; */
-    width: 80%;
+    width: 250px;
     margin: 0 auto;
 
+}
+
+@media(min-width:576px) and (max-width:768px) {
+    .note_list {
+        /* border: 1px solid red; */
+        width: 300px;
+        margin: 0 auto;
+
+    }
+}
+
+@media(min-width:768px) {
+    .note_list {
+        /* border: 1px solid red; */
+        width: 350px;
+        margin: 0 auto;
+
+    }
 }
 
 .note_list input {
