@@ -790,3 +790,41 @@ input[type="text"]::placeholder {
     padding: 8px 0;
 
 }
+
+#buttom_submit button {
+
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    opacity: 0;
+    cursor: pointer;
+}
+
+#buttom_submit {
+
+    /* border: 1px solid red; */
+    width: 100px;
+    height: 30px;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8ECFD2;
+
+    color: #8ECFD2;
+    /* 蓋掉span多出來的部分  */
+    /* overflow: hidden; */
+
+}
+
+#buttom_submit:hover {
+
+    background-color: #8ECFD2;
+    color: #FFF;
+    /* cursor: pointer; */
+}
