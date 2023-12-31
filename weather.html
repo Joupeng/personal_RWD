@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weather</title>
+  <link rel="stylesheet" href="./css/common/all.css">
+  <link rel="stylesheet" href="./css/weather.css">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!-- dataable cdn -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+  <div class="weather_banner"></div>
+
+  <div class="weather_box">
+    <!-- text-center是boostrap的樣式名稱 -->
+    <div class="text-center">
+      <label for="city">城市</label>
+      <select name="city" id="city">
+        <option value="Sydney">Sydney</option>
+        <option value="Taipei">Taipei</option>
+        <option value="Venice">Venice</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Seoul">Seoul</option>
+      </select>
+      <button onclick="getWeather()">查詢氣象</button>
+      <a href="./index.html" class="weather_return"><span class="return">返回首頁</span></a>
+    </div>
+    <div class="container" style="padding:20px">
+      <!-- 摘要欄位 -->
+      <div id="weather" class="text-danger text-center">即時資訊</div>
+      <div class="row">
+        <div class="col">
+          <table id="datatable" class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <td>日期</td>
+                <td>溫度</td>
+                <td>風速</td>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //擴充一個Date的函式功能
+    //(this.valueOf()指的就是addDays
+    Date.prototype.addDays = function (days) {
+      let date = new Date(this.valueOf());
+      // 得到今天的日期可以選擇加幾日，setDate設置的寫法
+      date.setDate(date.getDate() + days);
+      //回傳幾天的日期
+      return date;
+    };
+    //同步
+    async function getWeatherFormWeatherService(uri) {
+      try {
+        //使用fetch發送get請求
+        let response = await fetch(uri);
+        //確保HTTP請求成功
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status:${response.status}`);
+        }
+        // 取得回傳的 JSON 資料
+        return await response.json();
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        return null;
+      }
+    }
+    //支援非同步async，點選按鈕執行，await才能寫裡面
+    async function getWeather() {
+      // 取得使用者選擇的城市
+      try {
+        let city = document.getElementById('city').value;
+        let uri = `https://goweather.herokuapp.com/weather/${city}`;
+
+        // let Weather = await getWeatherFormWeatherService(uri);
+        // alert(JSON.stringify(Weather));
+        //呼叫getWeatherFormWeatherService(uri)
+        //temperature wind description forecast都是資料的內容
+        let cityWeather = await getWeatherFormWeatherService(uri);
+        if (cityWeather) {
+          let temperature = cityWeather["temperature"];
+          let wind = cityWeather["wind"];
+          let description = cityWeather["description"];
+          //放入我們的即時天氣位置
+          document.getElementById("weather").textContent = `氣象:${description},溫度:${temperature},風速:${wind}`;
+          // 將日期資料填入 DataTable
+          let forecast = cityWeather["forecast"];
+          // 先抓到在HTML的table，將選中的表格轉換成DataTable，從jQuery取入的
+          //所以可以開始使用他的語法，dataTable.clear(); dataTable.row.add
+          let dataTable = $("#datatable").DataTable();
+          // 再取得today
+          let today = new Date();
+          // 清除前面查的
+          dataTable.clear();
+          // 不止一天迴圈
+          forecast.forEach((day, index) => {
+            // DataTable的寫法dataTable.row.add
+            dataTable.row.add([
+              //要添加到新的一行的內容，取得當地日期，溫度及風速
+              today.addDays(index).toLocaleDateString(),
+              day.temperature,
+              day.wind
+              // 这是 DataTable 插件的 draw() 方法，用于重新绘制表格。false 参数表示不进行重新计算和排列，以提高效率。
+            ]).draw(false)
+          });
+        }
+      } catch (error) {
+        console.error('Error getting weather:', error);
+      }
+
+    };
+
+  </script>
+  <!-- jqury 精簡版3.6為了使用datable -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.weather_banner {
+  width: 100%;
+  background-image: url("../images/index/banner_weather.jpg");
+  height: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.weather_box {
+  margin-top: 30px;
+}
+
+.return {
+  border: 1px solid #8ECFD2;
+  padding: 6px;
+  margin-left: 20px;
+  border-radius: 8px;
+  color: #8ECFD2;
+}
+
+.return:hover {
+  background-color: #8ECFD2;
+  color: #fff;
+}
+
+.weather_return {
+  text-decoration: none;
+}
+
+.dataTables_length {
+  display: none;
+}
+
+#datatable_paginate {
+  display: none;
+}
