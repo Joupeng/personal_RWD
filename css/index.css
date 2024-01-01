@@ -95,18 +95,7 @@ div.font_box {
     }
 }
 
-/* @media (max-width: 992px) {
-    .banner_bg div.font_box h1 {
-        border: 1px solid green;
-        font-size: 32px;
-        width: 261px;
-        height: 82px;
-        letter-spacing: 12.8px;
-        32*40%=12.8
-        color:#FFF;
-    }
 
-} */
 
 .banner_bg div.font_box p {
     text-align: center;
@@ -649,8 +638,8 @@ div.font_box {
 }
 
 .note_picture__photo img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 280px;
     vertical-align: bottom;
 }
 
@@ -787,7 +776,7 @@ div.font_box {
 
 .note_list input {
     /* justify-content: center; */
-    color: #8ECFD2;
+    color: #919191;
 }
 
 input[type="text"] {

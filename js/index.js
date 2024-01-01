@@ -31,15 +31,25 @@ function doFirst() {
     let country = document.getElementById('country').value;
     let viewpoint = document.getElementById('viewpoint').value;
     let content = document.getElementById('content').value;
-    let picture = document.getElementById('picture').value;
+    //  取用picture而不是value
+    let pictureInput = document.getElementById('picture');
+    let picture = pictureInput.files[0]
+    // 使用 FileReader 讀取文件
+    let reader = new FileReader();
 
-    // 創建新的留言板元素
-    let newNoteElement = document.createElement('div');
-    newNoteElement.className = 'note_picture_container__outside'
+    // 設定當讀取完成時的回調函數
+    reader.onload = function (e) {
+      // 獲取 Data URL
+      // 創建的 URL 可以立即在網頁上展示相應的內容，而不需要等待數據上傳到伺服器並生成實際的 URL。
+      let pictureURL = URL.createObjectURL(picture);
 
-    // 添加新留言板的內容到網頁上
-    newNoteElement.innerHTML = `
-    <div class="note_picture__photo"><img src="${picture}" alt="無法顯示"></div>
+      // 創建新的留言板元素
+      let newNoteElement = document.createElement('div');
+      newNoteElement.className = 'note_picture_container__outside'
+
+      // 添加新留言板的內容到網頁上
+      newNoteElement.innerHTML = `
+    <div class="note_picture__photo"><img src="${pictureURL}" alt="無法顯示"></div>
     <div class="note_picture__text">
     <p>${new Date().toLocaleDateString()}</p>
     <p>${country}  ${viewpoint}</p>
@@ -49,17 +59,22 @@ function doFirst() {
     <p>${name}</p>
     </div>
     `
-    // 將新的留言板元素插入到留言板區域中，插回父層
-    document.getElementById('noteContainer').appendChild(newNoteElement);
-    //清空輸入框
-    document.getElementById('name').value = '';
-    document.getElementById('country').value = '';
-    document.getElementById('viewpoint').value = '';
-    document.getElementById('content').value = '';
-    document.getElementById('picture').value = '';
-
+      // 將新的留言板元素插入到留言板區域中，插回父層
+      document.getElementById('noteContainer').appendChild(newNoteElement);
+      //清空輸入框
+      document.getElementById('name').value = '';
+      document.getElementById('country').value = '';
+      document.getElementById('viewpoint').value = '';
+      document.getElementById('content').value = '';
+      // 清空文件選擇框
+      document.getElementById('picture').value = '';
+      // 清理 URL 對象
+      // 是用來釋放先前使用 URL.createObjectURL() 創建的 URL，而不是釋放圖片本身。它的主要目的是釋放瀏覽器在內存中為該 URL 所分配的資源。
+      // URL.revokeObjectURL(pictureURL);
+    };
+    // 讀取文件（圖片）
+    reader.readAsDataURL(picture);
   });
+
 }
-
-
 window.addEventListener('load', doFirst)
