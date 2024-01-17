@@ -1,0 +1,73 @@
+body {
+  font: normal 18px Tahoma, Arial, Verdana;
+}
+
+#myCart {
+  margin: 0 auto;
+  width: 900px;
+  border: 1px solid #fff;
+}
+
+input {
+  width: 60px;
+}
+
+tr {
+  border-bottom: 1px dotted #aaa;
+}
+
+td {
+  margin: 0px;
+  padding: 1px 10px 4px 10px;
+  border-bottom: 1px dotted #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+#cartList {
+  font-size: medium;
+  font-weight: 800;
+  border-bottom: 1px solid #aaa;
+}
+
+#subtotal {
+  font-size: medium;
+  font-weight: 600;
+  color: #8ECFD2;
+}
+
+.return {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.return p {
+  border: 1px solid#8ECFD2;
+  text-align: center;
+  width: 100px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-right: 5px;
+  color: #8ECFD2;
+  padding: 3px;
+}
+
+.return p:hover {
+  background-color: #8ECFD2;
+  text-align: center;
+  width: 100px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-right: 5px;
+  color: #fff;
+  padding: 3px;
+}
+
+.return a {
+  text-decoration: none;
+}
+
+.checkOut p {
+  margin-left: 5px;
+}

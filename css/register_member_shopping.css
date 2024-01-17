@@ -1,0 +1,169 @@
+body {
+    font: normal 18px Tahoma, Arial, Verdana;
+}
+
+#big_wrapper {
+    border: 1px solid #ccc;
+    width: 1000px;
+    margin: 20px auto;
+}
+
+@media (min-width:992px) and (max-width:1199.98px) {
+    #big_wrapper {
+        border: 1px solid #ccc;
+        width: 900px;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width:768px) and (max-width:991.98px) {
+    #big_wrapper {
+        border: 1px solid #ccc;
+        width: 680px;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width:576px) and (max-width:767.98px) {
+    #big_wrapper {
+        border: 1px solid #ccc;
+        width: 480px;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width:498px) and (max-width:575.98px) {
+    #big_wrapper {
+        border: 1px solid #ccc;
+        width: 380px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width:497.98px) {
+    #big_wrapper {
+        border: 1px solid #ccc;
+        width: 300px;
+        margin: 20px auto;
+    }
+}
+
+#newItem {
+    border-right: 1px solid #999;
+    width: 300px;
+    height: 220px;
+    float: left;
+    margin: 15px;
+    padding: 10px;
+}
+
+@media(max-width:768px) {
+    #newItem {
+        border-right: none;
+        height: 100px;
+    }
+}
+
+
+#newItem img {
+    padding: 5px;
+}
+
+#content {
+    /* border-right: 1px solid #999; */
+    /* width: 300px; */
+    height: 220px;
+    float: left;
+    margin: 15px;
+    padding: 10px;
+}
+
+@media(max-width:768px) {
+    #content {
+        /* border-right: 1px solid #999; */
+        /* width: 300px; */
+        height: 100px;
+    }
+}
+
+#shopButton {
+    /*border:1px solid red; */
+    /* width: 300px; */
+    height: 220px;
+    float: left;
+    margin: 15px;
+    padding: 10px;
+}
+
+@media(max-width:768px) {
+    #shopButton {
+        /* border-right: 1px solid #999; */
+        /* width: 300px; */
+        height: 100px;
+    }
+}
+
+img {
+    width: 252px;
+    margin: 20px 0;
+}
+
+ul li.ui-corner-left {
+    list-style: none;
+    display: inline-block;
+    /* border:1px solid red;  */
+    width: 272px;
+}
+
+/* 查看購物車按鈕 */
+.cartProcess {
+    border: 1px solid #8ECFD2;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: #8ECFD2;
+}
+
+.cartProcess:hover {
+    background-color: #8ECFD2;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+a {
+    color: #8ECFD2;
+    text-decoration: none;
+}
+
+.addButton {
+    border: 1px solid #8ECFD2;
+    border-radius: 5px;
+    padding: 1px 3px;
+    cursor: pointer;
+    color: #8ECFD2;
+}
+
+.addButton:hover {
+    /* border: 1px solid #8ECFD2; */
+    border-radius: 5px;
+    padding: 1px 3px;
+    cursor: pointer;
+    background-color: #8ECFD2;
+    color: #fff;
+}
+
+
+/* =========動態新增內容按下add cart紐會加到上方===== */
+#newItem img {
+    width: 170px;
+    float: left;
+}
+
+#newItem span {
+    /* border: 1px solid maroon;  */
+    display: block;
+    margin: 10px;
+}

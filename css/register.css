@@ -66,6 +66,7 @@ ul.breadcrumb_title_list {
     width: 100%;
     border-radius: 8px;
     background-color: #EAEAEA;
+    padding: 10px 5px;
 }
 
 @media (min-width:576px) {
@@ -157,28 +158,33 @@ ul.breadcrumb_title_list {
 .register_text {
     text-align: center;
     color: #8ECFD2;
-    font-size: 36px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 @media (min-width:576px) {
     .register_text {
-        font-size: 40px;
+        font-size: 24px;
         font-weight: bold;
     }
 }
 
 /* 使用不同方式登入 */
+
+.other_function {
+    margin-bottom: 10px
+}
+
 .other_function_text {
     text-align: center;
     color: #8ECFD2;
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 20px;
 }
 
 @media (min-width:576px) {
     .other_function_text {
-        font-size: 36px;
+        font-size: 24px;
         margin-top: 30px;
     }
 }
@@ -261,20 +267,25 @@ hr {
     }
 }
 
+.function_icon img {
+    width: 100%;
+}
+
 /* ==============================================================================註冊會員================================================================================ */
 
 .text_still_member {
     text-align: center;
     color: #8ECFD2;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 8px;
 }
 
 @media (min-width:576px) {
     .text_still_member {
-        font-size: 36px;
+        font-size: 24px;
         letter-spacing: 12px;
+        text-align: center;
     }
 
 }
@@ -283,6 +294,7 @@ hr {
     .text_still_member {
         font-size: 36px;
         letter-spacing: 10px;
+        text-align: center;
     }
 }
 

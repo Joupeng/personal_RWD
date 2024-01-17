@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/common/footer.css">
     <link rel="stylesheet" href="./css/common/banner1.css">
     <link rel="stylesheet" href="./css/register_member.css">
+    <link rel="stylesheet" href="./css/register_member_shopping.css">
     <!-- 子階層的 -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- tab功能 -->
@@ -17,6 +18,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./js/register_member.js"></script>
+    <!-- shopping -->
+    <script src="./js/shopping_items.js"></script>
     <!--  GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
@@ -87,12 +90,186 @@
                 <aside class="aside">
                     <p class="main_title_1">個人首頁</p>
                     <ul class="index_type">
-                        <li class="photo_box"><a href="#tabs-1">收藏照片</a></li>
+                        <li class="photo_box"><a href="#tabs-1">專屬明信片</a></li>
                         <li class="trip_love_box"><a href="#tabs-2">旅人收藏</a></li>
-                        <li class="other_box_contanier"><a href="#tabs-3">他人推薦</a></li>
+                        <li class="other_box_contanier"><a href="#tabs-3">收藏照片</a></li>
                 </aside>
                 </ul>
                 <div id="tabs-1">
+                    <main class="main">
+                        <div id="big_wrapper">
+                            <header>
+                                <!-- 動態新增三項圖檔跟名稱跟價格到newItem -->
+                                <!-- 空白也會被當小孩要注意 -->
+                                <!-- <img src="imgs/formosa.jpg" alt="">
+                                    <span>Formosa</span>
+                                    <span>5000</span> -->
+                                <div id="newItem"></div>
+                                <div id="content">
+                                    <nav>
+                                        Item : <span id="itemCount">0</span> item(s)
+                                    </nav>
+                                    <nav>
+                                        Subtotal : $ <span id="subtotal">0</span>
+                                    </nav>
+                                </div>
+                                <div id="shopButton">
+                                    <span class="cartProcess" id="cartLink">查看購物車</span>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </header>
+                            <hr>
+                            <section>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/island.jpg">
+                                            Island
+                                        </div>
+                                        <div>
+                                            Price : $50
+                                        </div>
+                                        <div>
+                                            <span id="A1001" class="addButton">
+                                                Add Cart
+                                                <!-- 故意使用的屬性去隱藏名稱 -->
+                                                <input type="hidden" value="Island|island.jpg|50">
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/museum.jpg">
+                                            Museum
+                                        </div>
+                                        <div>
+                                            Price : $70
+                                        </div>
+                                        <div>
+                                            <span id="A1002" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Museum|museum.jpg|70">
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/garden.jpg">
+                                            Garden
+                                        </div>
+                                        <div>
+                                            Price : $68
+                                        </div>
+                                        <div>
+                                            <span id="A1003" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Garden|garden.jpg|68">
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/lookout.jpg">
+                                            Lookout
+                                        </div>
+                                        <div>
+                                            Price : $72
+                                        </div>
+                                        <div>
+                                            <span id="A1004" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Lookout|lookout.jpg|72">
+                                            </span>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/dock.jpg">
+                                            Dock
+                                        </div>
+                                        <div>
+                                            Price : $80
+                                        </div>
+                                        <div>
+                                            <span id="A1005" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Dock|dock.jpg|80">
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/night.jpg">
+                                            Night
+                                        </div>
+                                        <div>
+                                            Price : $60
+                                        </div>
+                                        <div>
+                                            <span id="A1006" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Night|night.jpg|60">
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/artwork.jpg">
+                                            Artwork
+                                        </div>
+                                        <div>
+                                            Price : $68
+                                        </div>
+                                        <div>
+                                            <span id="A1007" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Artwork|artwork.jpg|68">
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./images/imgs/creation.jpg">
+                                            Creation
+                                        </div>
+                                        <div>
+                                            Price : $55
+                                        </div>
+                                        <div>
+                                            <span id="A1008" class="addButton">
+                                                Add Cart
+                                                <input type="hidden" value="Creation|creation.jpg|55">
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+
+                    </main>
+                </div>
+                <!-- 為什麼一定要用main -->
+                <div id="tabs-2">
+                    <main class="main">
+                        <div class="diary_box">
+                            <div class="diary_box_text">
+                                <h4>2023/09/12</h4>
+                                <p>阿爾卑斯山(冬)</p>
+                            </div>
+                            <div class="diary_box_text">
+                                <h4>2023/09/12</h4>
+                                <p>阿爾卑斯山(冬)</p>
+                            </div>
+                            <div class="diary_box_text">
+                                <h4>2023/09/12</h4>
+                                <p>阿爾卑斯山(冬)</p>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div id="tabs-3">
                     <main class="main">
                         <ul class="content_box">
                             <li>
@@ -141,60 +318,6 @@
                             </li>
 
                         </ul>
-                    </main>
-                </div>
-                <!-- 為什麼一定要用main -->
-                <div id="tabs-2">
-                    <main class="main">
-                        <div class="diary_box">
-                            <div class="diary_box_text">
-                                <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p>
-                            </div>
-                            <div class="diary_box_text">
-                                <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p>
-                            </div>
-                            <div class="diary_box_text">
-                                <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-                <div id="tabs-3">
-                    <main class="main">
-                        <!-- 先用照片代替，資料到時會從旅行推薦的資料進行填入 -->
-                        <div class="other_box">
-                            <div class="other_box_text" id="other_box_text_1">
-                                <!-- <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p> -->
-                                <img src=".//images/register_member/other1.svg" alt="">
-                                <div class="save_love_button"><button type="button" id="save_for_1">存入個人收藏</button>
-                                </div>
-                            </div>
-                            <div class="other_box_text" id="other_box_text_2">
-                                <!-- <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p> -->
-                                <img src=".//images/register_member/other1.svg" alt="">
-                                <div class="save_love_button"><button type="button" id="save_for_2">存入個人收藏</button>
-                                </div>
-                            </div>
-                            <div class="other_box_text" id="other_box_text_3">
-                                <!-- <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p> -->
-                                <img src=".//images/register_member/other1.svg" alt="">
-                                <div class="save_love_button"><button type="button" id="save_for_3">存入個人收藏</button>
-                                </div>
-                            </div>
-                            <div class="other_box_text" id="other_box_text_4">
-                                <!-- <h4>2023/09/12</h4>
-                                <p>阿爾卑斯山(冬)</p> -->
-                                <img src=".//images/register_member/other1.svg" alt="">
-                                <div class="save_love_button"><button type="button" id="save_for_4">存入個人收藏</button>
-                                </div>
-                            </div>
-                        </div>
                     </main>
                 </div>
             </div>

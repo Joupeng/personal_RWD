@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="./css/common/footer.css">
     <link rel="stylesheet" href="./css/common/banner1.css">
     <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/register.js"></script>
     <!-- 子階層的 -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
@@ -81,28 +83,27 @@
                     <div class="logo_inside_box">
                         <img src="./images/logo/logo_green_small.png" id="title_logo" alt="無法顯示">
                     </div>
-                    <div class="register_function">
-                        <div class="register_text">會員登入</div>
-                        <div class="input_list_button">
-                            <div><input type="text" placeholder="請輸入帳號"></div>
-                            <div><input type="password" placeholder="請輸入密碼"></div>
-                            <!-- 暫時用確認進到會員登入 -->
-                            <div><a href="./register_member.html"><button type="submit">確認</button></a></div>
-                        </div>
-                        <div class="other_function">
-                            <div class="other_function_text">使用其他社群方式登入</div>
-                            <hr>
-                            <div class="function_icon">
-                                <img src="./images/register/IG.png" alt="無法顯示">
-                                <img src="./images/register/fb.png" alt="無法顯示">
-                                <img src="./images/register/google.png" alt="無法顯示">
-                            </div>
+                    <div class="register_text">會員登入</div>
+                    <div class="input_list_button">
+                        <div><input type="text" id="email" placeholder="請輸入帳號"></div>
+                        <div><input type="password" id="password" placeholder="請輸入密碼"></div>
+                        <!-- 暫時用確認進到會員登入 -->
+                        <!-- <div><a href="./register_member.html"><button type="submit">確認</button></a></div> -->
+                        <div><button type="submit" id="login">確認</button></div>
+                    </div>
+                    <div class="other_function">
+                        <div class="other_function_text">使用其他社群方式登入</div>
+                        <hr>
+                        <div class="function_icon">
+                            <div><img src="./images/register/IG.png" alt="無法顯示"></div>
+                            <div><img src="./images/register/fb.png" alt="無法顯示"></div>
+                            <div><img src="./images/register/google.png" alt="無法顯示"></div>
                         </div>
                     </div>
                 </div>
                 <div class="right_big_box">
                     <div class="register_box">
-                        <div class="text_still_member">尚未成為會員?</div>
+                        <p class="text_still_member">尚未成為會員?</p>
                         <div class="immediately_register"><button type="button">立即註冊</button></div>
                     </div>
                 </div>
@@ -159,30 +160,6 @@
             </div>
 
         </footer>
-        <script>
-            // 漢堡功能
-            let btnHamburger = document.getElementById("btn_hamburger");
-            let navList = document.querySelector('.header__nav-list');
-
-            btnHamburger.addEventListener("click", function () {
-                this.classList.toggle("-on");
-                navList.classList.toggle("-open");
-            });
-
-            //子選單的功能
-            $(document).ready(function () {
-                // 收合選單
-                $('.dropdown').click(function (e) {
-                    e.preventDefault();
-                    // e.preventDefault();/阻止事件的預設行為，這裡防止點擊連結時跳轉到其他頁面。因為它是用a標籤做的，照理說要有頁面跳轉功能/
-                    $(this).parent().find('.header__sub-ul').slideToggle();
-                    // 找到被點擊元素（.dropdown）的父層，然後在父層內找到類別為 dropdown-open 的子元素，並使用 slideToggle 效果來切換它的顯示/隱藏狀態。
-                    $(this).parent().siblings().find('.header__sub-ul').slideUp();
-                    // 將其他打開的選單收起來
-                })
-            })
-
-        </script>
 </body>
 
 

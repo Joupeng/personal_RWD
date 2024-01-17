@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="5_main.css">
+  <script src="6_new.js"></script>
+  <title>Cart Edit</title>
+  <link rel="stylesheet" href="./css/common/all.css">
+  <link rel="stylesheet" href="./css/common/header.css">
+  <link rel="stylesheet" href="./css/common/footer.css">
+  <link rel="stylesheet" href="./css/common/banner1.css">
+  <link rel="stylesheet" href="./css/register_member_checkout.css">
+  <script src="./js/shopping_checkout.js"></script>
+</head>
+
+<body>
+  <div id="myCart">
+    <h1>
+      Shopping Cart
+    </h1>
+    <header id="cartList">
+      <table style="border-bottom:1px solid #ddd;">
+        <tr class="itemHead">
+          <td style="width:200px;">Item List</td>
+          <td style="width:280px;"></td>
+          <td style="width:170px;">Price($)</td>
+          <td style="width:60px;">Item(s)</td>
+        </tr>
+      </table>
+
+      <!-- --------- -->
+      <div>
+        <table>
+          <!-- tr是可以一直動態新增，而table是指只創一次 -->
+          <!-- 每一筆新增加一個tr -->
+          <!-- <tr class="item">
+						<td style="width:200px;">
+							<img src="imgs/formosa.jpg" width="70">
+						</td>
+						<td style="width:280px;" id="A1001">
+							<p>Formosa</p>
+							<button>Delete</button>
+						</td>
+						<td style="width:170px;">
+							5000</td>
+						<td style="width:60px;">
+							//number可以負數所以要設定min
+							<input type="number" value="1" min="1">
+						</td>
+					</tr> -->
+        </table>
+      </div>
+
+      <!-- --------- -->
+    </header>
+    <footer style="text-align:right;">
+      Total : <span id="total">0</span>
+    </footer>
+    <div class="button_list">
+      <div class="return" id="return">
+        <a href="./register_member.html">
+          <p>返回商品頁</p>
+        </a>
+        <div class="checkOut">
+          <p>結帳</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
