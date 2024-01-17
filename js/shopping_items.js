@@ -74,7 +74,9 @@ function doFirst() {
   let cartItem = document.getElementById('cartLink')
   cartItem.addEventListener('click', function (e) {
     if (storage['addItemList'] != "") {
-      window.location.href = "../register_shopping.html"
+      // 本機端
+      // window.location.href = "../register_shopping.html"
+      window.location.href = "/register_shopping.html"
       //存取總數量跟總金額
       let totalQuantityText = document.getElementById('itemCount').innerText
       let subtotalText = document.getElementById('subtotal').innerText

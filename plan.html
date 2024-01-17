@@ -35,7 +35,7 @@
                         </a>
                         <ul class="header__sub-ul a">
                             <li class="header__sub-li"><a class="header__sub-li-link" href="./plan.html">自助規劃</a></li>
-                            <li class="header__sub-li"><a class="header__sub-li-link" href="./form.html">旅行投稿</a></li>
+                            <!-- <li class="header__sub-li"><a class="header__sub-li-link" href="./form.html">旅行投稿</a></li> -->
                         </ul>
                     </li>
                     <li class="header__nav_li ">
@@ -76,24 +76,21 @@
         <h1>自助規劃</h1>
         <p>此功能為幫助自助旅行的人，能更理解行程的規劃，增加旅行的安全，需要先</strong><a href="./register.html">登入</a>，才能使用。</p>
         <h3>步驟說明</h3>
-        <p>需先選擇天數，然後就會根據天數產生表單，供您填寫行程，完成後可以Download完成後可以Download自己的裝置進行保存。</p>
+        <p>需先選擇天數，然後就會根據天數產生表單，供您填寫行程，完成後可以Download完成後可以Download自己的裝置進行保存，僅提供7天短旅行使用。</p>
     </div>
     <!-- ============================================表單天數============================================ -->
     <div class="day_seletor">
-        <select name="day_selector" id="day_selector">
-            <option value="#">7days</option>
-            <option value="#">14days</option>
-            <option value="#">21days</option>
-            <option value="#">28days</option>
-            <option value="#">35days</option>
-        </select>
+        <div class="inner_box">
+            <input type="text" name="" id="day_choose" placeholder="請輸入天數" max="7">
+            <span>確認</span>
+        </div>
 
     </div>
     <!-- ============================================表單============================================ -->
     <div class="outside_box">
         <form id="myForm_create">
             <!-- <fieldset> -->
-            <legend>創立自己的行程表<br>(範例)</legend>
+            <legend>創立自己的行程表</legend>
             <div class="myForm_create_day1">
                 <h3>第一天</h3>
             </div>

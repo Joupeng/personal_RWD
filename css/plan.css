@@ -84,7 +84,7 @@ ul.breadcrumb_title_list {
     /* width: 100%; */
     width: 280px;
     padding: 0 20px;
-    font-size: 20px;
+    font-size: 14px;
     text-align: left;
     margin: 0 auto;
 }
@@ -92,7 +92,7 @@ ul.breadcrumb_title_list {
 @media (min-width:576px) and (max-width:768px) {
     .to-do_rule_step p {
         font-size: 16px;
-        padding: 0 20px;
+        padding: 0 16px;
         width: 480px;
         margin: 0 auto;
     }
@@ -100,7 +100,7 @@ ul.breadcrumb_title_list {
 
 @media (min-width:768px) and (max-width:992px) {
     .to-do_rule_step p {
-        font-size: 20px;
+        font-size: 18px;
         padding: 0 20px;
         width: 680px;
         margin: 0 auto;
@@ -109,7 +109,7 @@ ul.breadcrumb_title_list {
 
 @media (min-width:992px) and (max-width:1200px) {
     .to-do_rule_step p {
-        font-size: 20px;
+        font-size: 18px;
         padding: 0 20px;
         width: 880px;
         margin: 0 auto;
@@ -118,7 +118,7 @@ ul.breadcrumb_title_list {
 
 @media (min-width:1200px) {
     .to-do_rule_step p {
-        font-size: 24px;
+        font-size: 18px;
         padding: 0 20px;
         width: 900px;
         margin: 0 auto;
@@ -135,40 +135,17 @@ ul.breadcrumb_title_list {
 }
 
 /* <!-- ============================================表單============================================ --> */
-
-#day_selector {
-    appearance: none;
-    outline: none;
-    background-color: none;
-    border: 1px solid#919191;
-    border-radius: 8px;
-    width: 200px;
-    padding: 8px;
-    font-size: 16px;
-    color: #919191;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-
-    background-image: url(../images/triangle.png);
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position: right 8px center;
-    /* 水平方向距離右側 8px；垂直方向 center */
-
+.inner_box {
+    width: 300px;
+    margin: 15px auto;
 }
 
-.day_seletor {
-    /* min-width: 1000px; */
+.inner_box span {
+    border: 1px solid #8ECFD2;
+    color: #8ECFD2;
+    font-size: 14px;
+    width: 60px;
 }
-
-/* 
-無法成功插入三角形
-#day_selector::after {
-    content: "t";
-    display: inline-block;
-    border: 5px solid red;
-} */
 
 /* <!-- ================================================表單======================================== --> */
 .outside_box {

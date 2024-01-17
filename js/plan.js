@@ -4,7 +4,6 @@ function doFirst() {
 }
 function calculate(e) {
     e.preventDefault()
-    let start = document.getElementById()
 }
 
 window.addEventListener('load', doFirst)
