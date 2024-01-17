@@ -2,6 +2,8 @@
 // 第一個餐廳
 function doFirst() {
     document.getElementById('theFile').onchange = fileChange
+
+
 }
 // 處理函數有使用事件或物件的屬性或方法則可以帶入事件物件，ex:任意取名此處為e
 // 這裡需要找到要放入的圖片檔案

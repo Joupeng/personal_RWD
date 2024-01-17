@@ -71,3 +71,57 @@ td {
 .checkOut p {
   margin-left: 5px;
 }
+
+.check_out_list {
+  background-color: aliceblue;
+  width: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  display: none;
+}
+
+.logo_image {
+  width: 100px;
+  margin: 20px auto;
+}
+
+
+.logo_image img {
+  width: 100%;
+}
+
+
+.check_out_message p {
+  font: 14px;
+  text-align: center;
+}
+
+.header_note {
+  background-color: #8ECFD2;
+  height: 30px;
+  width: 300px;
+  border-radius: 8px 8px 0 0;
+}
+
+.buttom_return {
+  color: #8ECFD2;
+  border: 1px solid #8ECFD2;
+  border-radius: 8px;
+  width: 100px;
+  font-size: 14px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.check_out_list a {
+  text-decoration: none;
+}
+
+#check_out:hover {
+  background-color: #8ECFD2;
+  color: #fff;
+  cursor: pointer;
+}

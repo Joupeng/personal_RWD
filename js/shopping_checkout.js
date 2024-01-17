@@ -95,12 +95,49 @@ function doFirst() {
       storage.setItem('subtotal', subtotalText)
     }
   })
+  let checkOut = document.getElementById('checkout')
+  checkOut.addEventListener('click', function (e) {
+    let checkOutMessage = document.querySelector('.check_out_list')
+    checkOutMessage.style.display = "block"
+  })
+  // //
+  // let clearShooping = document.getElementById('clear')
+  // clearShooping.addEventListener('click', function (e) {
+  //   storage.removeItem('itemQuantities')
+  //   storage.removeItem('addItemList')
+  //   storage.removeItem('totalQuantity')
+  //   storage.removeItem('subtotal')
+  //   // console.log(itemId)
+  //   // let itemId = e.target.parentNode.id
+
+  //   storage.removeItem('itemId')
+  //   // storage['addItemList'] = storage['addItemList'].replace(new RegExp(`${itemId},\\s*`), '');
 
 
+  // })
+  // 點選返回會員首頁會清空localStorage的項目
+  let clearShopping = document.getElementById('clear');
+  clearShopping.addEventListener('click', function (e) {
+    // 清除每個商品的紀錄，就是根據itemId創出來的key:value
+    let itemString = storage.getItem('addItemList');
+    let items = itemString.substring(0, itemString.length - 2).split(', ');
+
+    for (let i = 0; i < items.length; i++) {
+      let itemId = items[i];
+      storage.removeItem(itemId);
+    }
+
+    // 清除購物車的商品列表
+    storage.removeItem('addItemList');
+
+    // 清除總數量和總金額的資訊
+    storage.removeItem('itemQuantities')
+    storage.removeItem('subtotal');
+  });
 
 
 }
-
+//建立購買商品
 function createCartList(itemId, itemValue) {
   // 呼叫函式
   //使alert確認有正確嗎是否是localstorage的值
@@ -181,7 +218,7 @@ function deleteItem(e) {
   // 2.要先扣除總金額才可以刪掉，不然會找不到，數量變動總金額也會變
   // 找到Id就能找到value
   let itemValue = storage.getItem(itemId)
-  console.log(itemValue)
+  // console.log(itemValue)
   // 扣除金額
   let itemPrice = parseInt(itemValue.split('|')[2])
   let countString = storage.getItem('itemQuantities')
@@ -198,14 +235,7 @@ function deleteItem(e) {
   // 要移除的要取得id
   storage.removeItem(itemId)
   // 取得要進行替代的值
-  //比較冗長寫法======
-  //// value.replace(`A1001, `, ``)A1001可以帶入變數
-  // let value = storage.getItem('addItemList')
-  // // 把要移除的取代成空字串，記得我們的id會搭配,跟一個空白，再寫回去陣列裡
-  // let newValue = value.replace(`${itemId}, `, ``)
-  // storage.setItem('addItemList', newValue)
-  // =============================
-  // 使用陣列物件表示法(比較精簡寫法)
+  // 使用陣列物件表示法
   // 把要移除的取代成空字串，記得我們的id會搭配,跟一個空白，再寫回去陣列裡
   //陣列寫法是直接代表get
   // 使用正規表達式（Regular Expression）來確保只刪除完整的商品 ID

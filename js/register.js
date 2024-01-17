@@ -33,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (data[email] === password) {
         alert("登入成功");
         window.location.href = './register_member.html';
+        localStorage.setItem('loggedUser', email);
       } else {
-        alert("登入失敗");
+        alert("帳號密碼錯誤");
       }
       event.preventDefault();//送出表單不要重新整理
     }
