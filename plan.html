@@ -82,79 +82,67 @@
     <div class="day_seletor">
         <div class="inner_box">
             <input type="text" name="" id="day_choose" placeholder="請輸入天數" max="7">
-            <span>確認</span>
+            <span onclick="generateList()">確認</span>
         </div>
-
     </div>
-    <!-- ============================================表單============================================ -->
-    <div class="outside_box">
-        <form id="myForm_create">
-            <!-- <fieldset> -->
+    <!-- ============================================表單生成區域============================================ -->
+    <div class="outside_box" id="formContainer">
+        <!-- <form id="myForm_create">
             <legend>創立自己的行程表</legend>
-            <div class="myForm_create_day1">
-                <h3>第一天</h3>
-            </div>
             <div class="trip_news">
                 <input type="text" placeholder="請輸入行程名稱">
                 <input type=" text" placeholder="請輸入前往國家">
                 <input type="date" placeholder="請選擇日期">
             </div>
-            <div class="day1_create_breakfast">
-                <!-- <input type="text" placeholder="請輸入早餐品項"> -->
+            <div class="myForm_create">
+                <h3>第一天</h3>
+            </div>
+            <div class="create_breakfast">
                 <input type="text" placeholder="請輸入早餐地點">
                 <input type="text" placeholder="請輸入交通工具">
                 <input type="time" placeholder="請選擇抵達時間">
             </div>
-            <div class="day1_create_lunch">
-                <!-- <input type=" text" placeholder="請輸入午餐品項"> -->
+            <div class="create_lunch">
+
                 <input type="text" placeholder="請輸入午餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
-            <div class="day1_create_dinner">
-                <!-- <input type="text" placeholder="請輸入晚餐品項"> -->
+            <div class="create_dinner">
                 <input type="text" placeholder="請輸入晚餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
-            <div class="day1_create_living">
+            <div class="create_living">
                 <input type="text" placeholder="請輸入住宿地點">
             </div>
-            <div class="day1_create_list">
+            <div class="create_list">
                 <textarea placeholder="請輸入行程清單"></textarea>
             </div>
-            <div class="myForm_create_day2">
+            <div class="myForm_create">
                 <h3>第二天</h3>
             </div>
-            <div class="day2_create_breakfast">
-                <!-- <input type="text" placeholder="請輸入早餐品項"> -->
+            <div class="create_breakfast">
                 <input type="text" placeholder="請輸入早餐地點">
                 <input type="text" placeholder="請輸入交通工具">
                 <input type="time" placeholder="請選擇抵達時間">
             </div>
-            <div class="day2_create_lunch">
-                <!-- <input type="text" placeholder="請輸入午餐品項"> -->
+            <div class="create_lunch">
                 <input type="text" placeholder="請輸入午餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
-            <div class="day2_create_dinner">
-                <!-- <input type="text" placeholder="請輸入晚餐品項"> -->
+            <div class="create_dinner">
                 <input type="text" placeholder="請輸入晚餐地點">
                 <input type="text" placeholder="請輸入景點交通工具">
             </div>
-            <div class="day2_create_list">
+            <div class="create_list">
                 <textarea placeholder="請輸入行程清單"></textarea>
             </div>
-
             <div class="button_create1">
                 <button type="submit" id="button_create1_submit">確認</button>
             </div>
-            <!-- <div id="feedback"></div> -->
-
-    </div>
-    <div class="button_create2">
-        <button type="button" id="button_create2_download">Download</button>
-    </div>
-    <!-- </fieldset> -->
-    </form>
+            <div class="button_create2">
+                <button type="button" id="button_create2_download">Download</button>
+            </div>
+        </form> -->
     </div>
     <!-- ------------------------------------------------footer---------------------------------------------------- -->
     <footer class="box_footer_main">

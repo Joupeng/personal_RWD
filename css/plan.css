@@ -154,24 +154,21 @@ ul.breadcrumb_title_list {
 
 }
 
-.myForm_create_day1 h3,
-.myForm_create_day2 h3 {
+.myForm_create h3 {
     color: #8ECFD2;
     font-size: 16px;
 }
 
 @media (min-width:768px) {
 
-    .myForm_create_day1 h3,
-    .myForm_create_day2 h3 {
+    .myForm_create h3 {
         font-size: 20px;
     }
 }
 
 @media (min-width:992px) {
 
-    .myForm_create_day1 h3,
-    .myForm_create_day2 h3 {
+    .myForm_create h3 {
         font-size: 28px;
     }
 }
@@ -213,16 +210,11 @@ legend {
 }
 
 .trip_news,
-.day1_create_breakfast,
-.day1_create_lunch,
-.day1_create_dinner,
-.day1_create_living,
-.day1_create_list,
-.day2_create_breakfast,
-.day2_create_lunch,
-.day2_create_dinner,
-.day2_create_living,
-.day2_create_list {
+.create_breakfast,
+.create_lunch,
+.create_dinner,
+.create_living,
+.create_list {
     margin: 20px 50px;
 
 }
@@ -231,26 +223,14 @@ legend {
     width: 400px;
 }
 
-
-
-/* .myForm_create_day1 input {
-    margin: 0 8px;
-    padding: 4px 8px;
-
-} */
 .trip_news input,
-.day1_create_breakfast input,
-.day1_create_lunch input,
-.day1_create_dinner input,
-.day1_create_living input,
-.day1_create_list input,
+.create_breakfast input,
+.create_lunch input,
+.create_dinner input,
+.create_living input,
+.create_list input,
 .myForm_create_day2 input,
-.day2_create_breakfast input,
-.day2_create_lunch input,
-.day2_create_dinner input,
-.day2_create_list input,
-.day1_create_list textarea,
-.day2_create_list textarea {
+.create_list textarea {
     margin: 10px auto;
     padding: 18px;
     width: 100%;
@@ -260,18 +240,13 @@ legend {
 @media (min-width:576px) {
 
     .trip_news input,
-    .day1_create_breakfast input,
-    .day1_create_lunch input,
-    .day1_create_dinner input,
-    .day1_create_living input,
-    .day1_create_list input,
+    .create_breakfast input,
+    .create_lunch input,
+    .create_dinner input,
+    .create_living input,
+    .create_list input,
     .myForm_create_day2 input,
-    .day2_create_breakfast input,
-    .day2_create_lunch input,
-    .day2_create_dinner input,
-    .day2_create_list input,
-    .day1_create_list textarea,
-    .day2_create_list textarea {
+    .create_list textarea {
         font-size: 16px;
     }
 }
@@ -279,18 +254,13 @@ legend {
 @media (min-width:768px) {
 
     .trip_news input,
-    .day1_create_breakfast input,
-    .day1_create_lunch input,
-    .day1_create_dinner input,
-    .day1_create_living input,
-    .day1_create_list input,
+    .create_breakfast input,
+    .create_lunch input,
+    .create_dinner input,
+    .create_living input,
+    .create_list input,
     .myForm_create_day2 input,
-    .day2_create_breakfast input,
-    .day2_create_lunch input,
-    .day2_create_dinner input,
-    .day2_create_list input,
-    .day1_create_list textarea,
-    .day2_create_list textarea {
+    .create_list textarea {
         margin: 15px auto;
         padding: 18px;
         width: 100%;
@@ -301,18 +271,13 @@ legend {
 @media (min-width:992px) {
 
     .trip_news input,
-    .day1_create_breakfast input,
-    .day1_create_lunch input,
-    .day1_create_dinner input,
-    .day1_create_living input,
-    .day1_create_list input,
+    .create_breakfast input,
+    .create_lunch input,
+    .create_dinner input,
+    .create_living input,
+    .create_list input,
     .myForm_create_day2 input,
-    .day2_create_breakfast input,
-    .day2_create_lunch input,
-    .day2_create_dinner input,
-    .day2_create_list input,
-    .day1_create_list textarea,
-    .day2_create_list textarea {
+    .create_list textarea {
         padding: 10px;
         font-size: 28px;
         width: 300px;
@@ -321,8 +286,7 @@ legend {
     }
 }
 
-.day1_create_list textarea,
-.day2_create_list textarea {
+.create_list textarea {
     width: 100%;
     height: 170px;
 }
