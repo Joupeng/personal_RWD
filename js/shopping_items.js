@@ -88,6 +88,7 @@ function doFirst() {
       storage.setItem('subtotal', subtotal);
 
     } else {
+      e.preventDefault(); // 防止點擊連結時跳轉
       alert("購物車是空的，請先加入商品！")
     }
   })
