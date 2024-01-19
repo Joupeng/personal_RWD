@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="./css/jquery-ui.theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- 轉成pdf的套件，rasterizehtml函式庫，配合canvas  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rasterizehtml/1.3.0/rasterizeHTML.allinone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <!-- GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
         rel="stylesheet">
+
+    </style>
 </head>
 
 <body>
@@ -84,157 +89,165 @@
                 <li> <a href="#tab_korea"><span>韓國</span></a></li>
                 <li><a href="#tab_singapore"><span>新加坡</span></a></li>
             </ul>
-            <div id="tab_japan">
-                <div class="safe_main_box">
-                    <div class="inner_box">
-                        <div class="image_outside">
-                            <div class="image_box"> <img src="./images/safe/safe.png" alt="無法顯示"></div>
-                        </div>
-                        <h1>日本安全避難資訊</h1>
-                        <div class="all_information">
-                            <div class="hospitial_box">
-                                <h3>英語/大型醫院</h3>
-                                <ul>
-                                    <li class="address_icon">
-                                        <p>Red Cross Hospital2-34-10</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>TokyoTel: 03-3444-1181</p>
-                                    </li>
-                                    <li class="address_icon">
-                                        <p>Red Cross Hospital2-34-10</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>TokyoTel: 03-3444-1181</p>
-                                    </li>
-                                </ul>
+            <div id="all">
+                <div id="tab_japan">
+                    <div class="safe_main_box">
+                        <div class="inner_box">
+                            <div class="image_outside">
+                                <div class="image_box"> <img src="./images/safe/safe.png" alt="無法顯示"></div>
                             </div>
-                            <div class="departmant_box">
-                                <h3>機構聯絡</h3>
-                                <ul>
-                                    <li class="address_icon">
-                                        <p>東京都醫療機關介紹服務</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>03-5285-8181</p>
-                                    </li>
-                                    <li class="address_icon">
-                                        <p>緊急翻譯聯絡服務</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>03-5285-8181</p>
-                                    </li>
-                                </ul>
+                            <h1>日本安全避難資訊</h1>
+                            <div class="all_information">
+                                <div class="hospitial_box">
+                                    <h3>英語/大型醫院</h3>
+                                    <ul>
+                                        <li class="address_icon">
+                                            <p>Red Cross Hospital2-34-10</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>TokyoTel: 03-3444-1181</p>
+                                        </li>
+                                        <li class="address_icon">
+                                            <p>Red Cross Hospital2-34-10</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>TokyoTel: 03-3444-1181</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="departmant_box">
+                                    <h3>機構聯絡</h3>
+                                    <ul>
+                                        <li class="address_icon">
+                                            <p>東京都醫療機關介紹服務</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>03-5285-8181</p>
+                                        </li>
+                                        <li class="address_icon">
+                                            <p>緊急翻譯聯絡服務</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>03-5285-8181</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="download_safe">
-                            <button type="button">下載資料</button>
+                            <div class="download_safe">
+                                <button type="button" class="downloadBtn">下載資料</button>
+                                <!-- <a id="download_btn" href="javascript:print_html();">下載</a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="tab_korea">
-                <div class="safe_main_box">
-                    <div class="inner_box">
-                        <div class="image_outside">
-                            <div class="image_box"> <img src="./images/safe/korea.png" alt="無法顯示"></div>
-                        </div>
-                        <h1>韓國安全避難資訊</h1>
-                        <div class="all_information">
-                            <div class="hospitial_box">
-                                <h3>英語/大型醫院</h3>
-                                <ul>
-                                    <li class="address_icon">
-                                        <p>Red Cross Hospital2-34-10</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>TokyoTel: 03-3444-1181</p>
-                                    </li>
-                                    <li class="address_icon">
-                                        <p>Red Cross Hospital2-34-10</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>TokyoTel: 03-3444-1181</p>
-                                    </li>
-                                </ul>
+                <div id="tab_korea">
+                    <div class="safe_main_box">
+                        <div class="inner_box">
+                            <div class="image_outside">
+                                <div class="image_box"> <img src="./images/safe/korea.png" alt="無法顯示"></div>
                             </div>
-                            <div class="departmant_box">
-                                <h3>機構聯絡</h3>
-                                <ul>
-                                    <li class="address_icon">
-                                        <p>東京都醫療機關介紹服務</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>03-5285-8181</p>
-                                    </li>
-                                    <li class="address_icon">
-                                        <p>緊急翻譯聯絡服務</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>03-5285-8181</p>
-                                    </li>
-                                </ul>
+                            <h1>韓國安全避難資訊</h1>
+                            <div class="all_information">
+                                <div class="hospitial_box">
+                                    <h3>英語/大型醫院</h3>
+                                    <ul>
+                                        <li class="address_icon">
+                                            <p>Red Cross Hospital2-34-10</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>TokyoTel: 03-3444-1181</p>
+                                        </li>
+                                        <li class="address_icon">
+                                            <p>Red Cross Hospital2-34-10</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>TokyoTel: 03-3444-1181</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="departmant_box">
+                                    <h3>機構聯絡</h3>
+                                    <ul>
+                                        <li class="address_icon">
+                                            <p>東京都醫療機關介紹服務</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>03-5285-8181</p>
+                                        </li>
+                                        <li class="address_icon">
+                                            <p>緊急翻譯聯絡服務</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>03-5285-8181</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="download_safe">
-                            <button type="button">下載資料</button>
+                            <div class="download_safe">
+                                <!-- <a id="download_btn" href="javascript:print_html();">下載</a> -->
+                                <button type="button" class="downloadBtn">下載資料</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="tab_singapore">
-                <div class="safe_main_box">
-                    <div class="inner_box">
-                        <div class="image_outside">
-                            <div class="image_box"> <img src="./images/safe/sin.png" alt="無法顯示"></div>
-                        </div>
-                        <h1>新加坡安全避難資訊</h1>
-                        <div class="all_information">
-                            <div class="hospitial_box">
-                                <h3>英語/大型醫院</h3>
-                                <ul>
-                                    <li class="address_icon">
-                                        <p>Red Cross Hospital2-34-10</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>TokyoTel: 03-3444-1181</p>
-                                    </li>
-                                    <li class="address_icon">
-                                        <p>Red Cross Hospital2-34-10</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>TokyoTel: 03-3444-1181</p>
-                                    </li>
-                                </ul>
+                <div id="tab_singapore">
+                    <div class="safe_main_box">
+                        <div class="inner_box">
+                            <div class="image_outside">
+                                <div class="image_box"> <img src="./images/safe/sin.png" alt="無法顯示"></div>
                             </div>
-                            <div class="departmant_box">
-                                <h3>機構聯絡</h3>
-                                <ul>
-                                    <li class="address_icon">
-                                        <p>東京都醫療機關介紹服務</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>03-5285-8181</p>
-                                    </li>
-                                    <li class="address_icon">
-                                        <p>緊急翻譯聯絡服務</p>
-                                    </li>
-                                    <li class="phone_icon">
-                                        <p>03-5285-8181</p>
-                                    </li>
-                                </ul>
+                            <h1>新加坡安全避難資訊</h1>
+                            <div class="all_information">
+                                <div class="hospitial_box">
+                                    <h3>英語/大型醫院</h3>
+                                    <ul>
+                                        <li class="address_icon">
+                                            <p>Red Cross Hospital2-34-10</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>TokyoTel: 03-3444-1181</p>
+                                        </li>
+                                        <li class="address_icon">
+                                            <p>Red Cross Hospital2-34-10</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>TokyoTel: 03-3444-1181</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="departmant_box">
+                                    <h3>機構聯絡</h3>
+                                    <ul>
+                                        <li class="address_icon">
+                                            <p>東京都醫療機關介紹服務</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>03-5285-8181</p>
+                                        </li>
+                                        <li class="address_icon">
+                                            <p>緊急翻譯聯絡服務</p>
+                                        </li>
+                                        <li class="phone_icon">
+                                            <p>03-5285-8181</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="download_safe">
-                            <button type="button">下載資料</button>
+                            <div class="download_safe">
+                                <!-- <a id="download_btn" href="javascript:print_html();">下載</a> -->
+                                <button type="button" class="downloadBtn">下載資料</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="loading"><img src="./images/logo/logo_green_small.png" alt=""></div>
+    <div id="mask"></div>
+    <canvas id="canvas" width="595" height="842" style="border: 1px solid black; display:none;"></canvas>
     <!-- ------------------------------------------------footer---------------------------------------------------- -->
     <footer class="box_footer_main">
         <ul class="main_list">
@@ -276,7 +289,6 @@
                     </ul>
                 </div>
             </li>
-
         </ul>
 
         <div class="class_for">
@@ -304,17 +316,60 @@
                 $(this).parent().siblings().find('.header__sub-ul').slideUp();
                 // 將其他打開的選單收起來
             })
+
+            // tab切換
+            $(function () {
+                $("#tabs").tabs({
+                    // 透過activate事件在切換頁籤時清空原本的內容
+                    activate: function (event, ui) {
+                        // 获取 canvas 元素
+                        let canvas = document.getElementById("canvas");
+                        // 獲取上下文
+                        let context = canvas.getContext("2d");
+                        // 清空画布
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+                    }
+                });
+            });
+
+            // 檔案下載
+            // 先處理html，然後透過jsPDF輸出成canvas，再轉成PDF
+            // 宣告成全域變數
+            window.jsPDF = window.jspdf.jsPDF; //2.X版
+            // 生成PDF的函式
+            function generatePdf() {
+                //測試讓Canvas成像在下方，已隱藏
+                // 開始成像先取得畫布
+                let content = canvas.getContext('2d');
+                //HTML要被轉換成PDF的內容
+                let fileContent = document.getElementById('all').outerHTML;
+                let options = {
+                    // width: 595,
+                    // height: 842
+                };
+                //異步因為需要請求網路及圖像加載，使用then在異步完成執行
+                rasterizeHTML.drawHTML(fileContent, canvas, options).then(function (renderResult) {
+                    // 渲染結果放到畫布上
+                    content.drawImage(renderResult.image, 0, 0);
+                    // console.log(canvas.toDataURL("image/png"));
+                    //將畫布內容轉成PNG格式的數據URL，URL可以不用再對服務器額外請求，導出方便
+                    let imgData = canvas.toDataURL("image/png");
+                    let pdf = new jsPDF()
+                    //2.X版的寫法 var pdf = new jspdf.jsPDF()
+                    pdf.addImage(imgData, 'JPEG', 0, 0);
+                    //console.log(pdf);	
+                    // 儲存
+                    pdf.save("download.pdf");
+                });
+            }
+            // 觸發的方式
+            $('.downloadBtn').on("click", (event) => {
+                generatePdf();
+            });
+
         })
 
-
-
-        // tab切換
-        $(function () {
-            $("#tabs").tabs();
-        });
-
     </script>
-
 </body>
 
 </html>

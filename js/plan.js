@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    //監聽點選確認事件
+    document.getElementById('confirmButton').addEventListener('click', generateList)
+    //監聽輸入框keydown事件，所以要找到輸入框的id，使用的是DOM屬性
+    document.getElementById('day_choose').addEventListener('keydown', function (e) {
+        //如果按下的是enter鍵為13
+        if (event.keyCode == 13) {
+            generateList();
+        }
+    })
+})
+
 function generateList() {
     // 獲取輸入框的值
     let inputValue = document.getElementById('day_choose').value
@@ -20,8 +32,17 @@ function generateList() {
             tripDiv.className = 'trip_news'
             //    一次插入多個
             tripDiv.innerHTML = '<input type="text" placeholder="請輸入行程名稱">' +
-                '<input type="text" placeholder="請輸入前往國家">' +
-                '<input type="date" placeholder="請選擇日期">';
+                '<input type="text" placeholder="請輸入前往國家">';
+            //創建日期
+            // 獲取當前日期並轉成格式字串格式，日期部分前10個字符
+            let currentDate = new Date().toISOString().slice(0, 10)
+            let dateInput = document.createElement('input')
+            dateInput.type = 'date'
+            dateInput.placeholder = '請選擇日期'
+            //日期要限制只能選擇當日即之後日期
+            dateInput.setAttribute('min', currentDate)
+
+            tripDiv.appendChild(dateInput)
             form.appendChild(tripDiv)
             formContainer.appendChild(form)
 
@@ -34,21 +55,21 @@ function generateList() {
                 // 早餐
                 let breakfastDiv = document.createElement('div')
                 breakfastDiv.className = 'create_breakfast'
-                breakfastDiv.innerHTML = '<input type="text" placeholder="請輸入早餐地點">' +
+                breakfastDiv.innerHTML = '<input type="text" placeholder="請輸入早餐">' +
                     '<input type = "text" placeholder = "請輸入交通工具" >' +
                     '<input type="time" placeholder="請選擇抵達時間">'
 
                 // 午餐
                 let lunchDiv = document.createElement('div')
                 lunchDiv.className = 'create_lunch'
-                lunchDiv.innerHTML = '<input type="text" placeholder="請輸入午餐地點">' +
+                lunchDiv.innerHTML = '<input type="text" placeholder="請輸入午餐">' +
                     '<input type = "text" placeholder = "請輸入交通工具" >' +
                     '<input type="time" placeholder="請選擇抵達時間">'
 
                 // 晚餐
                 let dinnerDiv = document.createElement('div')
                 dinnerDiv.className = 'create_dinner'
-                dinnerDiv.innerHTML = '<input type="text" placeholder="請輸入晚餐地點">' +
+                dinnerDiv.innerHTML = '<input type="text" placeholder="請輸入晚餐">' +
                     '<input type = "text" placeholder = "請輸入交通工具" >' +
                     '<input type="time" placeholder="請選擇抵達時間">'
 
@@ -79,6 +100,8 @@ function generateList() {
             form.appendChild(buttonDiv)
             // 產生後才監聽
             submitButton.addEventListener('click', checkForm)
+        } else {
+            alert('僅提供7日之內短期旅遊規劃')
         }
     } else {
         alert('請輸入有效的天數（1 到 7 之間的數字）')
@@ -93,13 +116,14 @@ function checkForm() {
     for (let i = 0; i < inputFields.length; i++) {
         let fileValue = inputFields[i].value.trim()
         //如果有欄位沒有值要警告
-        if (!fileValue) { }
-        alert('請填寫所有欄位')
-        //    阻止表單提交
-        return false
+        if (!fileValue) {
+            alert('請填寫所有欄位')
+            //    阻止表單提交
+            return false
+        }
+
     }
     alert('表單提交成功')
-    return true
 
 }
 let submitButton = document.getElementById('button_create1')

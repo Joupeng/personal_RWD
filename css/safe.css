@@ -334,3 +334,45 @@ li.phone_icon::before {
 
 
 }
+
+.download_safe a {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+
+    border: 3px solid #8ECFD2;
+    background-color: #fff;
+    margin-top: 40px;
+    font-size: 24px;
+    color: #8ECFD2;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: none;
+}
+
+/* 下載時的暗幕，整個畫面 */
+#mask {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+iframe {
+    border: 0;
+}
