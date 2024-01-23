@@ -311,7 +311,7 @@ legend {
 }
 
 button#button_create1_submit {
-    width: 200px;
+    width: 100px;
     margin: 10px;
     padding: 8px;
     border-radius: 8px;
@@ -324,7 +324,7 @@ button#button_create1_submit {
 
 @media (min-width:576px) {
     button#button_create1_submit {
-        width: 280px;
+        width: 100px;
         margin: 10px;
         padding: 12px;
         border-radius: 8px;
@@ -334,19 +334,30 @@ button#button_create1_submit {
 }
 
 button#button_create1_submit:hover {
-    width: 280px;
+    width: 100px;
     margin: 10px;
     padding: 12px;
     border-radius: 8px;
-    /* border: 3px solid; */
+    border: 3px solid;
     background-color: #8ECFD2;
     margin-top: 20px;
     font-size: 24px;
     color: #fff;
 }
 
+#button_create1_download:disabled {
+    /* 這裡添加與正常狀態相同的樣式 */
+    /* background-color: #f0f0f0; */
+    border: 3px solid #f0f0f0;
+    color: #f0f0f0;
+    background-color: #fff;
+    /* 禁用滑鼠事件 */
+    pointer-events: none;
+
+}
+
 button#button_create2_download {
-    width: 300px;
+    width: 200px;
     margin: 10px;
     padding: 12px;
     border-radius: 8px;
@@ -357,22 +368,8 @@ button#button_create2_download {
     color: #FFDB9D;
 }
 
-@media (min-width:576px) {
-    button#button_create2_download {
-        width: 300px;
-        margin: 10px;
-        padding: 12px;
-        border-radius: 8px;
-        border: 3px solid #FFDB9D;
-        background-color: #fff;
-        margin-top: 20px;
-        font-size: 20px;
-    }
-
-}
-
 button#button_create2_download:hover {
-    width: 300px;
+    width: 200px;
     margin: 10px;
     padding: 12px;
     border-radius: 8px;
@@ -381,4 +378,15 @@ button#button_create2_download:hover {
     margin-top: 20px;
     font-size: 20px;
     color: #fff;
+}
+
+#button_create2_download:disabled {
+    /* 這裡添加與正常狀態相同的樣式 */
+    /* background-color: #f0f0f0; */
+    border: 3px solid #f0f0f0;
+    color: #f0f0f0;
+    background-color: #fff;
+    /* 禁用滑鼠事件 */
+    pointer-events: none;
+
 }

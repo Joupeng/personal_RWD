@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 })
-
+let pdfGenerated = false;
 function generateList() {
     // 獲取輸入框的值
     let inputValue = document.getElementById('day_choose').value
@@ -99,16 +99,35 @@ function generateList() {
             buttonDiv.appendChild(submitButton)
             form.appendChild(buttonDiv)
             // 產生後才監聽
-            submitButton.addEventListener('click', checkForm)
+            // submitButton.addEventListener('click', checkForm)
+            // 為表單添加事件監聽器以防止默認表單提交行為
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // 阻止默認的表單提交行為
+                submitForm(); // 調用submitForm 函數
+            });
+
+            //先生成download鈕，隱藏再讓他顯示
+            let DownLoadDiv = document.createElement('div')
+            DownLoadDiv.className = 'button_create2'
+            // DownLoadDiv.style.display = 'none'
+            let DownLoadButton = document.createElement('button')
+            DownLoadButton.type = 'button';
+            DownLoadButton.id = 'button_create2_download'
+            DownLoadButton.innerHTML = '下載'
+            DownLoadButton.style.borderRadius = '#FFDB9D'
+            DownLoadButton.style.display = 'none'
+            DownLoadDiv.appendChild(DownLoadButton)
+            form.appendChild(DownLoadDiv)
+
         } else {
-            alert('僅提供7日之內短期旅遊規劃')
+            alert('請填入旅遊天數，僅提供7日之內短期旅遊規劃')
         }
     } else {
         alert('請輸入有效的天數（1 到 7 之間的數字）')
     }
 }
 
-function checkForm() {
+function submitForm() {
     let checkForm = document.getElementById('myForm_create')
     //取得所有輸入欄位，他在'myForm_create裡面
     let inputFields = checkForm.querySelectorAll('input,textarea')
@@ -116,16 +135,74 @@ function checkForm() {
     for (let i = 0; i < inputFields.length; i++) {
         let fileValue = inputFields[i].value.trim()
         //如果有欄位沒有值要警告
-        if (!fileValue) {
+        if (fileValue == "") {
             alert('請填寫所有欄位')
             //    阻止表單提交
             return false
+        } else {
+            // 呼叫提交完成訊息
+            showMessage()
+            // alert('表單提交成功')
+
+            // 提交完成不可以再被編輯
+            let formInputs = document.querySelectorAll('#myForm_create input ,textarea');
+            formInputs.forEach(input => {
+                input.readOnly = true;
+                input.style.backgroundColor = '#f0f0f0'
+            });
+
+            //監聽是否點選下載
+            document.getElementById('button_create2_download').addEventListener('click', handDownLoad);
+            let submitButton = document.getElementById('button_create1_submit')
+            submitButton.disabled = true;
         }
 
     }
-    alert('表單提交成功')
 
 }
-let submitButton = document.getElementById('button_create1')
+// 成功遞交表單訊息
+function showMessage() {
+    let messageBox = document.createElement('div');
+    messageBox.style.position = 'fixed';
+    messageBox.style.top = '50%';
+    messageBox.style.left = '50%';
+    messageBox.style.transform = 'translate(-50%,-50%)';
+    messageBox.style.width = '280px'
+    messageBox.style.borderRadius = '8px'
+    messageBox.style.backgroundColor = '#fff';
+    messageBox.style.color = '#8ECFD2'
+    messageBox.style.border = '3px solid #8ECFD2';
+    messageBox.style.zIndex = '10';
 
+    // 文字建立
+    let text = document.createElement('p')
+    text.innerText = '表單填寫完成，可以點選下載'
+    text.style.textAlign = 'center'
+    text.style.color = '#8ECFD2'
+    messageBox.appendChild(text)
+    // 放入父層
+    document.body.appendChild(messageBox);
+
+    //計時關閉
+    setTimeout(function () {
+        messageBox.remove();
+    }, 1000);
+    //顯現下載按鈕parentNode就是指他的div
+    document.getElementById('button_create2_download').style.display = 'block';
+
+}
+//handDownLoad的邏輯
+function handDownLoad() {
+    // 檢查是否已經生成過 PDF，避免重複生成，
+    if (!pdfGenerated) {
+        // 使用 html2pdf 將當前頁面內容轉換為 PDF
+        let element = document.getElementById('myForm_create');
+        html2pdf(element);
+        // console.log('123');
+        pdfGenerated = true;  // 設置標誌為已生成
+        // 更改下載按鈕的顏色
+        let downloadButton = document.getElementById('button_create2_download');
+        downloadButton.disabled = true;  // 禁用按鈕
+    }
+}
 
