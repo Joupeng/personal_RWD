@@ -345,7 +345,7 @@ button#button_create1_submit:hover {
     color: #fff;
 }
 
-#button_create1_download:disabled {
+#button_button_create1_submit:disabled {
     /* 這裡添加與正常狀態相同的樣式 */
     /* background-color: #f0f0f0; */
     border: 3px solid #f0f0f0;

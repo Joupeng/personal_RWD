@@ -132,32 +132,39 @@ function submitForm() {
     //取得所有輸入欄位，他在'myForm_create裡面
     let inputFields = checkForm.querySelectorAll('input,textarea')
     //檢查是否有值
+    // 是否檢查到空值的標誌
+    let hasEmptyValue = false;
     for (let i = 0; i < inputFields.length; i++) {
         let fileValue = inputFields[i].value.trim()
         //如果有欄位沒有值要警告
         if (fileValue == "") {
             alert('請填寫所有欄位')
+            hasEmptyValue = true;
             //    阻止表單提交
-            return false
-        } else {
-            // 呼叫提交完成訊息
-            showMessage()
-            // alert('表單提交成功')
-
-            // 提交完成不可以再被編輯
-            let formInputs = document.querySelectorAll('#myForm_create input ,textarea');
-            formInputs.forEach(input => {
-                input.readOnly = true;
-                input.style.backgroundColor = '#f0f0f0'
-            });
-
-            //監聽是否點選下載
-            document.getElementById('button_create2_download').addEventListener('click', handDownLoad);
-            let submitButton = document.getElementById('button_create1_submit')
-            submitButton.disabled = true;
+            break;  // 有空值時立即跳出迴圈
         }
+    }
+    // 因為只有在沒有空值下才會出現true，所以這邊代表就是沒有空值
+    if (!hasEmptyValue) {
+        // 呼叫提交完成訊息
+        showMessage()
+        // alert('表單提交成功')
+
+        // 提交完成不可以再被編輯，鎖住input跟出現底色
+        let formInputs = document.querySelectorAll('#myForm_create input ,textarea');
+        formInputs.forEach(input => {
+            input.readOnly = true;
+            input.style.backgroundColor = '#f0f0f0'
+        });
+
+        //監聽是否點選下載
+        document.getElementById('button_create2_download').addEventListener('click', handDownLoad);
+        let submitButton = document.getElementById('button_create1_submit')
+        submitButton.disabled = true;
 
     }
+
+
 
 }
 // 成功遞交表單訊息
@@ -183,6 +190,13 @@ function showMessage() {
     // 放入父層
     document.body.appendChild(messageBox);
 
+    // 設定提交鈕失效
+    let submitButton = document.getElementById('button_create1_submit');
+    submitButton.disabled = true;
+    submitButton.style.border = '3px solid #f0f0f0';
+    submitButton.style.color = '#f0f0f0';
+    submitButton.style.backgroundColor = '#fff';
+
     //計時關閉
     setTimeout(function () {
         messageBox.remove();
@@ -191,7 +205,7 @@ function showMessage() {
     document.getElementById('button_create2_download').style.display = 'block';
 
 }
-//handDownLoad的邏輯
+//handDownLoad的邏輯，要強制只能下載一次
 function handDownLoad() {
     // 檢查是否已經生成過 PDF，避免重複生成，
     if (!pdfGenerated) {
