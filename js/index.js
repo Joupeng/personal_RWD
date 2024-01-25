@@ -33,8 +33,20 @@ function doFirst() {
     let content = document.getElementById('content').value;
     //  取用picture而不是value
     let pictureInput = document.getElementById('picture');
+
+    // 先檢查是否有選擇文件
+    if (!pictureInput.files || !pictureInput.files[0]) {
+      alert('請選擇一張圖片');
+      return; // 如果沒有選擇文件，中斷操作
+    }
+    if (!name || !country || !viewpoint || !content || !pictureInput.files[0]) {
+      alert('請填寫完整資訊');
+      return; // 如果有未填寫的欄位，中斷操作
+    }
+
+
     let picture = pictureInput.files[0]
-    // 使用 FileReader 讀取文件
+    // 要再確認有選照片後，才會使用 FileReader 讀取文件
     let reader = new FileReader();
 
     // 設定當讀取完成時的回調函數
@@ -42,6 +54,10 @@ function doFirst() {
       // 獲取 Data URL
       // 創建的 URL 可以立即在網頁上展示相應的內容，而不需要等待數據上傳到伺服器並生成實際的 URL。
       let pictureURL = URL.createObjectURL(picture);
+
+
+
+
 
       // 創建新的留言板元素
       let newNoteElement = document.createElement('div');

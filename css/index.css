@@ -638,7 +638,7 @@ div.font_box {
 }
 
 .note_picture__photo img {
-    width: auto;
+    width: 100%;
     height: 280px;
     vertical-align: bottom;
 }
