@@ -64,7 +64,7 @@
     async function getWeatherFormWeatherService(uri) {
       try {
         //使用fetch發送get請求，加上不同源寫法
-        let response = await fetch(uri, { mode: 'no-cors' });
+        let response = await fetch(uri);
         //確保HTTP請求成功
         if (!response.ok) {
           throw new Error(`HTTP error! Status:${response.status}`);
