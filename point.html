@@ -18,8 +18,6 @@
     <!-- js燈箱+fadeto -->
     <script src="./js/jquery-3.7.1.js"></script>
     <script src="./js/lightbox.js"></script>
-    <!-- js燈箱 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <!-- GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
@@ -100,40 +98,40 @@
     <!-- ===============================================究級九宮格==================================================== -->
     <div class="point_vendor_title">
         <h1>在地店家 </h1>
-
+        <!-- 共有10張圖，使用gid-area，圖片切換透過a連結 -->
         <div class="linear_box">
             <div class="linear_text">想要在山邊喝杯咖啡嗎<br>?或是在海邊看日落呢<br>?</div>
             <div class="contaniner_photo">
                 <div class="grid-container">
-                    <a data-lightbox="images" href="./images/point/first_front.jpg" class="grid-item">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/first_front.jpg">
                         <img src="./images/point/first.png" alt="">
                     </a>
                     <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
                         <img src="./images/point/second.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/three_front.png">
                         <img src="./images/point/third.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/four_front.png">
                         <img src="./images/point/fourth.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/five_front.png">
                         <img src="./images/point/fifth.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/six_front.png">
                         <img src="./images/point/sixth.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg" id="seventh_item">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/seven_front.png" id="seventh_item">
                         <img src="./images/point/seventh.png" alt="">
                         <div class="word_text">重新感受自己感受這世界</div>
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/eight_front.png">
                         <img src="./images/point/eighth.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/nine_front.png">
                         <img src="./images/point/nineth.png" alt="">
                     </a>
-                    <a class="grid-item" data-lightbox="images" href="./images/point/second.jpg">
+                    <a class="grid-item" data-lightbox="images" href="./images/point/ten_front.png">
                         <img src="./images/point/tenth.png" alt="">
                     </a>
                 </div>
@@ -227,12 +225,12 @@
 
         // lightbox功能=========================================================
 
-        lightbox.options({
+        lightbox.option({
             resizeDuration: 200,
             maxWidth: 600,
             wrapAround: true,
             albumLabel: " %1 of %2"
-        })
+        });
 
     </script>
 
