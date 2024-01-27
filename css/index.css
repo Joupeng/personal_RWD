@@ -209,6 +209,21 @@ div.font_box {
 
 }
 
+@media(max-width:768px) {
+    .weather {
+        width: 80px;
+        height: 80px;
+        background-color: hsla(0, 0%, 97%, 0.8);
+        border-radius: 8px;
+        position: fixed;
+        top: 350px;
+        right: 10px;
+        z-index: 99;
+
+    }
+}
+
+
 .weather img {
     width: 80%;
 }
