@@ -1,4 +1,75 @@
 function doFirst() {
+  // 輪播
+  let divWidth;
+  let imgCount = $('#content li').length
+  // alert(imgCount)
+  // 根據圖片個數產生圓點個數
+
+  // 在初始時獲取視窗寬度
+  catchWindowWidth();
+
+  for (let i = 0; i < imgCount; i++) {
+    $('#contentButton').append(`<li></li>`)
+  }
+  // 第一個li會是深色，因為象徵點選位置
+  $('#contentButton li:first').addClass('clicked')
+  // 寫上寬度
+  // div的寬就是li的寬
+  $('#content li').width(divWidth) // li的寬
+  $('#content').width(divWidth * imgCount)  //ul的寬度(就是寬乘上個數)
+  // 點選的功能
+  let index = 0
+  // 5秒會換圖
+  let timer = setInterval(moveToNext, 5000)
+  $('#contentButton li').click(function () {
+    // 有點選進來就清掉倒數計時
+    clearInterval(timer)
+    // 被點的index
+    // alert($(this).index())
+    // alert(index)
+    // 往左移會根據點的index，第二個點就是1，移一個寬度，向左為-1
+    index = $(this).index()
+    $('#content').animate({
+      left: divWidth * index * -1,
+    })
+    //被點到的要加class
+    $(this).addClass('clicked')
+    // 其他的要移除
+    $('#contentButton li').not(this).removeClass('clicked')
+    // 做完後5秒才動
+    timer = setInterval(moveToNext, 5000)
+  })
+  // 各功能設定
+  //沒有按的時候5秒自己會移下一個
+  function moveToNext() {
+    //控制index的範圍，只能介於0~7，因為目前是8張圖片
+    //當是第7張，就會回到第一頁=>index=0
+    if (index < imgCount - 1) {
+      index += 1
+    } else {
+      index = 0
+    }
+    $('#content').animate({
+      left: divWidth * index * -1,
+    })
+    // 要找到當下出現的要深色的圓的index，eq找那個index
+    // 選擇集合中與指定索引相等的元素。
+    $(`#contentButton li:eq(${index})`).addClass('clicked')
+    // 其他的要移除
+    $('#contentButton li').not(`:eq(${index})`).removeClass('clicked')
+  }
+  // 當視窗變更取得寬度也要重新計算
+  $(window).resize(function () {
+    // 取得寬度
+    catchWindowWidth();
+    $('#content li').width(divWidth);
+    $('#content').width(divWidth * imgCount);
+  });
+  function catchWindowWidth() {
+    // 取得視窗寬度並存儲在 divWidth 中
+    divWidth = $('#sliderBoard').width();
+  }
+
   // 漢堡功能
   let btnHamburger = document.getElementById("btn_hamburger");
   let navList = document.querySelector('.header__nav-list');

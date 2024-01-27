@@ -123,6 +123,7 @@ ul.breadcrumb_title_list {
     /* 六行 */
     /* grid-template-columns: 15% 15% 40%; */
     row-gap: 20px;
+    /* 設定10個格子，根據螢幕寬度從1張圖變2張圖再變成3張圖4張圖 */
     grid-template-areas:
         "first"
         "fifth "

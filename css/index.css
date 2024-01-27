@@ -1,26 +1,25 @@
-/* * {
-    outline: 1px solid red;
+* {
+    margin: 0px;
+    padding: 0px;
 }
- */
-
 
 section.banner_bg {
-    margin-top: 20px;
-    height: 524px;
-    /* border: 1px solid red; */
-    background-image: url("../images/index/banner2.png");
+    /* margin-top: 20px; */
+    height: 550px;
+    /* border: 1px solid green; */
+    /* background-image: url("../images/index/banner2.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center center;*/
     position: relative;
     width: 100%;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     section.banner_bg {
         margin-top: 20px;
         height: 524px;
-        /* border: 1px solid red; */
+        border: 1px solid red;
         background-image: url("../images/index/banner_t.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -29,47 +28,77 @@ section.banner_bg {
         height: 521px;
         width: 100%;
     }
-}
+} */
 
 /* banner上面的正方形 */
+div.font_box {
+    height: 500px;
+    width: 300px;
+    background-color: #8ECFD2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    justify-content: center;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    div.font_box {
+        /* border: 1px solid blue; */
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-top: 30px
+    }
+}
+
+.inner_box {
+    /* border: 1px solid red; */
+    padding-top: 200px;
+
+}
+
+@media (max-width:768px) {
+    .inner_box {
+        padding: 0;
+        height: 200px;
+        /* border: 1px solid yellow; */
+    }
+}
 
 div.font_box {
     /* display: none; */
-    /* border: 1px solid red; */
-    background-color: transparent;
-    padding-top: 10px;
+    /* border: 1px solid red;
+    background-color: transparent; */
+    /* padding-top: 10px; */
+    /* position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 99; */
+    /* transform: translate(-50%, -50%); */
+
 }
 
 
 @media (min-width: 768px) {
-
     div.font_box {
         /* border: 1px solid red; */
-        background-color: #8ECFD2;
+        /* background-color: #8ECFD2;
         color: #FFF;
-        height: 100%;
+        height: 100%; */
         /* 在他的父元素進行撐開 ，不用設定高 */
-        width: 300px;
+        /* width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0; */
     }
 }
-
-/* 
-@media (max-width: 992px) {
-    div.font_box {
-        border: 1px solid red;
-        background-color: #8ECFD2;
-        color: #FFF;
-        height: 100%;
-        在他的父元素進行撐開 ，不用設定高
-        width: 426px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-} */
 
 .banner_bg div.font_box h1 {
     font: "Noto Sans SC";
@@ -87,7 +116,7 @@ div.font_box {
         font: "Noto Sans SC";
         /* border: 1px solid green; */
         font-size: 32px;
-        width: 261px;
+        /* width: 261px; */
         /* height: 82px; */
         letter-spacing: 12.8px;
         /* 32*40%=12.8 */
@@ -104,7 +133,7 @@ div.font_box {
     font-size: 16px;
     letter-spacing: 3px;
     /*16*20%=3.2*/
-    width: 261px;
+    /* width: 261px; */
     margin: 0 auto;
     color: #FFF;
 }
@@ -115,6 +144,59 @@ div.font_box {
     font-size: 16px;
 }
 
+/* =======================================輪播 ==========================================*/
+.image {
+    width: 100%;
+    height: 500px;
+}
+
+#sliderBoard {
+    width: 100%;
+    /* border: 1px solid #ccc; */
+    /* 總高度550 */
+    height: 100%;
+    margin: 50px 0;
+    overflow: hidden;
+}
+
+/* 定位屬性 */
+#content {
+    position: relative;
+    list-style: none;
+    margin: 0;
+}
+
+#content li {
+    float: left;
+}
+
+/* 按鈕會根據圖片動態產生 */
+#contentButton {
+    /* border: 1px solid red; */
+    /* background-color: #ccc; */
+
+    /* 圓點置中 */
+    text-align: center;
+    /* 總高:550px 按鈕50px */
+    height: 50px;
+}
+
+#contentButton li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 8px;
+    display: inline-block;
+}
+
+#contentButton li.clicked {
+    background-color: #666;
+}
+
+
+
+/* 天氣 */
 .weather {
     width: 150px;
     height: 150px;
