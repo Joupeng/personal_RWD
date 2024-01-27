@@ -216,7 +216,7 @@ div.font_box {
         background-color: hsla(0, 0%, 97%, 0.8);
         border-radius: 8px;
         position: fixed;
-        top: 350px;
+        top: 450px;
         right: 10px;
         z-index: 99;
 
@@ -236,6 +236,18 @@ div.font_box {
     top: 50%;
     color: #8ECFD2;
 
+}
+
+@media(max-width:768px) {
+    .weather p {
+        font-size: 14px;
+        font-weight: bold;
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        color: #8ECFD2;
+
+    }
 }
 
 
