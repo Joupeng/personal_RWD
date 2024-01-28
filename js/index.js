@@ -101,7 +101,7 @@ function doFirst() {
     let name = document.getElementById('name').value;
     let country = document.getElementById('country').value;
     let viewpoint = document.getElementById('viewpoint').value;
-    let content = document.getElementById('content').value;
+    let content_box = document.getElementById('content_box').value;
     //  取用picture而不是value
     let pictureInput = document.getElementById('picture');
 
@@ -110,11 +110,14 @@ function doFirst() {
       alert('請選擇一張圖片');
       return; // 如果沒有選擇文件，中斷操作
     }
-    if (!name || !country || !viewpoint || !content || !pictureInput.files[0]) {
+    // if (!name || !country || !viewpoint || !content || !pictureInput.files[0]) {
+    //   alert('請填寫完整資訊');
+    //   return; // 如果有未填寫的欄位，中斷操作
+    // }
+    if (!name || !country || !viewpoint || !content_box || !pictureInput.files[0]) {
       alert('請填寫完整資訊');
       return; // 如果有未填寫的欄位，中斷操作
     }
-
 
     let picture = pictureInput.files[0]
     // 要再確認有選照片後，才會使用 FileReader 讀取文件
@@ -142,7 +145,7 @@ function doFirst() {
     <p>${country}  ${viewpoint}</p>
     </div>
     <div class="note_picture__think">
-    <span>${content}</span>
+    <span>${content_box}</span>
     <p>${name}</p>
     </div>
     `
@@ -152,7 +155,7 @@ function doFirst() {
       document.getElementById('name').value = '';
       document.getElementById('country').value = '';
       document.getElementById('viewpoint').value = '';
-      document.getElementById('content').value = '';
+      document.getElementById('content_box').value = '';
       // 清空文件選擇框
       document.getElementById('picture').value = '';
       // 清理 URL 對象
