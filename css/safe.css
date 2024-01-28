@@ -376,3 +376,9 @@ li.phone_icon::before {
 iframe {
     border: 0;
 }
+
+.downloadBtn:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #8ECFD2;
+}
