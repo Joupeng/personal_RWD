@@ -119,11 +119,12 @@
         <h3>職場失意 </h3>
         <p>也許上司看不到你的閃光點、同事與你有太多不同，疲憊的工作環境，讓你越來越不認識自己，可是你的生活不是只有工作，也許可以去別的地方看一看，才會發現世界很大，有很多可能性。</p>
     </div>
+
     <div class="spot_card_choose">
         <ul>
             <li>
                 <!-- ===============================================第一張牌 ===============================================================================-->
-                <div id="card">
+                <div id="card0">
                     <div class="front">
                         <img src="./images/spot/spot_1.png" alt="無法顯示">
                     </div>
@@ -155,6 +156,7 @@
                 </div>
             </li>
         </ul>
+        <span class="card_button" id="card_button_1">抽牌</span>
     </div>
     <div class="mind_spot_title">
         <h3>失去一段關係 </h3>
@@ -196,6 +198,7 @@
                 </div>
             </li>
         </ul>
+        <span class="card_button" id="card_button_2">抽牌</span>
         <p>即使遍體麟傷，也跟為自己做一次決定</p>
     </div>
     <!-- ------------------------------------------------footer---------------------------------------------------- -->
@@ -278,13 +281,44 @@
         }
 
 
+        //出現排組，不是直接執行帶入function
+        document.getElementById('card_button_1').addEventListener('click', function () {
+            this.style.display = 'none';
+            fadeInCards('card', 3, 0)
+        });
+        document.getElementById('card_button_2').addEventListener('click', function () {
+            this.style.display = 'none';
+            fadeInCards('card', 3, 3)
+        });
+        //按鈕的名稱(等會要串接字串)，數量，開始的
+        function fadeInCards(cardPrefix, numCards, startIndex) {
+            for (let i = startIndex; i < startIndex + numCards; i++) {
+                // 讓按鈕消失
+                // 舉例document.getElementById('card_button_1').style.display = 'none';
+                let cardId = `${cardPrefix}${i}`;
+                setTimeout(() => showCard(cardId), (i - startIndex) * 1000);
+            }
+        }
+        function showCard(cardId) {
+            let card = document.getElementById(cardId);
+            if (cardId) {
+                card.style.opacity = 1;
+            }
+        }
+
+
+
+
         // 翻牌功能
-        $("#card").flip();
+        $("#card0").flip();
         $("#card1").flip();
         $("#card2").flip();
         $("#card3").flip();
         $("#card4").flip();
         $("#card5").flip();
+
+
+
 
     </script>
 </body>

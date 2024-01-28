@@ -4,7 +4,7 @@ body {
 
 /* ===========================================================================麵包屑================================================================================= */
 .banner_bg.breadcrumb_title {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 ul.breadcrumb_title_list {
@@ -113,6 +113,8 @@ ul.breadcrumb_title_list {
     }
 }
 
+
+
 /* ------------------------------------------------------------------------職場排組------------------------------------------------------------------------------------------------ */
 
 .mind_spot_title {
@@ -193,6 +195,32 @@ ul.breadcrumb_title_list {
 
 
 /* ==============================================================抽牌================================================================== */
+/* 按鈕要跟牌組成現上下排 */
+.spot_card_choose {
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.card_button {
+    /* width: 100px;
+    height: 40px; */
+    padding: 10px 20px;
+    border: 3px solid #8ECFD2;
+    border-radius: 8px;
+    color: #8ECFD2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
+
+.card_button:hover {
+    background-color: #8ECFD2;
+    color: #fff;
+}
 
 
 .spot_card_choose ul {
@@ -259,7 +287,7 @@ ul.breadcrumb_title_list {
     height: auto;
 }
 
-#card,
+#card0,
 #card1,
 #card2,
 #card3,
@@ -268,6 +296,9 @@ ul.breadcrumb_title_list {
     /* margin: 0 auto; */
     /* border: 1px solid red; */
     margin: 24px 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* 過渡效果：透明度改變需要 1 秒，且緩慢加速緩慢減速 */
 }
 
 /* 動畫 */
