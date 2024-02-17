@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Noto+Sans+HK:wght@900&family=Noto+Sans+TC:wght@300&display=swap"
         rel="stylesheet">
+    <!-- aos套件 -->
+    <link rel="stylesheet" href="./css/aos.css">
 </head>
 
 <body>
@@ -82,7 +84,7 @@
             <p>我的團隊有六個人，都是慢慢透過這個網站所加入，沒有薪水只是希望想獨立旅行的人，也能安全地享受旅程，歡迎有志一同的你，加入我們。</p>
         </div>
     </div>
-    <div class="team_list_box">
+    <div class="team_list_box" data-aos="fade-up" data-aos-offset="100" data-aos-delay="300">
         <h3>我的團隊</h3>
         <div class="team_outside_box">
             <div class="team_person">
@@ -193,6 +195,9 @@
             })
         })
     </script>
+    <!-- aos套件及指令 -->
+    <script src="./js/aos.js"></script>
+    <script> AOS.init();</script>
 </body>
 
 </html>
