@@ -128,7 +128,7 @@ ul.breadcrumb_title_list {
     color: #8ECFD2;
     text-align: center;
     font-size: 24px;
-
+    padding-bottom: 30px;
 }
 
 .about_us_box p {
@@ -174,7 +174,7 @@ ul.breadcrumb_title_list {
         max-width: 1000px;
         grid-template-columns: 1fr 1fr 1fr;
         margin: auto;
-        gap: 30px;
+        gap: 100px;
     }
 }
 
@@ -186,15 +186,39 @@ ul.breadcrumb_title_list {
 }
 
 .team_person {
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 20px auto;
+    padding: 20px 20px;
+    border: 5px solid #8ECFD2;
+    border-radius: 8px;
+    /* 在原本的位置加上動畫會比較順 */
+    transform: translateY(0px);
+    transition: .5s;
+}
+
+.team_person:hover {
+    background-color: #8ECFD2;
+    transform: translateY(-10%);
 }
 
 .team_person h3 {
     margin: 18px auto;
+    border-bottom: 2px solid #8ECFD2;
+    padding: 8px 0;
+
 }
+
+/* 當父層被摸到字要變色 */
+.team_person:hover h3 {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
 
 .team_person p {
     color: #8ECFD2;
     font-size: 20px;
+}
+
+.team_person:hover p {
+    color: #fff;
 }
